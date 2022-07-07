@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+    nginx: 
+        restart: unless-stopped
+        build:
+            context: ./app/mercury
+            dockerfile: ./docker/nginx/Dockerfile
+        image: nginx_mercury:latest
+        container_name: nginx_mercury
+        ports:
+            - ${PORT_HOST}:80
+        volumes:
+            - static_volume:/app/mercury/django_static
+            - media_volume:/app/mercury/media
+            - ./app/mercury/docker/nginx:/etc/nginx/conf.d
+        depends_on: 
+            - mercury
+        command: "/bin/sh -c 'nginx -g \"daemon off;\"'"
+    
+    mercury:
+        restart: unless-stopped
+        build:
+            context: ./app/mercury
+            dockerfile: ./docker/mercury/Dockerfile
+        image: mercury:latest
+        container_name: mercury
+        entrypoint: /app/docker/mercury/entrypoint.sh
+        volumes:
+            - ${NOTEBOOKS_PATH}:/app/notebooks
+            - static_volume:/app/mercury/django_static
+            - media_volume:/app/mercury/media
+        expose:
+            - 8000     
+        environment:
+            DEBUG: ${DEBUG}
+            SERVE_STATIC: ${SERVE_STATIC}
+            DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME}
+            DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD}
+            DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL}
+            SECRET_KEY: ${SECRET_KEY}
+            ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+            
+volumes:
+    static_volume: {}
+    media_volume: {}
