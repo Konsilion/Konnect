@@ -1,4 +1,15 @@
 #!/bin/bash
+
+
+# COMMENTAIRE : =============
+
+# Toutes les fonctions disponibles pour votre Hub. La fonction principale (git_home) vous permet de sélectionner celles qui vous correspond.
+
+# N'oubliez pas que vous pouvez à tous moment ouvrir un terminal brut, afin de renseigner une commande spécifique.
+
+#=============================
+
+
 function git_home {
 
 # A MODIFIER - Paramètres de votre page home
@@ -7,14 +18,13 @@ function git_home {
 	local page_color=${YELLOW}
 	local page_bck_color=${BCK_YELLOW}
 	local page_master="git_home"
-	
-		
+
+
 # NE PAS MODIFIER - EN TÊTE et DESIGN GENERAL
-	
+
 	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name}\a"
-	
+
 	ksln_header "" ${page_name} ${page_bck_color} 
-	
 
 if [[ ${PRJ_LOAD} = 1 ]]; then
 
@@ -22,27 +32,24 @@ local inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
 if [ "$inside_git_repo" ]; then
 
-
 	# NE PAS MODIFIER - INFORMATIONS A AFFICHER
-	
+
 	ksln_info_banner ${page_color}
 
-
 	# CORPS DE LA FONCTION
-	
+
 	ksln_links
-	
+
 	echo -e "\n  - ${WHITE}Github${NC}\t\t\t\t${GREEN}1${NC}. Créer repertoire\t${GREEN}2${NC}. Informations\n\n"
 
 	echo -e "\n  - ${WHITE}Branche de travail${NC}${NC}\t\t\t${GREEN}3${NC}. Lister\t${GREEN}4${NC}. Changer\t${GREEN}5${NC}. Créer\t${RED}6${NC}. Retirer (${YELLOW}$(git branch | grep "*")${NC})\n"
-	
-	echo -e "  - ${WHITE}Salle d'attente${NC}\t\t\t${GREEN}7${NC}. Afficher\t${GREEN}8${NC}. Ajouter\t${GREEN}9${NC}. Finaliser\t${DIM}10. Retirer${NC}\n"
-	
+
+	echo -e "  - ${WHITE}Vos modifications${NC}\t\t\t${GREEN}7${NC}. Afficher\t${GREEN}8${NC}. Ajouter\t${GREEN}9${NC}. Finaliser\t${DIM}10. Retirer${NC}\n"
+
 	echo -e "  - ${WHITE}Envoyer vos modifications${NC}\t\t${DIM}11. Vérifier${NC}\t${GREEN}12${NC}. Envoyer\t${GREEN}13${NC}. Archives\n\n"
-	
+
 	echo -e "\n\n\t\t\t\t\t\t\t      ${GREEN}14${NC}. Paramètres   |  ${GREEN}15${NC}. Sortir du projet  |  ${RED}16${NC}. Dé-giter"
-		
-	
+
 	echo -e ${LINE_SIMPLE}
 
 	# RACCOURCI
@@ -53,15 +60,15 @@ else
 	echo -e "${LINE_SIMPLE}\n\n"
 
 	echo -e "\n  ${GREEN}19${NC}. Initialiser votre dossier avec Git : $(ksln_local_ln ${PRJ_PATH} "Dossier local")\n"	
-		
+
 	echo -e ${LINE_DOUBLE}
 
 fi
 
 
-else	
+else
 	# RACCOURCI
-	
+
 	echo -e "  ${GREEN}17${NC}. Ouvrir un projet	  ${GREEN}18${NC}. Télécharger un projet"
 	echo -e "${LINE_SIMPLE}\n"
 	
@@ -103,7 +110,7 @@ function git_gh_repo_rmv {
 function git_gh_repo_list {
 
 
-	# HEADER	
+	# HEADER
 	echo -ne "\e]0;Konsilion Hub - Vos répertoires Git\a"
 	ksln_subheader " ${GREEN}INFORMATIONS${NC} - GIT " "LISTE DES REPERTOIRES"
 
@@ -147,7 +154,7 @@ function git_clone {
 	echo -e "\n\n ${GREEN}[i]${NC} Copier ici le lien du projet ( https: ... .git ) :\n"
 
 	read remote_http
-	
+
 	git clone $remote_http 
 
 }
@@ -159,9 +166,9 @@ function git_clone {
 function git_archive_list {
 
 	git log
-	
+
 	echo -e "\n${CONTINUE_PHRASE}" && read
-	
+
 
 }
 
@@ -174,11 +181,11 @@ function git_archive_list {
 function git_branch_activate {
 
 	ksln_subheader "${PRJ_NAME} > " "CHANGER - BRANCHE"
-	
+
 	echo ""
-	
+
 	git branch
-	
+
 	echo -e "\n  Indiquer le nom de votre ${PURPLE}nouvelle branche${NC} :\n"
 	
 	read branch_name
