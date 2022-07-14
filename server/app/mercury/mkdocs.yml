@@ -1,7 +1,0 @@
-site_name: Ce machin
-theme: readthedocs
-nav:
-  - Acceuil: 'index.md'
-  - Page:
-    - 'page.md'
-    - 'LICENCE.md'

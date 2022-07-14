@@ -14,7 +14,7 @@
 #################################################
 
 
-PRJ_PATH_ORIGIN="/c/.../Konnect/server/lib/projects"
+PRJ_PATH_ORIGIN="/home/nicolasbremond/Bureau/Konnect/server/lib/projects"
 
 
 
