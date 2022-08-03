@@ -1,0 +1,30 @@
+# **Création d'environnement Conda** - *avec Konnect*
+
+??? info inline end "Ajouter Conda Forge"
+
+    Les canaux de téléchargement sont des **annuaires pour les applications de conda**. Le canal `conda-forge` est un des plus populaires, et Konnect repose en grande partie sur ce dernier. [Ajouter un canal]()
+   
+
+
+* Commencez par [démarrer Konnect]()
+* Ensuite accèdez aux environnement en tapant `k04`
+* Et enfin taper `8`
+
+C'est tous, après il suffit juste de **suivre les instructions**.
+
+!!! tip "Quelques bonnes pratiques"
+
+    - Ajouter **conda-forge**
+    - Ne pas avoir (trop) de **programme en fond**,
+    - Avoir une **connexion internet convenable** 
+    - Ne **pas installer trop de packages d'un coup**. Il est possible de construire un environnement **package par package**, cela dépend de la puissance de votre ordinateur.
+
+---
+
+![](../../images/konnect_conda.png)
+  
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>

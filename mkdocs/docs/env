@@ -1,0 +1,66 @@
+# SITE INFORMATIONS
+
+site_name: Documentation - KONNECT
+site_author: Konsilion Ingénieres
+site_description: >-
+  (Description du site)
+
+# LANGUE ET COULEUR
+
+theme:
+  language: fr
+  palette:
+    scheme: default
+    primary: blue grey
+    accent: blue
+
+
+# REPERTOIRE GIT DE VOTRE PROJET (GitHUB uniquement pour le moment)
+
+repo_url: https://github.com/Konsilion/Konnect
+repo_name: Konnect/
+edit_uri: blob/master/mkdocs/docs
+
+# TOUTE VOTRE DOCUMENTATION
+
+nav:
+  - Accueil: index.md
+  - Présentation: contenu/presentation.md
+  - Installation & Premier Pas: 
+      - Konnect: 
+          - Guide d'installation: contenu/installation.md
+          - Premiers Pas: contenu/installation.md
+      - En savoir plus:
+          - Conda: 
+              - Installation: tutoriels/conda/installation_conda.md
+              - Canaux de téléchargement: tutoriels/conda/ajout_channel.md
+              - Environnements: tutoriels/conda/creation_environnement.md
+              - Packages: tutoriels/conda/ajout_package.md
+          - Git: tutoriels/git/installation_git.md
+  - Fonctionnalités:
+      - contenu/fonctions.md
+  - Communauté:
+      - Documentation collaborative ?: informations/premiers_pas.md
+      - informations/pad.md
+      - informations/chat.md
+      - informations/visio.md
+      - informations/contacts.md
+      
+
+# MENTIONS LEGALES
+
+copyright: Konsilion ingénieries - Licence juridique Creative Commons CC-BY-SA 4.0
+
+
+# LIENS EXTERNES
+
+extra:
+  generator: false
+  social :
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/konsilion/
+      name: Retrouvez-nous sur Linkedin
+  version:
+      provider: mike
+      javascript_dir: js
+      
