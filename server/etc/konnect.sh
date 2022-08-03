@@ -1,12 +1,14 @@
 #!/bin/bash
 
+clear
+
 # SCRIPT PRINCIPAL : Permet de mettre en place l'environnements et génère la page d'accueil Konnect.
 
 #################### ENVIRONNEMENT KONSILION ###########################
 
 # Indiquez ici tous les scripts secondaires.
 
-. ../lib/projects/Konnect/server/etc/.env
+. ./.env
 
 . ${PATH_CONDA}/etc/profile.d/conda.sh
 
@@ -37,6 +39,8 @@ function konnect {
 	local page_master="konnect"
 		
 # NE PAS MODIFIER - EN TÊTE et DESIGN GENERAL
+
+	conda_env_verif
 	
 	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name}\a"
 	
@@ -46,7 +50,7 @@ function konnect {
 	
 	ksln_info_banner ${page_color} && ksln_links	 
 
-# MODIFIABLE - CORPS DE LA FONCTION
+# MODIFIABLE - CORPS DE LA PAGE
 
 	echo -e "\n  Bienvenue sur votre Hub, sélectionnez une catégorie\n\n
 
@@ -58,15 +62,16 @@ function konnect {
 	echo -e "\n${LINE_SIMPLE}"
 		
 # CHOICE / READ / ACTION
+
 	list_choice=("" "prj_home" "git_home" "apps_home" "conda_home" "frg_home" "nano ${PATH_ENV}")
 
-	ksln_answer "CYAN" && read CHOICE && ksln_page ${CHOICE}
+	ksln_answer "CYAN" && read CHOICE && cd ${PRJ_PATH} && ksln_page ${CHOICE}
 	
 	ksln_choice ${CHOICE} "6" "konnect" && clear && ${list_choice[$CHOICE]}
 
 # REFRESH
 	
-	ksln_bash_konnect
+	konnect
 }
 
 # PARAMETRAGES

@@ -12,6 +12,8 @@ function frg_home {
 		
 # NE PAS MODIFIER - EN TÊTE et DESIGN GENERAL
 	
+	conda_env_verif
+	
 	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name}\a"
 		
 	ksln_header "" ${page_name} ${page_bck_color} 
@@ -40,7 +42,7 @@ function frg_home {
 		
 	list_choice=("" "frg_download" "frg_activate" "frg_list")
 	
-	ksln_answer "CYAN" && read CHOICE && ksln_page ${CHOICE}
+	ksln_answer "CYAN" && read CHOICE && cd ${PRJ_PATH} && ksln_page ${CHOICE}
 	
 	ksln_choice ${CHOICE} "3" "frg_home" && ${list_choice[$CHOICE]}
 	
@@ -57,6 +59,8 @@ function frg_download {
 	ksln_subheader " ${GREEN}INFORMATIONS${NC} - PROJET FORGE" "TELECHARGEMENT"
 	
 # CORPS DE LA FONCTION
+
+	cd ${PATH_ORIGIN}/server/lib/projects
 	
 	git_clone
 }

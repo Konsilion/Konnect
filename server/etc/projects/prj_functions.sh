@@ -12,10 +12,12 @@ function prj_home {
 		
 # NE PAS MODIFIER - EN TÊTE et DESIGN GENERAL
 	
+	conda_env_verif
+	
 	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name}\a"
 	
-	ksln_header "" ${page_name} ${page_bck_color} 
-	
+	ksln_header "" ${page_name} ${page_bck_color}
+		
 			 
 if [[ ${PRJ_LOAD} = 1 ]]; then
 
@@ -24,18 +26,31 @@ if [[ ${PRJ_LOAD} = 1 ]]; then
 	ksln_info_banner ${page_color}
 
 # CORPS DE LA FONCTION
-	
-	ksln_links
-	
-	echo -e "\n  - ${WHITE}Documentation${NC}\t\t${GREEN}3${NC}. Ouvrir\t${GREEN}4${NC}. Modifier\t${GREEN}5${NC}. Publier     |     (Créer une documentation .${GREEN}6${NC})\n"
-	
-	echo -e "  - ${WHITE}Modèlisations${NC}\t\t${GREEN}7${NC}. Spyder\t${GREEN}8${NC}. Jupyter NB\t${GREEN}9${NC}. Jupyter Lab\t\n"
-	
-	echo -e "  - ${WHITE}Notebooks interactifs${NC}\t( ${DIM}Disponible prochainement${NC} )\n\n"
-	
-	echo -e "  - ${WHITE}Prototypes${NC}\t\t\t( ${DIM}Disponible prochainement${NC} )\n"
+
+	if [[ ${PRJ_NAME} = "apps" ]]; then
+
+		echo -e "\n\n  Vous êtes actuellement dans votre dossier d'application Web (apps)\t${BLACK}${BCK_PURPLE} k03 ${NC}. Accèder aux applications\n\n"
+
+
+	else	
+		ksln_links
 		
-	echo -e "\n\n\n\t\t\t${GREEN}10${NC}. Nouveau projet     |     ${GREEN}11${NC}. Changer     |     ${GREEN}12${NC}. Sortir     |     ${RED}13${NC}. Supprimer ce projet"
+		prj_home_which_doc
+
+		echo -e "${CYAN}${LINE_DOTTED}${NC}\n\n"
+		
+		echo -e "  Modélisation :\n"
+		
+			echo -e "  ${DIM}Jupyter Lab${NC}\t\t\t${GREEN}13${NC}. Ouvrir\t${RED}14${NC}. Eteindre\n"
+		
+			echo -e "  ${DIM}Spyder${NC}\t\t\t${GREEN}15${NC}. Ouvrir\t${RED}16${NC}. Eteindre\n"	
+	fi
+	
+	
+	
+	echo -e ${LINE_DOTTED}
+	
+	echo -e "\n\t\t\t ${GREEN}20${NC}. Nouveau projet     |     ${GREEN}21${NC}. Changer     |     ${GREEN}22${NC}. Sortir     |     ${RED}23${NC}. Supprimer ce projet"
 		
 	echo -e ${LINE_SIMPLE}
 		
@@ -54,13 +69,20 @@ fi
 
 	
 	list_choice=("" "prj_activate" "prj_add" \
-		     "apps_mkdocs_serve" "apps_jupyter_nb" "apps_mkdocs_ghdeploy" "prj_doc_create" \
-		     "spyder" "apps_jupyter_nb" "apps_jupyter_lab" \
-		     "prj_add" "prj_activate" "prj_deactivate" "prj_rmv")
+		     "apps_mkdocs_serve" ${IDE_DEFAULT} "apps_mkdocs_down" \
+		     "apps_mike_publish" "apps_mike_list" "apps_mike_delete" \
+		     "apps_jb_serve" ${IDE_DEFAULT} "apps_jb_down" \
+		     "apps_jb_publish" \
+		     "apps_jupyter_lab" "apps_jupyter_down" \
+		     "apps_spyder" "apps_spyder_down" \
+		     "apps_mercury_run" "apps_mercury_watch" \
+		     "apps_mercury_publish" \
+		     "prj_add" "prj_activate" "prj_deactivate" "prj_rmv" \
+		     "prj_doc_create" "prj_jb_create")
 	
-	ksln_answer "CYAN" && read CHOICE && ksln_page ${CHOICE}
+	ksln_answer "CYAN" && read CHOICE && cd ${PRJ_PATH} && ksln_page ${CHOICE}
 	
-	ksln_choice ${CHOICE} "13" "prj_home" && ${list_choice[$CHOICE]}
+	ksln_choice ${CHOICE} "25" "prj_home" && ${list_choice[$CHOICE]}
 	
 # REFRESH
 
@@ -72,18 +94,59 @@ fi
 
 
 
+function prj_home_which_doc {
 
 
-
-
-
-
-function prj_open {
-
-	xdg-open .
+	local mkdocs_exist=${PATH_ORIGIN}/server/lib/projects/${PRJ_NAME}/mkdocs
 	
-	prj_home
+	if [[ -d "$mkdocs_exist" ]]; then
+
+		echo -e "  Site Web :\n"
+	
+		echo -e "  ${DIM}Création & Modifications${NC}\t${GREEN}3${NC}. Ouvrir\t${GREEN}4${NC}. Modifier\t${RED}5${NC}. Eteindre\n"
+	
+		echo -e "  ${DIM}Publication & Versions${NC}\t${GREEN}6${NC}. Ajouter\t${GREEN}7${NC}. Lister\t${RED}8${NC}. Supprimer une version\n"
+
+	
+
+
+	fi
+
+
+	local jpbook_exist=${PATH_ORIGIN}/server/lib/projects/${PRJ_NAME}/JupyterBook
+	
+	if [[ -d "$jpbook_exist" ]]; then
+
+		echo -e "  Documentation scientifique :\n"
+	
+		echo -e "  ${DIM}Création & Modifications${NC}\t${GREEN}9${NC}. Construire en local\t${GREEN}10${NC}. Modifier\t${RED}11${NC}. Eteindre\n"
+	
+		echo -e "  ${DIM}Publication :${NC}\t\t\t${GREEN}12${NC}. Publier en ligne\n"
+		
+
+
+	fi
+
+
+
+	if [ ! -d "$mkdocs_exist" ] && [ ! -d "$jpbook_exist" ]; then
+		
+		echo -e "  Site Web :${NC}\t\t\t\t${GREEN}24${NC}. Créer"
+		echo -e "${DIM}ou${NC}"
+		echo -e "  Documentation scientifique :${NC}\t\t${GREEN}25${NC}. Créer\n"
+		
+	
+	fi
+
+
+
 }
+
+
+
+
+
+
 
 
 
@@ -124,13 +187,15 @@ function prj_list_num {
 	echo -e ${LINE_DOUBLE}
 }
 
+
+
 function prj_add {
 
 echo -ne "\e]0;Konsilion Hub - Projet création\a"
 
 # HEADER
 	
-	ksln_header " PROJETS > " "CRÉATION"
+	ksln_subheader " PROJETS > " "CRÉATION"
 
 # INFORMATIONS - Copier de list prj_num
 
@@ -142,15 +207,46 @@ echo -ne "\e]0;Konsilion Hub - Projet création\a"
 	
 	read  prj_name
 	
-	mkdir ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+	if [ -z "$prj_name" ]; then
 	
-	cp -r ${PATH_ORIGIN}/server/lib/templates/project/* ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+		echo "Nom (vide), aucun dossier créé"
+				
+		echo -e ${CONTINUE_PHRASE} && read
 		
-	cd ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+		return
+			
+	else
+	
+		mkdir ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+		
+		cp -r ${PATH_ORIGIN}/server/lib/templates/project/* ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+				
+		cd ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+			
+	fi
+		
+	echo -e "\n  • Voulez vous créer un ${GREEN}répertoire en ligne${NC} (recommandé) : [O]/N"
+	
+	read  prj_git
+	
+	if [ "$prj_git" != "N" ]; then
+	
+		git_init
+		
+		echo -e ${LINE_DOUBLE}
+		
+		echo -e "\n\n  ${RED}Important${NC} : Vous allez créer un répertoir sur GitHub. "
+		echo -e "A la première question prendre le second choix (local repository) et appuyer sur entrée jusqu'à la fin\n"
+		
+		echo -e ${CONTINUE_PHRASE} && read
+		
+		git_gh_repo_create
 
-	echo -e ${LINE_DOUBLE}
-		
+	fi
+	
 	prj_change ${PWD}
+	
+	echo -e ${CONTINUE_PHRASE} && read
 }
 
 
@@ -165,9 +261,11 @@ echo -ne "\e]0;Konsilion Hub - Projets suppressions\a"
 
 # HEADER
 	
-	ksln_header " PROJETS > " "SUPPRESSION"
+	ksln_subheader "PROJETS" "SUPPRESSION"
 
 # CORPS DE LA FONCTION
+
+	ksln_continue_risk
 	
 	echo -e " Desactivation du projet ${PRJ_NAME} ...\n"
 	
@@ -271,10 +369,46 @@ function prj_change {
 
 d=$1
 sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}
-echo " Redemarage nécessaire ..."
+echo -e ${LINE_DOUBLE}
+echo -e " Redemarage nécessaire ... ${GREEN}Appuyer sur entrée${NC} pour continuer" && read 
 cd ${PATH_ORIGIN}/server/etc && bash konnect.sh
 
 }
+
+
+function prj_jb_create {
+
+
+
+echo -ne "\e]0;Konsilion Hub - Documentation scientifique création\a"
+
+# HEADER
+	
+	ksln_subheader " DOCUMENTATION SCIENTIFIQUE > " "CRÉATION"
+
+# CORPS DE LA FONCTION
+	
+	local path_create=${PATH_ORIGIN}/server/lib/projects/${PRJ_NAME}/JupyterBook
+	
+	if [[ -d "$path_create" ]]; then
+		echo -e "\n\n${GREEN}  [i]${NC} La documentation scientifique JupyterBook existe déjà. ${GREEN}Entrer${NC} pour continuer." && read
+	
+		prj_home
+	fi
+	
+
+	mkdir ${PATH_ORIGIN}/server/lib/projects/${PRJ_NAME}/JupyterBook
+	
+	cp -r ${PATH_ORIGIN}/server/lib/templates/JupyterBook/* ${PATH_ORIGIN}/server/lib/projects/${PRJ_NAME}/JupyterBook
+
+	echo -e ${LINE_DOUBLE}
+	
+	echo -e "\n  Documentation scientifique créée.\n"
+	
+	echo -e ${CONTINUE_PHRASE} && read
+
+}
+
 
 
 
@@ -301,8 +435,6 @@ echo -ne "\e]0;Konsilion Hub - Documentation création\a"
 	
 	cp -r ${PATH_ORIGIN}/server/lib/templates/mkdocs/* ${PATH_ORIGIN}/server/lib/projects/${PRJ_NAME}/mkdocs
 		
-	cd ${PATH_ORIGIN}/server/lib/projects/${PRJ_NAME}/mkdocs
-
 	echo -e ${LINE_DOUBLE}
 	
 	echo -e "\n  Documentation créée.\n"
@@ -311,3 +443,6 @@ echo -ne "\e]0;Konsilion Hub - Documentation création\a"
 	
 	# apps_mkdocs_serve
 }
+
+
+

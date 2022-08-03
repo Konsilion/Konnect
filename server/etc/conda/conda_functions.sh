@@ -11,6 +11,8 @@ function conda_home {
 		
 # NE PAS MODIFIER - EN TÊTE et DESIGN GENERAL
 	
+	conda_env_verif
+	
 	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name}\a"
 	
 	ksln_header "" ${page_name} ${page_bck_color} 
@@ -22,14 +24,16 @@ function conda_home {
 
 
 # CORPS DE LA FONCTION
+
+	ksln_links
 	
 	echo -e "  - ${WHITE}Cannaux de téléchargement${NC}\t${GREEN}1${NC}. Ajouter\t${GREEN}2${NC}. Lister\t${RED}3${NC}. Supprimer\n\n"
 
-	echo -e "  - ${WHITE}Applications et Packages${NC}\t${GREEN}4${NC}. Ajouter\t${GREEN}5${NC}. Lister\t${GREEN}6${NC}. Mettre à jour\t${RED}7${NC}. Supprimer\n\n\n\n"
+	echo -e "  - ${WHITE}Applications et Packages${NC}\t${GREEN}4${NC}. Ajouter\t${GREEN}5${NC}. Lister\t${GREEN}6${NC}. Mettre à jour\t${RED}7${NC}. Supprimer\n\n"
 	
-	echo -e "  - ${WHITE}Les environnements${NC}\t\t${GREEN}8${NC}. Activer\t${GREEN}9${NC}. Créer\t${GREEN}10${NC}. Mettre à jour\t${GREEN}11${NC}. Importer (.yml)\n\n"
+	echo -e "  - ${WHITE}Les environnements${NC}\t\t${GREEN}8${NC}. Ajouter\t${GREEN}9${NC}. Lister\t${GREEN}10${NC}. Activer\t${DIM}11. Importer (.yml)${NC}\n\n"
 	
-	echo -e "\n\n\t\t\t\t\t\t\t\t\t\t  ${GREEN}12${NC}. Sortir de l'env.  |  ${RED}13${NC}. Supprimer"
+	echo -e "\n\n\t\t\t\t\t\t\t\t${GREEN}12${NC}. Sortir de l'env.  |  ${RED}13${NC}. Supprimer cet environnement"
 		
 	echo -e ${LINE_SIMPLE}
 
@@ -38,11 +42,11 @@ function conda_home {
 # QUESTION / CHOIX / ACTION
 			 
 	list_choice=("" "conda_channels_add" "conda_channels_list" "conda_channels_rmv" \
-		     "conda_pckg_add" "conda_pckg_list" "" "conda_pckg_rmv" \
-		     "conda_env_activate" "conda_env_add" "" "conda_env_import" \
+		     "conda_pckg_add" "conda_pckg_list" "conda_pckg_update" "conda_pckg_rmv" \
+		     "conda_env_add" "conda_env_list" "conda_env_activate" "" \
 		     "conda_env_deactivate" "conda_env_rmv")
 		     
-	ksln_answer "GREEN" && read CHOICE && ksln_page ${CHOICE}
+	ksln_answer "GREEN" && read CHOICE && cd ${PRJ_PATH} && ksln_page ${CHOICE}
 	
 	ksln_choice ${CHOICE} "13" "conda_home" && ${list_choice[$CHOICE]}
 
@@ -63,7 +67,9 @@ function conda_env_activate {
 
 	echo ""
 
-	conda_env_list
+	conda env list
+	
+	echo -e ${LINE_SIMPLE}
   
 # CORPS DE LA FONCTION
 
@@ -83,22 +89,37 @@ function conda_env_activate {
 	
 	echo -e "Vérifier votre nouveau environnement par '*' (${GREEN}Appuyer sur entrée${NC} pour continuer)"
 
-
-# CHOIX
-
 	read
+	
+	ksln_bash_konnect
 	
 }
 
 function conda_env_deactivate {
 
+local base_name="base"
+
 # HEADER
 	echo -ne "\e]0;Konsilion Hub - Environnements désactivation\a"
-	ksln_header " ACCUEIL > ENVIRONNEMENTS DE DEVELOPPEMENTS > " "DESACTIVATION"
+
+	ksln_subheader " ENV. DE DEVELOPPEMENT" "DESACTIVATION"
+
+if [ ${CONDA_NAME} == ${base_name} ]; then
+
+	echo -e "\n\n\t/!\ L'environnement actuel est celui de ${GREEN}base${NC}. Il est ${RED}impossible de quitter${NC} \
+cet environnement.\n\n"
 	
+	echo -e ${CONTINUE_PHRASE} && read
+	
+	conda_home
+
+else
+
 # INFORMATIONS
 
-	conda_env_list
+	conda env list
+	
+	echo -e ${LINE_SIMPLE}
 	
 # CORPS DE LA FONCTION
 	
@@ -107,66 +128,96 @@ function conda_env_deactivate {
 	conda deactivate
 	
 	conda_change
+		
+	echo -e "Vérifier votre nouveau environnement par '*'"
 	
 	conda_env_list
 	
-	echo -e "Vérifier votre nouveau environnement par '*' (${GREEN}Appuyer sur entrée${NC} pour continuer)"
+	ksln_bash_konnect
 	
-	
-# RACCOURCI
-
-# CHOIX
-
-# REFRESH
-
-	read && conda_home
-	
+fi	
 }
+
+
+
+function conda_env_verif {
+
+if [[ ${PRJ_NAME} = "apps" ]]; then
+
+	if [[ ${CONDA_DEFAULT_ENV} != "mercury" ]]; then
+	
+		conda activate mercury
+
+	fi
+
+else
+
+	if [[ ${CONDA_DEFAULT_ENV} != ${CONDA_NAME} ]]; then
+		
+		conda activate ${CONDA_NAME}
+
+	fi
+	
+fi
+}
+
+
+
+
+
+
+
 
 function conda_env_rmv {
 
 # HEADER
 	echo -ne "\e]0;Konsilion Hub - Environnements supressions\a"
-	ksln_header " ACCUEIL > ENVIRONNEMENTS DE DEVELOPPEMENTS > " "SUPPRESSION"
+	ksln_subheader "ENVIRONNEMENTS DE DEVELOPPEMENTS" "SUPPRESSION"
+
+local base_name="base"
+
+if [ ${CONDA_NAME} == ${base_name} ]; then
+
+	echo -e "\n\n\t/!\ L'environnement actuel est celui de ${GREEN}base${NC}. Il est ${RED}impossible de supprimer${NC} \
+cet environnement.\n\n"
 	
-# INFORMATIONS
+	echo -e ${CONTINUE_PHRASE} && read
+	
+	conda_home
+
+else
+
+	ksln_rmv_ask
+	
+	echo -e " Desactivation de l'environnement en cours ...\n"
+
+	conda deactivate
+		
+	echo -e " Suppression de l'environnement en cours ...\n"
+
+	conda remove --name ${CONDA_NAME} --all
+	
+	conda_change
+
+	echo -e ${LINE_DOUBLE}
 
 	conda_env_list
 	
-# CORPS DE LA FONCTION
-	
-	echo -e "  • ${GREEN}Nom de l'environnement à supprimer ${NC}? (${RED}attention${NC} : Opération ~ longue)\n"
-	
-	
-	read  env_name
-	
-	echo -e " Desactivation de l'environnement en cours ...\n"
-	
-	conda deactivate
-	
-	echo -e " Suppression de l'environnement en cours ...\n"
-
-	conda remove --name $env_name --all
-
-	echo -e ${LINE_DOUBLE}
-
-	conda env list
-	
-	echo -e ${LINE_DOUBLE}
-	
-	echo -e ${CONTINUE_PHRASE}
-
+	ksln_bash_konnect
+fi
 }
 
 function conda_env_add {
 
 # HEADER
 	echo -ne "\e]0;Konsilion Hub - Environnements création\a"
-	ksln_header " ACCUEIL > ENVIRONNEMENTS DE DEVELOPPEMENTS > " "CRÉATION"
+	
+	ksln_subheader "ENVIRONNEMENTS DE DEVELOPPEMENTS" "CRÉATION"
 	
 # INFORMATIONS
 
-	conda_env_list
+	conda env list	
+	echo -e "${LINE_SIMPLE}\n"
 	
 # CORPS DE LA FONCTION
 	
@@ -210,6 +261,9 @@ function conda_env_list {
 
 	conda env list	
 	echo -e "${LINE_SIMPLE}\n"
+	
+	echo -e ${CONTINUE_PHRASE} && read
+	
 }
 
 function conda_change {
@@ -227,7 +281,9 @@ function conda_env_import {
 	
 # INFORMATIONS
 
-	conda_env_list
+	conda env list
+	
+	echo -e ${LINE_SIMPLE}
 	
 # CORPS DE LA FONCTION
 	
@@ -260,13 +316,6 @@ function conda_env_import {
 	echo -e ${LINE_DOUBLE}
 	
 	echo -e ${CONTINUE_PHRASE}
-
-
-
-
-
-
-
 }
 
 
@@ -343,6 +392,16 @@ function conda_channels_list {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 function conda_pckg_list {
 
 # HEADER
@@ -416,7 +475,32 @@ function conda_pckg_rmv {
 }
 
 
+function conda_pckg_update {
 
+# HEADER
+	echo -ne "\e]0;Konsilion Hub - Packages\a"
+	ksln_subheader "PACKAGES > " "MISE A JOUR"
+	
+# CORPS DE LA FONCTION
 
+	echo -e "\n  Chargement des packages en cours ...\n"
 
+	conda list
+	
+	echo -e "\n  • ${GREEN}Nom du paquet à mettre à jour${NC} :\n"
+	
+	read  pckg_name
+	
+	echo -e "\n
+	Cette opération peut être ${RED}réellement longue${NC}. Conda mets à jour le package ${pckg_name} au sein de votre
+	environnement de développement : ${WHITE}${CONDA_NAME}${NC}
+	
+	Pour forcer l'arrêt : ${RED}Ctrl + C${NC}\n"	
 
+	echo -e ${LINE_DOUBLE}
+	
+	conda update --name ${CONDA_NAME} ${pckg_name}
+
+	echo -e "\n${CONTINUE_PHRASE}" && read
+	
+}

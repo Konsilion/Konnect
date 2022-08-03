@@ -9,27 +9,19 @@
 
 #################################################
 #                                               #
-#         VOS PARAMETRES - modifiables          #
+#         VOS PARAMETRES - à modifier           #
 #                                               #
 #################################################
-
 
 PRJ_PATH_ORIGIN="/home/nicolasbremond/Bureau/Konnect/server/lib/projects"
 
-
-
 #################################################
 #                                               #
-#             FONCTIONS PRINCIPALES             #
+#               FONCTIONS MODELES               #
 #                                               #
 #################################################
-
-
-
-
 
 function klsn_home_example {
-
 
 # A MODIFIER - Paramètres de votre page home
 
@@ -45,12 +37,10 @@ function klsn_home_example {
 	
 	ksln_header "" ${page_name} ${page_bck_color} 
 	
-	
 		
 # NE PAS MODIFIER - INFORMATIONS A AFFICHER
 	
 	ksln_info_banner ${page_color}
-	
 	
 	
 # A MODIFIER - LISTE DE ACTIONS NIVEAU PROJET
@@ -73,16 +63,12 @@ function klsn_home_example {
 	
 	echo -e "\n  Taper 1. pour afficher le modèle des fonctions. k00 pour retour à l'acceuil."
 	
-	
-	
-
 
 # A MODIFIER - LIER CHIFFRE ET FONCTIONS
 
 	list_choice=("" "prj_home" "git_home" "")
 	
 	local nbr_action=2 
-	
 	
 	
 # NE PAS MODIFIER - TRAITER L'ACTION
@@ -96,12 +82,7 @@ function klsn_home_example {
 	${page_master}
 }
 
-
-
-
-
 function ksln_function_example {
-
 
 # A MODIFIER - Paramètres de votre fonction
 
@@ -110,12 +91,10 @@ function ksln_function_example {
 	local page_master="konnect"
 
 
-
 # NE PAS MODIFIER - EN TÊTE et DESIGN GENERAL
 
 	echo -ne "\e]0;${HUB_NAME} - ${fct_name}\a"
 	ksln_subheader ${fct_process} ${fct_name}
-
 
 
 # A MODIFIER - CORPS DE VOTRE FONCTION
@@ -131,62 +110,48 @@ function ksln_function_example {
 	echo -e "\n  Pensez à partager vos fonctions"
 	
 
-
 # NE PAS MODIFIER - PRESS TO CONTINUE
 
 	echo -e ${CONTINUE_PHRASE} && read
 }
 
 
+#################################################
+#                                               #
+#          ELEMENTS DE MISES EN FORME           #
+#                                               #
+#################################################
 
 
 
-function ksln_bash_open {
+function ksln_drag_drop {
 
+echo -e "\n  ${GREEN}Faite glisser${NC} votre fichier ici et ${GREEN}appuyer sur entrée${NC} :\n\n"
 
-	echo -e "  $(ksln_local_ln /home/ "Ouvrir nouveau terminal")"
+echo -e "\t\t-----------------------------------"
+echo -e "\t\t|                                 |"
+echo -e "\t\t|                                 |"
+echo -e "\t\t|                                 |"
+echo -e "\t\t|   Faire glisser votre fichier   |"
+echo -e "\t\t|                                 |"
+echo -e "\t\t|               ici               |"
+echo -e "\t\t|                                 |"
+echo -e "\t\t|                                 |"
+echo -e "\t\t|                                 |"
+echo -e "\t\t-----------------------------------"
 
+echo -e "\n"
 
 }
 
 
 
-
-
-
-
-function ksln_bash_konnect {
-
-	cd ${PATH_ORIGIN}/server/etc/
-	clear
-	bash konnect.sh
-}
-
-
-function ksln_status {
-
-	line_project="${BLACK}${BCK_WHITE}  ${1}  ${PURPLE}   ${3}  ${NC}"
-
-	echo -e "${LINE_KONSILION} ${1}${BLACK}${BCK_GREEN}   ${2}   ${NC}\n\n"
-}
 
 
 function ksln_line_dot {
 
 	echo -e "${LINE_DOTTED}\n"
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 function ksln_choice {
 
@@ -199,6 +164,11 @@ function ksln_choice {
 }
 
 
+
+
+#################################################
+#                     ANSWER                    #
+#################################################
 function ksln_answer {
 
 case ${1} in
@@ -231,59 +201,44 @@ ksln_shortcuts
 
 
 
-
-
-
-
-
-
-
-function ksln_csv {
-
-INPUT=${1}
-OLDIFS=$IFS
-IFS=','
-[ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
-while read status reponame url
-do
-	echo -e "  - ${GREEN}$status${NC} - ${WHITE}$reponame${NC} : ${DIM}$url${NC}\n"
-
-done < $INPUT
-IFS=$OLDIFS
-}
-
-
-
-
-
-
-
-
-
+#################################################
+#                     HEADER                    #
+#################################################
 function ksln_header {
 
      	LINE_KONSILION="${BLACK}${BCK_WHITE}   ${HUB_NAME}   ${NC}"
 	echo -e "${LINE_KONSILION} ${1}${BLACK}${3}   ${2}   ${NC}\n"
 }
 
-
-
-
 function ksln_subheader {
 
 	echo -e "  ${1} ${BLACK}${BCK_PURPLE}   ${2}   ${NC}"
 }
 
-
-
-
-
 function ksln_info_banner {
+
+
+local inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+
+if [ "$inside_git_repo" ]; then
 
 # ${1}=Couleur
 
-	echo -e "  Projet : ${1}${PRJ_NAME}${NC}  |  Environnement : ${1}${CONDA_DEFAULT_ENV}${NC}"
+	echo -e "  Projet : ${1}${PRJ_NAME}${NC}  |  Environnement : ${1}${CONDA_NAME}${NC}   |   Branche : ${1}$(git branch | grep "*")${NC}"
 	echo -e "${LINE_SIMPLE}\n"
+
+
+else
+
+# ${1}=Couleur
+
+	echo -e "  Projet : ${1}${PRJ_NAME}${NC}  |  Environnement : ${1}${CONDA_NAME}${NC}"
+	echo -e "${LINE_SIMPLE}\n"
+
+fi
+
+
+
 }
 
 
@@ -293,6 +248,15 @@ function ksln_info_banner {
 
 
 
+
+
+
+
+
+
+#################################################
+#                   HYPERLIENS                  #
+#################################################
 function ksln_links {
 
 inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
@@ -303,7 +267,7 @@ if [ "$inside_git_repo" ]; then
 
 else
 
-	echo -e "  $(ksln_local_ln ${PRJ_PATH} "Dossier local")"
+	echo -e "  $(ksln_local_ln ${PRJ_PATH} "Dossier local")\n"
 
 fi
 }
@@ -322,19 +286,15 @@ function ksln_http_ln {
 
 
 
-
-
-
-
-
-
+#################################################
+#            RACCOURCIS PERSONNELS              #
+#################################################
 function ksln_shortcuts {
 
-	echo -e "${BLACK}${BCK_CYAN} k01 ${NC} - Projets      ${BLACK}${BCK_YELLOW} k02 ${NC} - Git"\
+	echo -e "${BLACK}${DIM} k00 ${NC} - Accueil      ${BLACK}${BCK_CYAN} k01 ${NC} - Projets      ${BLACK}${BCK_YELLOW} k02 ${NC} - Git"\
 	"      ${BLACK}${BCK_PURPLE} k03 ${NC} - Applications      ${BLACK}${BCK_GREEN} k04 ${NC} - Conda"\
 	"      ${BLACK}${BCK_CYAN} k05 ${NC} - Forge\n"
 }
-
 
 function ksln_page {
 
@@ -342,9 +302,6 @@ ksln_line_dot
 
 	case ${1} in
 
-		k-1)
-	     		clear && ksln_bash_konnect
-			;;
 	     	k00)
 			clear -x && konnect
 			;;
@@ -366,9 +323,48 @@ ksln_line_dot
 		cls)
 	     		clear -x
 			;;
+		wd)
+			echo ${PWD} 
+			;;
 
 	     	*)
 			;;
 	esac
+}
+
+
+function ksln_bash_konnect {
+
+	cd ${PATH_ORIGIN}/server/etc/
+	clear
+	bash konnect.sh
+}
+
+
+
+function ksln_continue_risk {
+
+	echo -e "\n ${RED}IMPORTANT : ${NC} Etes-vous sur de vouloir poursuivre ? ${GREEN}Entrée${NC} pour continuer  |  ${RED}Ctrl+C${NC} pour arrêter"
+	read
+
+
+}
+
+
+
+
+
+function ksln_csv {
+
+INPUT=${1}
+OLDIFS=$IFS
+IFS=','
+[ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
+while read status reponame url
+do
+	echo -e "  - ${GREEN}$status${NC} - ${WHITE}$reponame${NC} : ${DIM}$url${NC}\n"
+
+done < $INPUT
+IFS=$OLDIFS
 }
 

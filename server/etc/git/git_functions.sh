@@ -22,6 +22,8 @@ function git_home {
 
 # NE PAS MODIFIER - EN TÊTE et DESIGN GENERAL
 
+	conda_env_verif
+
 	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name}\a"
 
 	ksln_header "" ${page_name} ${page_bck_color} 
@@ -46,7 +48,7 @@ if [ "$inside_git_repo" ]; then
 
 	echo -e "  - ${WHITE}Vos modifications${NC}\t\t\t${GREEN}7${NC}. Afficher\t${GREEN}8${NC}. Ajouter\t${GREEN}9${NC}. Finaliser\t${DIM}10. Retirer${NC}\n"
 
-	echo -e "  - ${WHITE}Envoyer vos modifications${NC}\t\t${DIM}11. Vérifier${NC}\t${GREEN}12${NC}. Envoyer\t${GREEN}13${NC}. Archives\n\n"
+	echo -e "  - ${WHITE}Envoyer vos modifications${NC}\t\t${GREEN}11${NC}. Actualiser\t${GREEN}12${NC}. Envoyer\t${GREEN}13${NC}. Archives\n\n"
 
 	echo -e "\n\n\t\t\t\t\t\t\t      ${GREEN}14${NC}. Paramètres   |  ${GREEN}15${NC}. Sortir du projet  |  ${RED}16${NC}. Dé-giter"
 
@@ -56,7 +58,7 @@ if [ "$inside_git_repo" ]; then
 
 else
 
-	echo -e "  Dépôt projet : ${YELLOW}${PRJ_NAME}${NC}      |      Environnement : ${YELLOW}${CONDA_DEFAULT_ENV}${NC}"
+	echo -e "  Dépôt projet : ${YELLOW}${PRJ_NAME}${NC}      |      Environnement : ${YELLOW}${CONDA_NAME}${NC}"
 	echo -e "${LINE_SIMPLE}\n\n"
 
 	echo -e "\n  ${GREEN}19${NC}. Initialiser votre dossier avec Git : $(ksln_local_ln ${PRJ_PATH} "Dossier local")\n"	
@@ -83,12 +85,12 @@ fi
 	list_choice=("" "git_gh_repo_create" "git_gh_repo_view" \
 		     "git_list" "git_branch_activate" "git_branch_add" "git_branch_rmv" \
 		     "git_index_list" "git_index_add" "git_index_commit" "" \
-		     "" "git_repo_push" "git_archive_list" \
+		     "git_branch_pull" "git_repo_push" "git_archive_list" \
 		     "git_info" "prj_deactivate" "git_deinit"\
 		     "prj_activate" "git_clone" \
 		     "git_init")
 		     
-	ksln_answer "YELLOW" && read CHOICE && ksln_page ${CHOICE}
+	ksln_answer "YELLOW" && read CHOICE && cd ${PRJ_PATH} && ksln_page ${CHOICE}
 	
 	ksln_choice ${CHOICE} "19" "git_home" && ${list_choice[$CHOICE]}
 
@@ -115,7 +117,6 @@ function git_gh_repo_list {
 	ksln_subheader " ${GREEN}INFORMATIONS${NC} - GIT " "LISTE DES REPERTOIRES"
 
 	gh repo list 
-	
 }
 
 
@@ -123,6 +124,7 @@ function git_gh_repo_list {
 
 
 function git_gh_repo_create {
+
 
 	gh repo create
 	
@@ -155,7 +157,7 @@ function git_clone {
 
 	read remote_http
 
-	git clone $remote_http 
+	git clone $remote_http
 
 }
 
@@ -186,13 +188,13 @@ function git_branch_activate {
 
 	git branch
 
-	echo -e "\n  Indiquer le nom de votre ${PURPLE}nouvelle branche${NC} :\n"
+	echo -e "\n  Indiquer la branche à ${PURPLE}activer${NC} :\n"
 	
 	read branch_name
 
 	git checkout ${branch_name}
 
-	echo -e "\n  Vérifier sa création\n"
+	echo -e "\n  Vérifier son activation\n"
 	
 	git branch
 	
@@ -240,6 +242,8 @@ function git_branch_rmv {
 	
 	read branch_name
 	
+	ksln_continue_risk
+	
 	git branch ${branch_name}
 	
 	git branch -d ${branch_name}
@@ -252,7 +256,23 @@ function git_branch_rmv {
 
 }
 
+function git_branch_pull {
 
+	echo -e "\n ${RED}/!\ ${NC}Les modifications éventuelles apportées aux fichiers en ligne ${RED}seront appliquées${NC} à vos fichiers et dossiers en local.\n"
+
+	ksln_continue_risk
+	
+	echo -e ${LINE_DOUBLE}
+	
+	echo -e "\n${GREEN} Afin de continuer${NC} vous devez rentrer le nom de la branche actuelle : ${GREEN}$(git branch | grep "*")${NC}"
+
+	read branch_name
+
+	git pull origin ${branch_name}
+	
+	echo -e "\n${CONTINUE_PHRASE}" && read	
+
+}
 
 
 
@@ -278,7 +298,19 @@ function git_branch_rmv {
 function git_index_commit {
 
 	git commit
+}
 
+
+
+function git_repo_pull {
+
+	# ACTION DANGEREUSE
+	
+	# git diff --stat --cached origin/master
+	
+	branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+	
+	git pull origin $branch
 }
 
 
@@ -305,8 +337,6 @@ function git_repo_push {
 
 
 function git_info {
-
-	ksln_subheader "${PRJ_NAME} > " "STATUS GIT | GITHUB"
 	
 	echo -e "\n ${BLUE}GIT --${NC}\n"
 
@@ -379,36 +409,15 @@ function git_index_rmv {
 
 
 
-function git_repo_fetch {
-
-	echo ""
-
-}
-
-
-
-
 
 
 function git_init {
 
-	ksln_subheader "${PRJ_NAME} > " "INITIALISATION GIT"
 	
 	git init
-	
-	# gh repo create
-		
+			
 	echo -e ${LINE_DOUBLE}
-	
-	ksln_subheader " $WINDOWS - {RED}MANUEL D'UTILISATION${NC} - " "GIT INIT EDITION"
-	
-	echo -e " 
-	• Vous allez être redirigez vers un editeur de texte dont il faut connaitres trois commandes :\n\n
-	• ${GREEN}INSERER{NC} : Appuyez sur ${GREEN}i{NC}\n
-	• ${GREEN}QUITTER MODE INSERTION{NC} : Appuyez sur ${GREEN}esc{NC}\n
-	• ${GREEN}QUITTER + SAUVEGARDER{NC} : Appuyez sur ${GREEN}:q!{NC}\n" 
-	
-	read
+		read
 	
 	git_index_add
 	
@@ -425,6 +434,8 @@ function git_init {
 
 function git_deinit {
 
+	ksln_continue_risk
+
 	rm -rf ${PRJ_PATH}/.git
 
 }
@@ -435,13 +446,10 @@ function git_deinit {
 
 function git_index_add {
 
-	ksln_subheader "${PRJ_NAME} > " "AJOUT - SALLE D'ATTENTE (local)"
 	
-	git add *
-	
-	git add .gitignore
+	git add .
 
-	echo -e "\n  Vérifier votre ajout - commit : ${BLUE}${PRJ_NAME}${NC}\n"
+	echo -e "\n  Vérifier votre ajout - commit :\n"
 	
 	git status
 	

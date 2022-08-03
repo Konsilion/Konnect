@@ -18,6 +18,4 @@ plugins:
   - macros
   - search
   - mike
-
-markdown_extensions:
-  - footnotes   
+    
