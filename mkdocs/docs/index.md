@@ -5,7 +5,7 @@ hide:
 ---
 
 
-# **KONNECT** - Vos projets de A à Z.
+# **Konnect** - Vos projets de A à Z.
 
 
 

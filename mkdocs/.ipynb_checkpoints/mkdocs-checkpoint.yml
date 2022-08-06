@@ -20,6 +20,8 @@ plugins:
   - mike
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - footnotes
   - admonition
   - def_list

@@ -17,6 +17,12 @@ Lorsqu'un projet (dossier) est **connecté avec Git**, alors il est possible de 
 
 ---
 
+??? tip "Konnect ne 'Merge' pas"
+
+    La possibilité de **fusionner une branche** diverse avec la branche principale (master) n'est pas disponible. Cette **action engageante** de par sa nature, nous vous proposons de vous informer sur quand, comment et pourquoi faire un 'merge'.
+    
+    A l'avenir peut être que cette option serait être intégrée. [Dites le nous](../../../informations/contacts) si elle vous manque.
+
 
 
 === "Windows"
@@ -47,27 +53,6 @@ Lorsqu'un projet (dossier) est **connecté avec Git**, alors il est possible de 
 
 
 
-
-
-
-
-
-
-
-## Initialiser Git et GitHub CLI
-
-
-
-
-
-
-
-
-??? tip "Konnect ne 'Merge' pas"
-
-    La possibilité de **fusionner une branche** diverse avec la branche principale (master) n'est pas disponible. Cette **action engageante** de par sa nature, nous vous proposons de vous informer sur quand, comment et pourquoi faire un 'merge'.
-    
-    A l'avenir peut être que cette option serait être intégrée. [Dites le nous](../../../informations/contacts) si elle vous manque.
 
 
 

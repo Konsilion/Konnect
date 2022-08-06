@@ -3,7 +3,9 @@ hide:
     - toc
 ---
 
-# **Comprartimenter votre travail par branches** - *avec Konnect* 
+# **Comment travailler ensemble ?** - *avec Konnect*
+
+
 
 
 <style>
