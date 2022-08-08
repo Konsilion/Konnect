@@ -21,7 +21,7 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 
 * Technologie de **Data Science**
 
-## *Afin que la compréhension des outils n'interfère pas avec l'acquisition des méthodes*
+## *Produire et partager* les connaissances.
 
 ---
 
@@ -35,7 +35,7 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 
 
 
-![](https://img.shields.io/badge/Maintenu-Oui-success.svg) ![](https://img.shields.io/github/languages/top/Konsilion/Konnect?style=?style=for-the-badge) ![](https://img.shields.io/github/repo-size/Konsilion/Konnect?style=?style=for-the-badge)
+![](https://img.shields.io/badge/Maintenu-Oui-success.svg) ![](https://img.shields.io/github/repo-size/Konsilion/Konnect?style=?style=for-the-badge)
 
 
 <style>

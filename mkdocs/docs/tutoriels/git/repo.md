@@ -3,7 +3,7 @@ hide:
     - toc
 ---
 
-# **Gestion de vos projets** - *avec Konnect*
+# **Mise en commun de vos projets** - *avec Git*
 
 
 Lorsqu'un projet (dossier) est **connecté avec Git** alors il est possible de faire de nombreuses choses. Néanmoins, avec Konnect concentré vous sur l'essentiel :
@@ -20,6 +20,38 @@ Lorsqu'un projet (dossier) est **connecté avec Git** alors il est possible de f
     La possibilité de **fusionner une branche** diverse avec la branche principale (master) n'est pas disponible. Cette **action engageante** de par sa nature, nous vous proposons de vous informer sur quand, comment et pourquoi faire un 'merge'.
     
     A l'avenir peut être que cette option serait être intégrée. [Dites le nous](../../../informations/contacts) si elle vous manque.
+
+
+## Manuel d'utilisation Konnect
+
+!!! info "Prérequis"
+
+    Vous devez sélectionné un projet dans Konnect. (k01 > 21 > nom projet)
+
+
+### Initialiser mon projet
+
+Afin d'**ajouter votre projet** en cours à vos répertoire **en ligne**, faite les commandes suivantes :
+
+* Taper `k02` 
+* puis `1` pour lister toutes les modification
+* et enfin entrer le `nom du package`
+
+
+
+
+
+
+
+
+* Taper `k02` 
+* puis `7` pour lister toutes les modification
+* et enfin entrer le `nom du package`
+
+
+
+
+
 
 
 ![Git_Konnect](../../../images/git_active_konnect.png)

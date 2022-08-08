@@ -1,9 +1,10 @@
 ---
 hide:
   -toc
+  -navigation
 ---
 
-# Coordonnées
+# Contacts
 
 
 **Nicolas Brémond**

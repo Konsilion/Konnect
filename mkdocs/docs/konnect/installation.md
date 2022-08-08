@@ -151,7 +151,7 @@ Désormais, il vous faut **créer deux environnements** présentés ci-dessous. 
 
 Vous pouvez désormais **profiter pleinement** des fonctionnalités de Konsilion - Konnect. 
     
-[Vos premiers pas avec Konnect](../premiers_pas){ .md-button .md-button--primary }
+[Interface de Konnect](../presentation_konnect/#interface-konnect){ .md-button .md-button--primary }
 
 
 <style>

@@ -3,7 +3,7 @@ hide:
     - toc
 ---
 
-# **Gestion de vos projets** - *avec Konnect*
+# **Diffusion de vos projets** - *avec Git*
 
 
 Lorsqu'un projet (dossier) est **connecté avec Git** alors il est possible de faire de nombreuses choses. Néanmoins, avec Konnect concentré vous sur l'essentiel :

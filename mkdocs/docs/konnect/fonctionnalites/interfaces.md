@@ -1,17 +1,14 @@
-# **Vos premiers pas** *- avec Konnect*   
 
-*Pour installer et paramètrer Konnect c'est par [ici](../installation)*
 
----
-
-**Bienvenue sur Konnect**, nous vous proposons de voir l'**organisation dans son ensemble**. 
+# **Les différentes interfaces** de Konnect
+ 
 
 ![](../../images/konnect_accueil.png)
 
 
 ??? info "Description des commandes"
 
-    * **1**. Toutes les fonctionnalités concernant la gestion de projet
+    * **1**. Toutes les fonctionnalités concernant la documentation et modélisation
     * **2**. Versionner et Partager votre projet sur GitHub
     * **3**. Développer vos applications Web avec Mercury
     * **4**. Créer et modifier vos environnements avec la technologie Conda
@@ -35,7 +32,7 @@
 
 ![](../../images/prj_site_web.png)
 
-*Le projet séléctionné (ici Konnect) comporte une documentation de* ***type Site Web***
+*Le projet séléctionné (ici PicoJoule) comporte une documentation de* ***type Site Web***
 
 
 ??? info "Description des commandes"
@@ -50,7 +47,7 @@
 
 ![](../../images/prj_doc_scientifique.png)
 
-*Le projet séléctionné (ici Konnect) comporte une documentation de* ***type Documentation scientifique***
+*Le projet séléctionné (ici MethaConcept) comporte une documentation de* ***type Documentation scientifique***
 
 ??? info "Description des commandes"
 
@@ -64,7 +61,7 @@
 
 ![](../../images/prj_deactivate.png)
 
-*Le projet sélectionné actuellement est* ***apps*** *ainsi il vous faut taper k03 afin de*
+*Le projet sélectionné actuellement est* ***apps*** *ainsi il vous faut taper k03 afin d'accèder à la gestion de vos applications Web.*
 
 
 ??? info "Description des commandes"
@@ -78,7 +75,7 @@
 ![](../../images/git_init_konnect.png)
 
 
-*Le projet sélectionné actuellement* ***hors-ligne*** *, présent uniquement sur votre PC.*
+*Le projet sélectionné est actuellement* ***hors-ligne*** *, et présent uniquement sur votre PC.*
 
 ??? info "Description des commandes"
 
@@ -90,7 +87,7 @@
 
 ![](../../images/git_active_konnect.png)
 
-*Le projet sélectionné possède uns gestion des versions avec* ***git***
+*Le projet sélectionné possède une gestion* ***git***
 
 !!! warning "Votre projet est-il en ligne ?"
 
@@ -133,7 +130,7 @@
 
     
 
-## Gestion applications
+## Gestion des applications Web
 
 ![](../../images/apps_deactivate_konnect.png)
 
