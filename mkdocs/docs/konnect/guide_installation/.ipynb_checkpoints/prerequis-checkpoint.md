@@ -18,16 +18,16 @@
 
 === "MacOS"
   
-    * Télécharger et installer [**Git**](../../tutoriels/git/installation_git){target=}
+    * Télécharger et installer [**Git**](../../../tutoriels/git/installation_git){target=}
 
 === "Linux"
 
-    * Télécharger et installer [**Git**](../../tutoriels/git/installation_git){target=}
+    * Télécharger et installer [**Git**](../../../tutoriels/git/installation_git){target=}
 
 
 **Miniconda3** 
     
-* Télécharger et installer [**Miniconda3**](../../tutoriels/conda/installation_conda){target=}
+* Télécharger et installer [**Miniconda3**](../../../tutoriels/conda/installation_conda){target=}
 
 **GitHub**
 

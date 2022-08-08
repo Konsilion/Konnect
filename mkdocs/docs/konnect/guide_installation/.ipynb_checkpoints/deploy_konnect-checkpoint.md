@@ -4,7 +4,7 @@
 
 !!! note "Pour débuter"
 
-    Télécharger et extraire [**Konnect**](){target=} dans votre emplacement préféré *(ex : Bureau, Documents, etc)*
+    Télécharger et extraire [**Konnect**](https://konsilion.fr/wp/wp-content/uploads/2022/08/Konnect.zip){target=} dans votre emplacement préféré *(ex : Bureau, Documents, etc)*
 
 ## Paramètrage initial
 
@@ -19,14 +19,14 @@
 
     * Renommer le fichier `.env.example` en `.env` 
     * Ouvrir le fichier `.env` avec un éditeur de texte et **suivre les instructions**.
-    * Activer GitBash dans Windows terminal - [*voir tutoriel*]()
+    * Activer GitBash dans Windows terminal - [*voir tutoriel*](https://www.youtube.com/embed/zM9Mb-otqww?start=53){target=}
     * Taper la commande suivante : `bash param.sh` et ++enter++
 
 === "MacOS"
 
     * Renommer le fichier `.env.example` en `.env` 
-    * Ouvrir le fichier `.env` avec un éditeur de texte et **suivre les instructions**.
-    * Ouvrir le terminal dans le dossier Konnect
+    * Ouvrir le fichier `.env` avec un éditeur de texte et **lire les commentaires**.
+    * Ouvrir le terminal depuis le dossier Konnect
     * Taper la commande suivante : `bash param.sh` et ++enter++
 
 === "Linux"
@@ -37,6 +37,8 @@
     * Taper la commande suivante : `bash param.sh` et ++enter++
   
 ??? tip "Où est le fichier .env ?"
+
+    Dans le dossier **Konnect > server > etc > .env.example** | Afin d'afficher les fichiers masqués suivre les instructions ci-dessous.
 
     === "Windows"
 
