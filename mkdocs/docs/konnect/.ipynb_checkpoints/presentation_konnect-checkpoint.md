@@ -3,11 +3,7 @@ hide:
     -toc
 ---
 
-
-
-# **Vos premiers pas** *- avec Konnect*   
-
-## **Bienvenue sur Konnect !** 
+# **Bienvenue sur Konnect !** 
 
 Une solution de **développement et de gestion de projet** simple, performante et **Open-Source** pour les **associations, laboratoires** et **étudiants**.
 

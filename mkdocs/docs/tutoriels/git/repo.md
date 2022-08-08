@@ -1,6 +1,5 @@
 ---
 hide:
-    - toc
 ---
 
 # **Mise en commun de vos projets** - *avec Git*
@@ -22,31 +21,38 @@ Lorsqu'un projet (dossier) est **connecté avec Git** alors il est possible de f
     A l'avenir peut être que cette option serait être intégrée. [Dites le nous](../../../informations/contacts) si elle vous manque.
 
 
-## Manuel d'utilisation Konnect
-
-!!! info "Prérequis"
-
-    Vous devez sélectionné un projet dans Konnect. (k01 > 21 > nom projet)
-
-
-### Initialiser mon projet
+## Initialiser mon projet
 
 Afin d'**ajouter votre projet** en cours à vos répertoire **en ligne**, faite les commandes suivantes :
 
 * Taper `k02` 
-* puis `1` pour lister toutes les modification
-* et enfin entrer le `nom du package`
+* puis `1` pour créer un répertoire en ligne
 
 
+## Partager mes modifications
 
-
-
-
-
+Afin d'**ajouter vos modifications** en cours, sur votre branche courante dans votre répertoire **en ligne**, faite les commandes suivantes :
 
 * Taper `k02` 
 * puis `7` pour lister toutes les modification
-* et enfin entrer le `nom du package`
+* puis `8`, `9` et `10`
+* enfin taper `11` pour envoyer en ligne
+
+
+## Actualiser mon dossier local
+
+
+???+ fail inline end "Action irréversible"
+
+    Cette option est encore en développement, ainsi les modifications en contradiction avec votre dossier local prendrons le dessus et effaçeront vos données locales.
+
+
+
+Afin d'**actualiser votre projet local**, afin de ré&cupérer les éventuelles modifications depuis votre répertoire **en ligne**, faite les commandes suivantes :
+
+* Taper `k02` 
+* puis `13`
+
 
 
 

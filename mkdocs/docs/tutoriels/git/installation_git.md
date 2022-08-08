@@ -70,23 +70,6 @@ hide:
 
 
 
-
-
-
-
-
-
-
-
-## Initialiser Git et GitHub CLI
-
-
-
-
-
-
-
-
 ??? tip "Konnect ne 'Merge' pas"
 
     La possibilité de **fusionner une branche** diverse avec la branche principale (master) n'est pas disponible. Cette **action engageante** de par sa nature, nous vous proposons de vous informer sur quand, comment et pourquoi faire un 'merge'.

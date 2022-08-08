@@ -8,14 +8,11 @@ hide:
 
 
 
-
-??? warning inline "Version bêta"
-
-    Actuellement l'intégration de git à Konnect n'est pas terminée. Ainsi nous vous recommandons de suivre ces quelques instructions.
-
-
 ---
 
+!!! warning inline "Version bêta"
+
+    Actuellement l'intégration de git à Konnect n'est pas terminée. Ainsi nous vous recommandons de **suivre ces quelques instructions**.
 
 
 Lorsque vous travailler sur un projet, il est recommandé de le **compartimenter en branches**, où la branche dite **master** représenterait le tronc.
@@ -24,11 +21,15 @@ La branche master est celle qui présente la **version à stable** de votre proj
 
 ---
 
-Mais un projet évolue, il est **partagé**, des **modifications** sont faites et alors se pose la question de **comment mettre en commun** ?
-La manière dont vous organiser votre collaboration ne dépend que de vous (pas de recette miracle). 
+Voici comment **créer un nouvelle branche** depuis Konnect :
 
-Néanmoins, voici quelques piste d'organisations pouvant vous aider à définir la votre :
+* Taper `k02`
+* puis `5`
 
+Votre nouvelle branche sera créée depuis la `branche master`.
+
+
+![](../../images/git_active_konnect.png)
 
 
 

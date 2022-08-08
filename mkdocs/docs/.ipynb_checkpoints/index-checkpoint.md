@@ -9,17 +9,17 @@ hide:
 
 
 
-Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutions et outils utiles à la gestion de vos projets.
+Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutions et outils **utiles à la gestion et au développement de vos projets**.
 
 ---
 
 * Site Web en **moins de 5 minutes**
 
-* Documentation **collaborative scientifique**
+* Documentation **collaborative**
+
+* Technologies de **Data Science**
 
 * **Pas de serveur** à gérer
-
-* Technologie de **Data Science**
 
 ## *Produire et partager* les connaissances.
 
@@ -27,7 +27,7 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 
 
 
-[Présentation de Konnect](#){ .md-button .md-button--primary } [Installation](#){ .md-button .md-button--primary } [Premiers Pas](#){ .md-button .md-button--primary }
+[Présentation de Konnect](./konnect/presentation_konnect){ .md-button .md-button--primary } [Installation](./konnect/guide_installation/prerequis){ .md-button .md-button--primary } [Premiers Pas](./konnect/fonctionnalites/interfaces/){ .md-button .md-button--primary }
 
 ---
 

@@ -10,8 +10,11 @@ nav:
    
   - Présentation & Installation:  
       - Présentation: konnect/presentation_konnect.md
-      - Guide d'installation: konnect/installation.md
-       
+      - Guide d'installation: 
+          - Prérequis: konnect/guide_installation/prerequis.md
+          - Installer Konnect: konnect/guide_installation/deploy_konnect.md
+          - Initialisation: konnect/guide_installation/param_konnect.md
+          
   - Manuel d'utilisation:
       - Interfaces: konnect/fonctionnalites/interfaces.md
       - Site internet: 
@@ -23,10 +26,7 @@ nav:
           - Personnaliser: konnect/fonctionnalites/doc_scientifique/modification_doc.md
       - Applications Web:
           - Créer et Publier: konnect/fonctionnalites/web_apps/webapps_start.md
-          - Administration des applications: konnect/fonctionnalites/web_apps/admin_apps.md
-      - Data Science IDE:
-          - Jupyter Lab: konnect/fonctionnalites/web_apps/webapps_start.md
-          - Spyder: konnect/fonctionnalites/web_apps/admin_apps.md      
+          - Administration des applications: konnect/fonctionnalites/web_apps/admin_apps.md    
       - Konnect - Forge: 
           - Partager et Télécharger: konnect/fonctionnalites/forge/presentation_forge.md
   
@@ -40,10 +40,12 @@ nav:
           - Installation: tutoriels/git/installation_git.md
           - Répertoire projet: tutoriels/git/repo.md
           - Branche de travail: tutoriels/git/branch.md
-          - Collaborer: tutoriels/git/collaboration_git.md 
   
-  - Contacts: informations/contacts.md
-
+  - Communauté: 
+      - Prises de note: informations/pad.md
+      - Chat de discussion: informations/chat.md
+      - Les visios: informations/visio.md
+      - Contacts: informations/contacts.md
 
 
 
