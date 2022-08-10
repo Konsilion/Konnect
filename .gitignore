@@ -1,3 +1,4 @@
+/.gitignore
 /snapshots
 /Konnect/server/etc/.env
 /Konnect/server/lib/projects
