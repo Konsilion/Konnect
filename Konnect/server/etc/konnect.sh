@@ -56,7 +56,7 @@ function konnect {
 
 	echo -e "\n
 
-	${BCK_CYAN}__${NC} : Gestion projets .${GREEN}1${NC}\t\t\t${BCK_PURPLE}__${NC} : Applications .${GREEN}3${NC}\n\n
+	${BCK_CYAN}__${NC} : Projets et documentation .${GREEN}1${NC}\t${BCK_PURPLE}__${NC} : Applications .${GREEN}3${NC}\n\n
 	${BCK_YELLOW}__${NC} : Partage et versionning .${GREEN}2${NC}\t\t${BCK_GREEN}__${NC} : Environnements de développement .${GREEN}4${NC}\n\n
 
 	${GREEN}5${NC} : Accèder à la Forge\t\t${RED}Ctrl + C${NC} : Éteindre\n\n\n\n"
