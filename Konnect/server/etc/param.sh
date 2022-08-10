@@ -32,12 +32,6 @@ sed -i -e "s|${PRJ_PATH_ORIGIN}|$d|g" ${PATH_ORIGIN}/server/etc/functions.sh
 echo -e "\n  Etape 1/6 - ${GREEN}Terminée${NC} : Projets paramètrés\n" && echo -e "  ${GREEN}Appuyer sur entrée${NC} pour continuer ..." && read 
 
 
-
-
-
-
-
-
 echo -e ${LINE_SIMPLE}
 
 
@@ -156,4 +150,41 @@ echo -e "  ${GREEN}BRAVO !${N} installation fini à 95% ${RED}vous devez mainten
 	
 	
 	exit
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function ksln_param_min {
+
+
+
+
+d=${PATH_ORIGIN}/server/lib/projects
+sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}
+sed -i -e "s|${PRJ_PATH_ORIGIN}|$d|g" ${PATH_ORIGIN}/server/etc/functions.sh
+
+
+
+
+
+d=${PATH_ORIGIN}/server/lib/forge/Konsilion_Forge.csv
+sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_ENV}
+
+
+
+echo -e ${LINE_SIMPLE}
 }

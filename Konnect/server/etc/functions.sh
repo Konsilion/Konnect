@@ -13,7 +13,7 @@
 #                                               #
 #################################################
 
-PRJ_PATH_ORIGIN="/home/nicolasbremond/Documents/Konnect_dev/Konnect/server/lib/projects"
+PRJ_PATH_ORIGIN="/home/nicolasbremond/Bureau/Konnect/server/lib/projects"
 
 #################################################
 #                                               #
@@ -216,8 +216,13 @@ function ksln_konnect_upgrade {
 	ksln_header "" "  MISE A JOUR - TERMINEE  " ${BCK_GREEN}
 	
 	rm -rf $tmp_path
+		
+	ksln_param_min
+	
 	
 	ksln_bash_konnect
+	
+	
 }
 
 
