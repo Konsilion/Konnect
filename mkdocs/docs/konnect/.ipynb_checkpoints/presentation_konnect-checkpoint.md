@@ -21,7 +21,7 @@ Une solution de **développement et de gestion de projet** simple, performante e
 
 ??? question "Il existe des applications de Bureau pour ça, pourquoi Konnect ?"
 
-    Le fait que Konnect **utilise uniquement bash**, cela lui apporte une **rapidité d'execution** defiant toute concurrence. Ainsi Konnect pèse moins de 5Mo, n'installe aucune nouvelle technologie que celle existante, c'est une surcouche vous traduisant **l'informatique en francais**.
+    Le fait que Konnect **utilise uniquement bash**, lui apporte une **rapidité d'execution** defiant toute concurrence. Ainsi Konnect pèse moins de 5Mo, n'installe aucune nouvelle technologie que celle existante, c'est une surcouche vous traduisant **l'informatique en francais**.
 
     Pour ce qui est des applications telles que GitHub Desktop, GitKraken, Anaconda, Docker Desktop ... elles sont **lourdes et gourmandes en ressources** informatiques, nécessitant ainsi un ordinateur suffisament puissant. Cela représente un **frein à l'acquisition des outils** utiles à la diffusion des savoirs.
 
@@ -35,7 +35,7 @@ Une solution de **développement et de gestion de projet** simple, performante e
 
 !!! tip "Installer Konnect"
 
-    Afin d'installer et paramètrer Konnect c'est par [ici](../installation)
+    Afin d'installer et paramètrer Konnect c'est par [ici](../guide_installation/prerequis)
 
 
 <style>

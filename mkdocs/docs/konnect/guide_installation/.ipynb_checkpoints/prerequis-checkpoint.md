@@ -3,6 +3,11 @@
 ??? info "Les prérequis ?"
 
     Les logiciels présentés ci-dessous sont **tous nécessaires** au bon fonctionnement de Konnect. Konnect ne nécessite pas en soit d'installation, il s'agit d'une succession de scripts bash permettant l'**agancement et l'orchestration** de ces pré-requis.
+    
+    * Git gère pour vous la **mise en commun de vos projets**. C'est un **serveur distribué**, un peu à l'image de la block chain.
+    * Conda génère pour vous des **environnement de développement**. Ils assurent de travailler avec **les mêmes outils informatiques** (logiciels et version)
+    * Les prérequis de Windows sont utiles à l'**harmonisation de votre PC Windows** avec Linux et Mac (qui eux, utilisent une base UNIX - pour information)
+    
 
 === "Windows"
   
@@ -10,7 +15,9 @@
     * Télécharger et installer [**GitBash**](https://git-scm.com/download/){target=} :
         * Choisir `nano` comme editeur par défaut
         * Choisir d'utiliser `Windows terminal - Add Gitbash profile to Windows terminal`
-        * Choisir comme `Windows terminal` comme interface bash - **ne pas choisir MinTTY**   
+        * Choisir comme `Windows terminal` comme interface bash - **ne pas choisir MinTTY** 
+    
+    Laisser le **reste des options par défaut** `third party software,bundled openSSH, OpenSSL library, line ending conversions, Git credential manager, File system caching, no experimental option, etc)`
     
     !!! warning
     

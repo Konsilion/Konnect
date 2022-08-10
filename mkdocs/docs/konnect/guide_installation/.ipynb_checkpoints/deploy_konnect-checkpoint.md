@@ -15,27 +15,6 @@
     * Les raccourcis comme copier, coller sont différents. Ainsi préferer le clic droit pour voir les options disponibles.
 
 
-=== "Windows"
-
-    * Renommer le fichier `.env.example` en `.env` 
-    * Ouvrir le fichier `.env` avec un éditeur de texte et **suivre les instructions**.
-    * Activer GitBash dans Windows terminal - [*voir tutoriel*](https://www.youtube.com/embed/zM9Mb-otqww?start=53){target=}
-    * Taper la commande suivante : `bash param.sh` et ++enter++
-
-=== "MacOS"
-
-    * Renommer le fichier `.env.example` en `.env` 
-    * Ouvrir le fichier `.env` avec un éditeur de texte et **lire les commentaires**.
-    * Ouvrir le terminal depuis le dossier Konnect
-    * Taper la commande suivante : `bash param.sh` et ++enter++
-
-=== "Linux"
-
-    * Renommer le fichier `.env.example` en `.env` 
-    * Ouvrir ce fichier `.env` avec un éditeur de texte et **suivre les instructions**, enregistrer.
-    * Ouvrir le terminal dans le dossier Konnect
-    * Taper la commande suivante : `bash param.sh` et ++enter++
-  
 ??? tip "Où est le fichier .env ?"
 
     Dans le dossier **Konnect > server > etc > .env.example** | Afin d'afficher les fichiers masqués suivre les instructions ci-dessous.
@@ -52,13 +31,54 @@
     
         Afin d'afficher les éléments masqués sous Linux tapez ++ctrl++ + H
 
+
+
+??? tip "Où trouver mon chemin minconda3 ?"
+
+    === "Windows"
+    
+        Dans un terminal, taper la command `where conda` et **séléctionner le chemin jusqu'à `.../miniconda3`**, ne pas prendre après
+        
+    === "MacOS"
+    
+        Dans un terminal, taper la command `whereis conda` et **séléctionner le chemin jusqu'à `.../miniconda3`**, ne pas prendre après
+        
+    === "Linux"
+    
+        Dans un terminal, taper la command `whereis conda` et **séléctionner le chemin jusqu'à `.../miniconda3`**, ne pas prendre après
+
+
+
+
+=== "Windows"
+
+    * Renommer le fichier `.env.example` en `.env` *(voir ci-dessous 'Où est le fichier .env)*
+    * Ouvrir le fichier `.env` avec un éditeur de texte et **suivre les instructions**.
+    * Activer GitBash dans Windows terminal depuis dossier Konnect - [*voir tutoriel*](https://www.youtube.com/embed/zM9Mb-otqww?start=53){target=}
+    * Taper la commande suivante : `bash konnect.sh` et ++enter++
+
+=== "MacOS"
+
+    * Renommer le fichier `.env.example` en `.env` *(voir ci-dessous 'Où est le fichier .env)*
+    * Ouvrir le fichier `.env` avec un éditeur de texte et **lire les commentaires**.
+    * Ouvrir le terminal depuis le dossier Konnect
+    * Taper la commande suivante : `bash konnect.sh` et ++enter++
+
+=== "Linux"
+
+    * Renommer le fichier `.env.example` en `.env` *(voir ci-dessous 'Où est le fichier .env)*
+    * Ouvrir ce fichier `.env` avec un éditeur de texte et **suivre les instructions**, enregistrer.
+    * Ouvrir le terminal dans le dossier Konnect
+    * Taper la commande suivante : `bash konnect.sh` et ++enter++
+  
+
 ---
     
-- [x] Dans le même terminal taper la commande suivante `bash konnect.sh`, voilà **vous êtes Konnecté.e**
+- [x] Pour commencer taper `6` pour paramètrer Konnect, voilà **vous êtes Konnecté.e**[C'est à dire ?](#)
 
 ![Konnect Accueil](../../images/konnect_accueil.png)
 
--- *Taper directement `bash konnect.sh` pour vous connecter les prochaines fois.*
+-- *Pour vous connecter les prochaines fois, taper directement `bash konnect.sh` depuis un terminal lancer dans le dossier Konnect.*
 
 
 !!! success "Etape 2/3 - Installation de Konnect terminée"
