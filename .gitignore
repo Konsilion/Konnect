@@ -1,2 +1,3 @@
-/server/lib/projects
-/server/etc/.env
+/snapshots
+/Konnect/server/etc/.env
+/Konnect/server/lib/projects
