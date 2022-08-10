@@ -156,21 +156,23 @@ function ksln_konnect_upgrade {
 	local tmp_path=${PATH_ORIGIN}/tmp_upgrade
 		
 	ksln_header "" "  MISE A JOUR DE KONNECT  " ${BCK_PURPLE} 
-	
+
+
 # PREPARATION
 
 	mkdir ${tmp_path}
 
 	cd ${tmp_path}
 	
-	git clone --branch dev https://github.com/Konsilion/Konnect.git
+	git clone --branch master https://github.com/Konsilion/Konnect.git
 	
 	mkdir ${tmp_path}/server
 	
-	mv ${tmp_path}/Konnect/server/* ${tmp_path}/server
+	mv ${tmp_path}/Konnect/Konnect/server/* ${tmp_path}/server
 	
 	rm -rf ${tmp_path}/Konnect
 	
+
 	
 # DEPLACEMENTS PROJETS 
 	
@@ -179,18 +181,21 @@ function ksln_konnect_upgrade {
 	cp -r ${PATH_ORIGIN}/server/lib/projects ${tmp_path}/server/lib 
 
 
+
 # DEPLACEMENTS FORGE 
 	
 	rm -rf ${tmp_path}/server/lib/forge 
 	
 	cp -r ${PATH_ORIGIN}/server/lib/forge ${tmp_path}/server/lib 
 	
+
 		
 # DEPLACEMENTS FICHIERS .env
 	
 	cp ${PATH_ORIGIN}/server/etc/.env ${tmp_path}/server/etc/
 	
-	
+
+
 # REMPLACEMENTS DES DEUX SERVEURS
 
 	# Sauvegarde

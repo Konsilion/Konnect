@@ -1,0 +1,7 @@
+mljar-mercury
+rich
+pandas
+matplotlib
+numpy
+openpyxl
+IPython
