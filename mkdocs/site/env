@@ -15,20 +15,22 @@ nav:
           - Installer Konnect: konnect/guide_installation/deploy_konnect.md
           - Initialisation: konnect/guide_installation/param_konnect.md
           
-  - Manuel d'utilisation:
-      - Interfaces: konnect/fonctionnalites/interfaces.md
-      - Site internet: 
-          - Créer et Publier: konnect/fonctionnalites/site_web/start_site_web.md
-          - Personnaliser: konnect/fonctionnalites/site_web/modification_site_web.md
-          - Nom de domaine: konnect/fonctionnalites/site_web/cname_site_web.md
-      - Documentation scientifique: 
-          - Créer et Publier: konnect/fonctionnalites/doc_scientifique/doc_start.md
-          - Personnaliser: konnect/fonctionnalites/doc_scientifique/modification_doc.md
-      - Applications Web:
-          - Créer et Publier: konnect/fonctionnalites/web_apps/webapps_start.md
-          - Administration des applications: konnect/fonctionnalites/web_apps/admin_apps.md    
-      - Konnect - Forge: 
-          - Partager et Télécharger: konnect/fonctionnalites/forge/presentation_forge.md
+  - Manuels d'utlisation:
+      - Interfaces: 
+          - Tour d'horizon: konnect/fonctionnalites/interfaces.md
+      - Les Usages:
+          - Site internet: 
+              - Créer et Publier: konnect/fonctionnalites/site_web/start_site_web.md
+              - Personnaliser: konnect/fonctionnalites/site_web/modification_site_web.md
+              - Nom de domaine: konnect/fonctionnalites/site_web/cname_site_web.md
+          - Documentation scientifique: 
+              - Créer et Publier: konnect/fonctionnalites/doc_scientifique/doc_start.md
+              - Personnaliser: konnect/fonctionnalites/doc_scientifique/modification_doc.md
+          - Applications Web:
+              - Créer et Publier: konnect/fonctionnalites/web_apps/webapps_start.md
+              - Administration des applications: konnect/fonctionnalites/web_apps/admin_apps.md    
+          - Konnect - Forge: 
+              - Partager et Télécharger: konnect/fonctionnalites/forge/presentation_forge.md
   
   - En savoir plus:
       - Conda:
@@ -42,10 +44,11 @@ nav:
           - Branche de travail: tutoriels/git/branch.md
   
   - Communauté: 
-      - Prises de note: informations/pad.md
+      - Echanges autour de Konnect: informations/pad.md
       - Chat de discussion: informations/chat.md
       - Les visios: informations/visio.md
       - Contacts: informations/contacts.md
+      - Nos applications Web: applications/list_apps.md
 
 
 

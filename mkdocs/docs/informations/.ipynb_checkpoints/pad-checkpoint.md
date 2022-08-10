@@ -32,7 +32,11 @@ hide:
    
 
 
+???+ example "Liens audios"
 
+    | Utilité de cet échange | Enregistrement| 
+    | -------- | -------- | 
+    | De prouver la faisabilité d'un embarquement audio dans la doc. Ainsi, cela apporte la possibilité d'y faire référence et de revenir par la suite sur la doc | <audio controls><source src="../../sounds/output.wav" type="audio/wav">Votre navigateur ne supporte pas ce lecteur audio</audio>     |
 
 
 <style>
