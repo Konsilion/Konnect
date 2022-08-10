@@ -13,7 +13,7 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 
 ---
 
-* Site Web en **moins de 5 minutes**
+* Site Web en **quelques minutes**
 
 * Documentation **collaborative**
 
