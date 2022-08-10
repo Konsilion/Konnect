@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: docs/index
+parts:
+  - caption: Comment modifier cette documentation ?
+    chapters:
+    - file: docs/contenu/premiere_page
+  - caption: Communauté
+    chapters:
+    - file: docs/informations/premiers_pas

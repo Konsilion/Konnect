@@ -1,0 +1,23 @@
+INHERIT: ./docs/env
+
+theme: 
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest 
+  icon: 
+    repo: fontawesome/brands/git
+  logo: logo.png
+
+plugins:
+  - macros
+  - search
+  - mike
+
+markdown_extensions:
+  - footnotes   
