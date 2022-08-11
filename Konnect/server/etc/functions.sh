@@ -6,15 +6,6 @@
 #
 #####################################################################################################################
 
-
-#################################################
-#                                               #
-#         VOS PARAMETRES - à modifier           #
-#                                               #
-#################################################
-
-PRJ_PATH_ORIGIN="/home/nicolasbremond/Documents/Konnect/Konnect/server/lib/projects"
-
 #################################################
 #                                               #
 #               FONCTIONS MODELES               #
@@ -192,11 +183,14 @@ function ksln_konnect_upgrade {
 	
 
 		
-# DEPLACEMENTS FICHIERS .env
+# DEPLACEMENTS FICHIERS .env ET .params
 	
 	cp ${PATH_ORIGIN}/server/etc/.env ${tmp_path}/server/etc/
 	
-
+	cp ${PATH_ORIGIN}/server/etc/.params ${tmp_path}/server/etc/
+	
+	
+	
 
 # REMPLACEMENTS DES DEUX SERVEURS
 

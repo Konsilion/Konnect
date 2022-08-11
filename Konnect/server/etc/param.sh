@@ -23,8 +23,7 @@ function ksln_param {
 # Modification de PRJ_PATH depuis PATH_ORIGIN
 
 d=${PATH_ORIGIN}/server/lib/projects
-sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}
-sed -i -e "s|${PRJ_PATH_ORIGIN}|$d|g" ${PATH_ORIGIN}/server/etc/functions.sh
+sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_PARAM}
 echo -e "\n  Etape 1 - ${GREEN}Terminée${NC} : Projets paramètrés\n"
 
 
@@ -34,8 +33,8 @@ echo -e ${LINE_SIMPLE}
 
 # Modification de FORGE_PATH depuis PATH_ORIGIN
 
-d=${PATH_ORIGIN}/server/lib/forge/Konsilion_Forge.csv
-sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_ENV}
+d=${PATH_ORIGIN}/server/lib/forge/Forge.csv
+sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_PARAM}
 echo -e "\n  Etape 2 - ${GREEN}Terminée${NC} : Forge paramètrée\n"
 
 echo -e ${LINE_SIMPLE}
@@ -135,7 +134,7 @@ echo -e "\n  INITIALISATION - ${GREEN}Terminée${NC}\t${GREEN}Appuyer sur entré
 # Modification de PRJ_PATH depuis PATH_ORIGIN
 
 d="KONNECT_IS_INIT"
-sed -i -e "s|${KONNECT_INIT}|$d|g" ${PATH_ENV}
+sed -i -e "s|${KONNECT_INIT}|$d|g" ${PATH_PARAM}
 
 
 # ---
@@ -151,25 +150,4 @@ echo -e "  ${GREEN}BRAVO !${N} installation fini à 95% ${RED}vous devez mainten
 	
 	
 	exit
-}
-
-
-
-
-
-
-
-function ksln_param_upgrade {
-
-d=${PATH_ORIGIN}/server/lib/projects
-
-sed -i -e "s|${PRJ_PATH_ORIGIN}|$d|g" ${PATH_ORIGIN}/server/etc/functions.sh
-echo -e ${LINE_DOUBLE}
-
-
-echo -e "  ${GREEN}MISE A JOUR TERMINEE !${N} : Redémarrer Konnect " && read
-
-
-exit
-
 }

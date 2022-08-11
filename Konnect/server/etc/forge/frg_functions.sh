@@ -132,7 +132,7 @@ function frg_activate {
 function frg_change {
 
 d=$1
-sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_ENV}
+sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_PARAM}
 echo " Redemarage nécessaire ..."
 cd ${PATH_ORIGIN}/server/etc && bash konnect.sh
 

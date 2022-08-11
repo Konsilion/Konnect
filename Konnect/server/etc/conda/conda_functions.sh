@@ -387,7 +387,7 @@ function conda_env_list {
 
 function conda_change {
 
-sed -i -e "s|${CONDA_NAME}|${CONDA_DEFAULT_ENV}|g" ${PATH_ENV}
+sed -i -e "s|${CONDA_NAME}|${CONDA_DEFAULT_ENV}|g" ${PATH_PARAM}
 
 }
 

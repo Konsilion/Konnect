@@ -8,7 +8,7 @@
 
 ## Documentation et ressources
 
-* Documentation officielle : [Y accèder](https://konsilion.github.io/Konnect/1.0.1){target=}
+* Documentation officielle : [Y accèder](https://konsilion.github.io/Konnect/1.0.1)
 * Reporter une erreur : [Y accèder](https://github.com/Konsilion/Konnect/issues)
 
 ---

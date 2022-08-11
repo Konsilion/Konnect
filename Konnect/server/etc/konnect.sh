@@ -10,6 +10,8 @@ clear
 
 . ./.env
 
+. ./.params
+
 . ./param.sh
 
 . ${PATH_CONDA}/etc/profile.d/conda.sh		# Donne acces aux commandes conda dans le terminal - conda init issue
@@ -80,7 +82,7 @@ function konnect {
 
 # PARAMETRAGES
 
-if [[ ${KONNECT_INIT} = "NO_INIT_KONNECT_YET" ]]; then
+if [[ ${KONNECT_INIT} = "KONNECT_IS_NOT_INIT" ]]; then
 
 
 	ksln_header "" "INITIALISATION" ${BCK_CYAN}

@@ -232,7 +232,7 @@ echo -ne "\e]0;Konsilion Hub - Projet création\a"
 	
 	read  prj_name
 	
-	echo -e "\n  • Voulez vous créer un ${GREEN}répertoire en ligne${NC} (recommandé) : [O]/N"
+	echo -e "\n  • Voulez vous créer un ${GREEN}répertoire en ligne${NC} (recommandé) : [y]/n"
 	
 	read  prj_git
 	
@@ -248,7 +248,7 @@ echo -ne "\e]0;Konsilion Hub - Projet création\a"
 	
 		mkdir ${PATH_ORIGIN}/server/lib/projects/${prj_name}
 		
-		cp -r ${PATH_ORIGIN}/server/lib/templates/project ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+		cp -r ${PATH_ORIGIN}/server/lib/templates/project/* ${PATH_ORIGIN}/server/lib/projects/${prj_name}
 				
 		cd ${PATH_ORIGIN}/server/lib/projects/${prj_name}
 					
@@ -256,7 +256,7 @@ echo -ne "\e]0;Konsilion Hub - Projet création\a"
 		
 
 	
-	if [ "$prj_git" != "N" ]; then
+	if [ "$prj_git" != "n" ]; then
 	
 		git_init
 		
@@ -391,7 +391,7 @@ function prj_deactivate {
 function prj_change {
 
 d=$1
-sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}
+sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_PARAM}
 echo -e ${LINE_DOUBLE}
 echo -e " Redemarage nécessaire ... ${GREEN}Appuyer sur entrée${NC} pour continuer" && read 
 cd ${PATH_ORIGIN}/server/etc && bash konnect.sh
