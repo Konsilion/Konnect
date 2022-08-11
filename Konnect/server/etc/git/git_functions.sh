@@ -50,7 +50,7 @@ if [ "$inside_git_repo" ]; then
 
 	echo -e "  - ${WHITE}Répertoire en ligne${NC}\t\t\t${GREEN}11${NC}. Envoyer\t${GREEN}12${NC}. Statuts\t${RED}13${NC}. Actualiser\n\n"
 
-	echo -e "\n\n\t\t\t\t\t\t\t      ${GREEN}14${NC}. Paramètres   |  ${GREEN}15${NC}. Sortir du projet  |  ${RED}16${NC}. Dé-giter"
+	echo -e "\n\n\t\t\t\t\t\t   ${GREEN}14${NC}. Paramètres utilisateur   |  ${GREEN}15${NC}. Sortir du projet  |  ${RED}16${NC}. Dé-giter"
 
 	echo -e ${LINE_SIMPLE}
 
@@ -167,7 +167,7 @@ function git_clone {
 
 function git_archive_list {
 
-	git log
+	git log --graph --decorate --all
 
 	echo -e "\n${CONTINUE_PHRASE}" && read
 
@@ -202,32 +202,153 @@ function git_branch_activate {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 function git_branch_add {
 
 
 	ksln_subheader "${PRJ_NAME} > " "AJOUTER - BRANCHE"
+		
+	git branch --all --list -vv
 	
-	echo ""
+	echo -e ${LINE_DOUBLE}
 	
-	git branch
 	
-	echo -e "\n  Indiquer le nom de votre ${PURPLE}nouvelle branche${NC} :\n"
-	
-	read branch_name
-	
-	git branch ${branch_name}
-	
-	git checkout ${branch_name}
+	# Récupérer une branche en ligne ou créer en local
 
-	echo -e "\n  Vérifier sa création\n"
+	echo -e "  Que ${PURPLE}souhaitez-vous${NC} faire ?\n"
+
+
+	PS3="---------------------------------------- >> Taper le numéro de votre choix :"
+	options=("Télécharger depuis répertoire origin" "Nouvelle branche local" "Annuler")
+	select opt in "${options[@]}"
+
+	do
+	    case $opt in
+		"Télécharger depuis répertoire origin")
+		    
+			echo -e "\n  Indiquer le ${PURPLE}nom de cette branche${NC} :\n"
+			
+			read branch_name
+			
+			git branch ${branch_name} origin/${branch_name}
+			
+			git checkout ${branch_name}
+
+			echo -e "\n  Vérifier les branches\n"
+			
+			git branch --all --list -vv
+			
+			echo -e "\n${CONTINUE_PHRASE}" && read	
+
+		    	break
+
+
+		    break
+		    ;;
+		"Nouvelle branche local")
+		    
+			echo -e "\n  Indiquer le nom de votre ${PURPLE}nouvelle branche${NC} :\n"
+			
+			read branch_name
+			
+			git branch ${branch_name}
+			
+			git checkout ${branch_name}
+
+			echo -e "\n  Vérifier les branches\n"
+			
+			git branch --all --list -vv
+			
+			echo -e "\n${CONTINUE_PHRASE}" && read	
+
+		    	break
+		    ;;
+		"Annuler")
+		    git_home
+		    
+		    break
+		    ;;
+		*) 
+		    echo "Option invalide $REPLY"
+		    git_home
+		    
+		    break
+		    ;;
+	    esac
+	done
 	
-	git branch
 	
-	echo -e "\n${CONTINUE_PHRASE}" && read		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function git_branch_rmv {
 
@@ -358,7 +479,7 @@ function git_list {
 
 	echo -e "\n  Liste des branches du projet : ${BLUE}${PRJ_NAME}${NC}\n"
 	
-	git branch
+	git branch --all --list -vv
 	
 	echo -e "\n${CONTINUE_PHRASE}" && read	
 }

@@ -13,7 +13,7 @@
 #                                               #
 #################################################
 
-PRJ_PATH_ORIGIN="/home/nicolasbremond/Bureau/Konnect/server/lib/projects"
+PRJ_PATH_ORIGIN="/home/nicolasbremond/Documents/Konnect/Konnect/server/lib/projects"
 
 #################################################
 #                                               #

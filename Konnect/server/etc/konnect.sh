@@ -80,16 +80,70 @@ function konnect {
 
 # PARAMETRAGES
 
-cd ${PATH_ORIGIN} 
+if [[ ${KONNECT_INIT} = "NO_INIT_KONNECT_YET" ]]; then
 
-PRJ_LOAD=1
-PRJ_NAME=$(basename "$PRJ_PATH")
-if [[ ${PRJ_PATH_ORIGIN} = ${PRJ_PATH} ]]; then 
-	PRJ_LOAD=0
-	PRJ_NAME="Aucun projet chargé"
+
+	ksln_header "" "INITIALISATION" ${BCK_CYAN}
+
+	cd ${PATH_ORIGIN}
+	
+	echo -e "\n  Vous souhaitez ${GREEN}démarrer Konnect${NC} :
+	
+	1. Vous avez ${GREEN}renommé et modifier${NC} le fichier ${DIM}.env.example${NC} en ${DIM}.env${NC}
+	2. Si non, alors quitter et réaliser l'étape 1
+	2. Si oui, vous pouvez ${GREEN}continuer en tapant Entrée${NC}
+	
+	${RED}Ctrl + C${NC} pour quitter"
+	
+	echo -e "${LINE_DOUBLE}"
+	
+	read
+
+	ksln_param
+	
+	
+else
+
+	cd ${PATH_ORIGIN} 
+
+	PRJ_LOAD=1
+	PRJ_NAME=$(basename "$PRJ_PATH")
+	if [[ ${PRJ_PATH_ORIGIN} = ${PRJ_PATH} ]]; then 
+		PRJ_LOAD=0
+		PRJ_NAME="Aucun projet chargé"
+	fi
+
+	conda activate ${CONDA_NAME}
+	cd ${PRJ_PATH}
+
+	konnect	
 fi
-
-conda activate ${CONDA_NAME}
-cd ${PRJ_PATH}
-
-konnect
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

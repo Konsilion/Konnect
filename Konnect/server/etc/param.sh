@@ -25,11 +25,7 @@ function ksln_param {
 d=${PATH_ORIGIN}/server/lib/projects
 sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}
 sed -i -e "s|${PRJ_PATH_ORIGIN}|$d|g" ${PATH_ORIGIN}/server/etc/functions.sh
-
-
-
-
-echo -e "\n  Etape 1/6 - ${GREEN}Terminée${NC} : Projets paramètrés\n" && echo -e "  ${GREEN}Appuyer sur entrée${NC} pour continuer ..." && read 
+echo -e "\n  Etape 1 - ${GREEN}Terminée${NC} : Projets paramètrés\n"
 
 
 echo -e ${LINE_SIMPLE}
@@ -40,7 +36,7 @@ echo -e ${LINE_SIMPLE}
 
 d=${PATH_ORIGIN}/server/lib/forge/Konsilion_Forge.csv
 sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_ENV}
-echo -e "\n  Etape 2/6 - ${GREEN}Terminée${NC} : Forge paramètrée\n" && echo -e "  ${GREEN}Appuyer sur entrée${NC} pour continuer ..." && read 
+echo -e "\n  Etape 2 - ${GREEN}Terminée${NC} : Forge paramètrée\n"
 
 echo -e ${LINE_SIMPLE}
 
@@ -65,7 +61,7 @@ git config --global core.editor ${TEXT_EDITOR}
 
 
 
-echo -e "\n  Etape 3/6 - ${GREEN}Terminée${NC} : Git paramètré\t${GREEN}Appuyer sur entrée${NC} pour continuer ..." && read 
+echo -e "\n  Etape 3 - ${GREEN}Terminée${NC} : Git paramètré"
 
 echo -e ${LINE_SIMPLE}
 
@@ -74,9 +70,6 @@ echo -e ${LINE_SIMPLE}
 # Création des environnements nécessaires à Konnect
 
 ksln_header "" "CREATION ENVIRONNEMENT" ${page_bck_color} 
-
-echo -e "  Pour en savoir plus sur les environnements pour Konnect, consulter la page suivante : \n"
-
 
 conda config --add channels conda-forge
 
@@ -92,7 +85,7 @@ conda activate ke1
 
 conda_change
 
-echo -e "\n  Etape 4 - ${GREEN}Terminée${NC} : Initialisation de ke1.\t${GREEN}Appuyer sur entrée${NC} pour continuer ..." && read 
+echo -e "\n  Etape 4 - ${GREEN}Terminée${NC} : Initialisation de ke1." 
 
 echo -e ${LINE_SIMPLE}
 
@@ -103,7 +96,7 @@ ksln_header "" "AUTHENTIFICATION A GITHUB" ${page_bck_color}
 
 gh auth login --web
 
-echo -e "\n  Etape 4/6 - ${GREEN}Terminée${NC} : Connecté à GitHub par le terminal\t${GREEN}Appuyer sur entrée${NC} pour continuer ..." && read 
+echo -e "\n  Etape 5 - ${GREEN}Terminée${NC} : Connecté à GitHub par le terminal"
 
 echo -e ${LINE_SIMPLE}
 
@@ -118,7 +111,7 @@ ksln_header "" "AUTHENTIFICATION A HEROKU" ${page_bck_color}
 
 heroku login
 
-echo -e "\n  Etape 5/6 - ${GREEN}Terminée${NC} : Connecté à Heroku par le terminal\t${GREEN}Appuyer sur entrée${NC} pour continuer ..." && read 
+echo -e "\n  Etape 5 - ${GREEN}Terminée${NC} : Connecté à Heroku par le terminal"
 
 echo -e ${LINE_SIMPLE}
 
@@ -133,8 +126,16 @@ ksln_header "" "INITIALISATION DE CONDA AVEC BASH" ${page_bck_color}
 
 conda init bash
 
-echo -e "\n  Etape 6/6 - ${GREEN}Terminée${NC} : Conda paramètré pour bash\t${GREEN}Appuyer sur entrée${NC} pour continuer" && read 
+echo -e "\n  INITIALISATION - ${GREEN}Terminée${NC}\t${GREEN}Appuyer sur entrée${NC} pour continuer" && read 
 
+
+
+
+
+# Modification de PRJ_PATH depuis PATH_ORIGIN
+
+d="KONNECT_IS_INIT"
+sed -i -e "s|${KONNECT_INIT}|$d|g" ${PATH_ENV}
 
 
 # ---
@@ -158,20 +159,7 @@ echo -e "  ${GREEN}BRAVO !${N} installation fini à 95% ${RED}vous devez mainten
 
 
 
-
-
-
-
-
-
-
-
-
-
 function ksln_param_min {
-
-
-
 
 d=${PATH_ORIGIN}/server/lib/projects
 sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}

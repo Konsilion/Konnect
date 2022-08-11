@@ -232,6 +232,10 @@ echo -ne "\e]0;Konsilion Hub - Projet création\a"
 	
 	read  prj_name
 	
+	echo -e "\n  • Voulez vous créer un ${GREEN}répertoire en ligne${NC} (recommandé) : [O]/N"
+	
+	read  prj_git
+	
 	if [ -z "$prj_name" ]; then
 	
 		echo "Nom (vide), aucun dossier créé"
@@ -244,15 +248,13 @@ echo -ne "\e]0;Konsilion Hub - Projet création\a"
 	
 		mkdir ${PATH_ORIGIN}/server/lib/projects/${prj_name}
 		
-		cp -r ${PATH_ORIGIN}/server/lib/templates/project/* ${PATH_ORIGIN}/server/lib/projects/${prj_name}
+		cp -r ${PATH_ORIGIN}/server/lib/templates/project ${PATH_ORIGIN}/server/lib/projects/${prj_name}
 				
 		cd ${PATH_ORIGIN}/server/lib/projects/${prj_name}
-			
+					
 	fi
 		
-	echo -e "\n  • Voulez vous créer un ${GREEN}répertoire en ligne${NC} (recommandé) : [O]/N"
-	
-	read  prj_git
+
 	
 	if [ "$prj_git" != "N" ]; then
 	
@@ -270,7 +272,7 @@ echo -ne "\e]0;Konsilion Hub - Projet création\a"
 	fi
 	
 	prj_change ${PWD}
-	
+		
 	echo -e ${CONTINUE_PHRASE} && read
 }
 
@@ -301,10 +303,6 @@ echo -ne "\e]0;Konsilion Hub - Projets suppressions\a"
 	rm -rf ${PRJ_PATH}
 
 	echo -e "\n ${GREEN}terminée${NC}."
-
-	echo -e ${LINE_DOUBLE}
-
-	echo -e ${CONTINUE_PHRASE} && read
 
 	prj_change ${PRJ_PATH_ORIGIN}
 }
