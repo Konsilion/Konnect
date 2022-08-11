@@ -219,7 +219,7 @@ function ksln_konnect_upgrade {
 	
 	rm -rf ${tmp_path}
 		
-	ksln_param_min
+	ksln_param_upgrade
 }
 
 
