@@ -1,9 +1,5 @@
 # Konsilion Hub - Konnect
 
-
-## ***Afin que la compréhension des outils n'interfere pas avec la compréhension des méthodes.***
-
-
 ![](https://img.shields.io/badge/Maintenu-Oui-success.svg)
 ![](https://img.shields.io/github/languages/top/Konsilion/Konnect?style=?style=for-the-badge)
 ![](https://img.shields.io/github/repo-size/Konsilion/Konnect?style=?style=for-the-badge)
@@ -17,8 +13,12 @@
 
 ---
 
-
 ## Pourquoi utiliser la distribution logiciel Konnect ?
+
+
+***Afin que la compréhension des outils n'interfere pas avec la compréhension des méthodes.***
+
+
 
 - **Combine rapidité et légerté** : Par son architecture simplifiée et inspiré des services Linux, l'application Konnect vous octroie une interface rapide à déployer et comportant tout ce qu'il faut pour la DataScience collaborative.
 - **Appropriation technologique** : Avec les modèles de page principale et de fonction, il vous est possible de modifier Konnect selon les spécificités de votre organisation (association, laboratoire, école, ect).
