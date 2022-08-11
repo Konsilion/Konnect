@@ -1,0 +1,63 @@
+#####################################################################################################################
+#
+#	        	PARAMETRES DE KONNECT A NE PAS MODIFIER MANUELLEMENT
+#
+#####################################################################################################################
+
+
+# --- VOS PROJETS DANS KONNECT  -  remplacer les "..." par le CHEMIN DE VOTRE DOSSIER KONNECT
+
+	PRJ_PATH="PRJ_PATH_in_wait"
+	
+	FORGE_PATH="FORGE_PATH_in_wait" 	# 1 forge minimum.	
+	
+
+
+	PATH_PARAM=${PATH_ORIGIN}/server/etc/.params
+
+	PATH_ENV=${PATH_ORIGIN}/server/etc/.env	
+
+
+
+
+
+	KONNECT_INIT="KONNECT_IS_NOT_INIT"
+
+	CONDA_NAME="base"
+	
+	HUB_NAME="KONNECT"
+	
+	IDE_DEFAULT="apps_jupyter_lab" # Applications disponibles : apps_jupyter_lab, apps_jupyter_nb, apps_spyder
+
+	
+
+	
+	# Color
+	
+	SWITCH="\033["
+	NC="${SWITCH}0m"
+	GREEN="${SWITCH}1;32m"
+	RED="${SWITCH}1;31m"
+	BLUE="${SWITCH}1;36m"
+	PURPLE="${SWITCH}1;35m"
+	WHITE="${SWITCH}4;37m"
+	CYAN="${SWITCH}1;36m"
+	DIM="${SWITCH}2;37m"
+	BLACK="${SWITCH}0;30m"
+	YELLOW="${SWITCH}1;33m"
+	
+	# background color
+	
+	BCK_WHITE="${SWITCH}2;47m"
+	BCK_GREEN="${SWITCH}2;42m"
+	BCK_CYAN="${SWITCH}2;46m"
+	BCK_BLUE="${SWITCH}2;44m"
+	BCK_YELLOW="${SWITCH}2;43m"
+	BCK_PURPLE="${SWITCH}2;45m"
+	
+	# line blocks
+
+	CONTINUE_PHRASE="${GREEN}  Appuyer sur entrée ${NC} pour continuer ..."
+	LINE_DOTTED="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "
+	LINE_SIMPLE="________________________________________________________________________________________________________________________"
+	LINE_DOUBLE="\n________________________________________________________________________________________________________________________\n"
