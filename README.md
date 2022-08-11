@@ -1,16 +1,18 @@
 # Konsilion Hub - Konnect
 
+
+## ***Afin que la compréhension des outils n'interfere pas avec la compréhension des méthodes.***
+
+
 ![](https://img.shields.io/badge/Maintenu-Oui-success.svg)
 ![](https://img.shields.io/github/languages/top/Konsilion/Konnect?style=?style=for-the-badge)
 ![](https://img.shields.io/github/repo-size/Konsilion/Konnect?style=?style=for-the-badge)
 
 > **Important** : Ceci est une version Bêta.
 
-*Afin que la compréhension des outils n'interfere pas avec la compréhension des méthodes.*
-
 ## Documentation et ressources
 
-* Documentation officielle : [Y accèder](https://konsilion.github.io/Konnect)
+* Documentation officielle : [Y accèder](https://konsilion.github.io/Konnect/1.0.1){target=}
 * Reporter une erreur : [Y accèder](https://github.com/Konsilion/Konnect/issues)
 
 ---
@@ -26,12 +28,10 @@
 ### Fonctionnalités intégrées dans Konnect
 
 1. **Créez simplement et rapidement** vos projets ou alors importez vos projets existants.
-2. **Partagez en quelques clics** votre projet sur le 'cloud' avec ++GitHub++ (nécessite un compte GitHub) [en savoir plus](https://github.com)
-3. **Importez ou créez un environnement de développement** à l'aide de ++miniconda3++ [en savoir plus](https://docs.conda.io/en/latest/miniconda.html)
+2. **Partagez en quelques clics** votre projet sur le 'cloud' avec GitHub (nécessite un compte GitHub) 
+3. **Importez ou créez un environnement de développement** à l'aide de miniconda3
 3. **Rédigez et partagez votre documentation scientifique** collaborative sur le Web à l'aide de JupyterBook
 4. **Développez vos applications Web** avec vos logiciels de DataScience préférés (Jupyter, Spyder, etc.) et Mercury.
-
-
 
 
 ---
