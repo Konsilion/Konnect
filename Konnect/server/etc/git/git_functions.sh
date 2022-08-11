@@ -84,7 +84,7 @@ fi
 		 
 	list_choice=("" "git_gh_repo_create" "git_gh_repo_view" \
 		     "git_list" "git_branch_activate" "git_branch_add" "git_branch_rmv" \
-		     "git_index_list" "git_index_add" "git_index_commit" "" \
+		     "git_index_list" "git_index_add" "git_index_rmv" "git_index_commit" \
 		     "git_repo_push" "git_archive_list" "git_branch_pull" \
 		     "git_info" "prj_deactivate" "git_deinit"\
 		     "prj_activate" "git_clone" \
@@ -515,13 +515,13 @@ function git_index_rmv {
 	
 	git status
 	
-	echo -e "\n  Indiquer le chemin du fichier (faite glisser) :"
+	ksln_drag_drop
 	
 	read $d
 	
 	git restore --staged $d
 
-	echo -e "\n  Vérifier votre suppression - commit : ${BLUE}${PRJ_NAME}${NC}\n"
+	echo -e "\n  Vérifier votre action : ${BLUE}${PRJ_NAME}${NC}\n"
 	
 	git status
 	
@@ -568,7 +568,7 @@ function git_deinit {
 function git_index_add {
 
 	
-	git add .
+	git add -u
 
 	echo -e "\n  Vérifier votre ajout - commit :\n"
 	
