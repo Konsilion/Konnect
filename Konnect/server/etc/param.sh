@@ -166,13 +166,16 @@ sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}
 sed -i -e "s|${PRJ_PATH_ORIGIN}|$d|g" ${PATH_ORIGIN}/server/etc/functions.sh
 
 
-
-
-
 d=${PATH_ORIGIN}/server/lib/forge/Konsilion_Forge.csv
 sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_ENV}
 
 
+echo -e ${LINE_DOUBLE}
 
-echo -e ${LINE_SIMPLE}
+
+echo -e "  ${GREEN}MISE A JOUR TERMINEE !${N} : Redémarrer Konnect " && read
+
+
+ksln_bash_konnect
+
 }
