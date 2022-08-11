@@ -159,23 +159,17 @@ echo -e "  ${GREEN}BRAVO !${N} installation fini à 95% ${RED}vous devez mainten
 
 
 
-function ksln_param_min {
+function ksln_param_upgrade {
 
 d=${PATH_ORIGIN}/server/lib/projects
-sed -i -e "s|${PRJ_PATH}|$d|g" ${PATH_ENV}
+
 sed -i -e "s|${PRJ_PATH_ORIGIN}|$d|g" ${PATH_ORIGIN}/server/etc/functions.sh
-
-
-d=${PATH_ORIGIN}/server/lib/forge/Konsilion_Forge.csv
-sed -i -e "s|${FORGE_PATH}|$d|g" ${PATH_ENV}
-
-
 echo -e ${LINE_DOUBLE}
 
 
 echo -e "  ${GREEN}MISE A JOUR TERMINEE !${N} : Redémarrer Konnect " && read
 
 
-ksln_bash_konnect
+exit
 
 }

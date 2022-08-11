@@ -172,6 +172,8 @@ function ksln_konnect_upgrade {
 	
 	rm -rf ${tmp_path}/Konnect
 	
+	rm ${tmp_path}/server/etc/.env.example
+	
 
 	
 # DEPLACEMENTS PROJETS 
@@ -215,14 +217,9 @@ function ksln_konnect_upgrade {
 
 	ksln_header "" "  MISE A JOUR - TERMINEE  " ${BCK_GREEN}
 	
-	rm -rf $tmp_path
+	rm -rf ${tmp_path}
 		
 	ksln_param_min
-	
-	
-	ksln_bash_konnect
-	
-	
 }
 
 
