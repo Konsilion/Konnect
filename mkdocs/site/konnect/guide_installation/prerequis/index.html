@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-des-prerequis-etape-1" class="md-skip">
+        <a href="#installation-des-prerequis" class="md-skip">
           Aller au contenu
         </a>
       
@@ -401,8 +401,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_2_2">
@@ -449,20 +447,6 @@
     <li class="md-nav__item">
       <a href="../deploy_konnect/" class="md-nav__link">
         Installer Konnect
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../param_konnect/" class="md-nav__link">
-        Initialisation
       </a>
     </li>
   
@@ -1258,7 +1242,7 @@
 
 
 
-<h1 id="installation-des-prerequis-etape-1"><strong>Installation des prérequis</strong> - Etape 1<a class="headerlink" href="#installation-des-prerequis-etape-1" title="Permanent link">&para;</a></h1>
+<h1 id="installation-des-prerequis"><strong>Installation des prérequis</strong><a class="headerlink" href="#installation-des-prerequis" title="Permanent link">&para;</a></h1>
 <details class="info">
 <summary>Les prérequis ?</summary>
 <p>Les logiciels présentés ci-dessous sont <strong>tous nécessaires</strong> au bon fonctionnement de Konnect. Konnect ne nécessite pas en soit d'installation, il s'agit d'une succession de scripts bash permettant l'<strong>agancement et l'orchestration</strong> de ces pré-requis.</p>
@@ -1271,20 +1255,19 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">MacOS</label><label for="__tabbed_1_3">Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Respecter les deux points concernant GitBash</strong>. Sans quoi des problèmes de compatibilités vont subvenir avec <code>GitHub Client - gh</code>.</p>
+</div>
 <ul>
 <li>Télécharger et installer <a href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=fr-fr&amp;gl=FR" target="target"><strong>Windows terminal</strong></a></li>
 <li>Télécharger et installer <a href="https://git-scm.com/download/" target="target"><strong>GitBash</strong></a> :<ul>
-<li>Choisir <code>nano</code> comme editeur par défaut</li>
 <li>Choisir d'utiliser <code>Windows terminal - Add Gitbash profile to Windows terminal</code></li>
 <li>Choisir comme <code>Windows terminal</code> comme interface bash - <strong>ne pas choisir MinTTY</strong> </li>
 </ul>
 </li>
 </ul>
 <p>Laisser le <strong>reste des options par défaut</strong> <code>third party software,bundled openSSH, OpenSSL library, line ending conversions, Git credential manager, File system caching, no experimental option, etc)</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Respecter les trois points concernant GitBash</strong>. Sans quoi des problèmes de compatibilités vont subvenir avec <code>gh-client</code>.</p>
-</div>
 </div>
 <div class="tabbed-block">
 <ul>
@@ -1305,7 +1288,6 @@
 <p><strong>GitHub</strong></p>
 <ul>
 <li>S'enregistrer sur GitHub <a href="https://github.com/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&amp;source=header-repo&amp;source_repo=mljar%2Fmercury" target="target"><strong>Inscription GitHub</strong></a></li>
-<li>Télécharger et installer <a href="https://cli.github.com/" target="target"><strong>GitHub client CLI</strong></a></li>
 </ul>
 <p><strong>Heroku</strong></p>
 <ul>
@@ -1314,7 +1296,7 @@
 </ul>
 <hr />
 <div class="admonition success">
-<p class="admonition-title">Etape 1/3 - Installations des prérequis terminées</p>
+<p class="admonition-title">Installations des prérequis terminées</p>
 <p><strong>Bravo !</strong> Vous venez de finir une bonne étape. Désormais <strong>vous possédez tous les outils nécessaires</strong>, mais il reste à placer Konnect par dessus, afin de vous <strong>simplifier la vie</strong>.</p>
 </div>
 <p><br></p>

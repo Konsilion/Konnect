@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#konnect-sur-votre-pc-etape-2" class="md-skip">
+        <a href="#installer-konnect-sur-votre-pc" class="md-skip">
           Aller au contenu
         </a>
       
@@ -401,8 +401,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_2_2">
@@ -484,24 +482,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vos-environnements-de-developpement" class="md-nav__link">
+    Vos environnements de développement
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../param_konnect/" class="md-nav__link">
-        Initialisation
-      </a>
     </li>
   
 
@@ -1300,6 +1291,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vos-environnements-de-developpement" class="md-nav__link">
+    Vos environnements de développement
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1318,7 +1316,7 @@
 
 
 
-<h1 id="konnect-sur-votre-pc-etape-2"><strong>Konnect sur votre PC</strong> - Etape 2<a class="headerlink" href="#konnect-sur-votre-pc-etape-2" title="Permanent link">&para;</a></h1>
+<h1 id="installer-konnect-sur-votre-pc"><strong>Installer Konnect sur votre PC</strong><a class="headerlink" href="#installer-konnect-sur-votre-pc" title="Permanent link">&para;</a></h1>
 <h2 id="telechargement-du-dossier">Téléchargement du dossier<a class="headerlink" href="#telechargement-du-dossier" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Pour débuter</p>
@@ -1328,14 +1326,14 @@
 <details class="tip">
 <summary>Astuces pour le terminal</summary>
 <ul>
-<li>Pour ouvrir un terminal : clic droit dans le dossier maitre, et ouvrir terminal.</li>
-<li><strong>La souris ne marche pas</strong> dans le terminal, il faut utiliser les flèches</li>
-<li>Les raccourcis comme copier, coller sont différents. Ainsi préferer le clic droit pour voir les options disponibles.</li>
+<li>Pour ouvrir un terminal : <strong>clic droit dans le dossier cible</strong>, et ouvrir terminal.</li>
+<li><strong>La souris ne marche pas</strong> dans le terminal, il faut <strong>utiliser les flèches</strong></li>
+<li>Les raccourcis comme copier, coller sont différents. Ainsi <strong>préferer le clic droit</strong> pour voir les options disponibles.</li>
 </ul>
 </details>
 <details class="tip">
-<summary>Où est le fichier .env ?</summary>
-<p>Dans le dossier <strong>Konnect &gt; server &gt; etc &gt; .env.example</strong> | Afin d'afficher les fichiers masqués suivre les instructions ci-dessous.</p>
+<summary>Où sont les fichiers .env et .params ?</summary>
+<p>Dans le dossier <strong>Konnect &gt; server &gt; etc</strong> | Afin d'afficher les fichiers masqués suivre les instructions ci-dessous.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">MacOS</label><label for="__tabbed_1_3">Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1370,15 +1368,15 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li>Renommer le fichier <code>.env.example</code> en <code>.env</code> <em>(voir ci-dessous 'Où est le fichier .env)</em></li>
+<li>Renommer le fichier <code>.env.example</code> en <code>.env</code> et <code>.params.example</code> en <code>.params</code> </li>
 <li>Ouvrir le fichier <code>.env</code> avec un éditeur de texte et <strong>suivre les instructions</strong>.</li>
-<li>Activer GitBash dans Windows terminal depuis dossier Konnect - <a href="https://www.youtube.com/embed/zM9Mb-otqww?start=53" target="target"><em>voir tutoriel</em></a></li>
+<li><strong>Dans Windows terminal</strong> activer un <strong>onglet GitBash</strong> depuis le dossier Konnect - <a href="https://www.youtube.com/embed/zM9Mb-otqww?start=53" target="target"><em>voir tutoriel</em></a></li>
 <li>Taper la commande suivante : <code>bash konnect.sh</code> et <span class="keys"><kbd class="key-enter">Enter</kbd></span></li>
 </ul>
 </div>
 <div class="tabbed-block">
 <ul>
-<li>Renommer le fichier <code>.env.example</code> en <code>.env</code> <em>(voir ci-dessous 'Où est le fichier .env)</em></li>
+<li>Renommer le fichier <code>.env.example</code> en <code>.env</code> et <code>.params.example</code> en <code>.params</code> </li>
 <li>Ouvrir le fichier <code>.env</code> avec un éditeur de texte et <strong>lire les commentaires</strong>.</li>
 <li>Ouvrir le terminal depuis le dossier Konnect</li>
 <li>Taper la commande suivante : <code>bash konnect.sh</code> et <span class="keys"><kbd class="key-enter">Enter</kbd></span></li>
@@ -1386,7 +1384,7 @@
 </div>
 <div class="tabbed-block">
 <ul>
-<li>Renommer le fichier <code>.env.example</code> en <code>.env</code> <em>(voir ci-dessous 'Où est le fichier .env)</em></li>
+<li>Renommer le fichier <code>.env.example</code> en <code>.env</code> et <code>.params.example</code> en <code>.params</code> </li>
 <li>Ouvrir ce fichier <code>.env</code> avec un éditeur de texte et <strong>suivre les instructions</strong>, enregistrer.</li>
 <li>Ouvrir le terminal dans le dossier Konnect</li>
 <li>Taper la commande suivante : <code>bash konnect.sh</code> et <span class="keys"><kbd class="key-enter">Enter</kbd></span></li>
@@ -1396,13 +1394,51 @@
 </div>
 <hr />
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Pour commencer taper <code>6</code> pour paramètrer Konnect, voilà <strong>vous êtes Konnecté.e</strong><a href="#">C'est à dire ?</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Pour commencer taper <code>6</code> pour initialiser Konnect, voilà <strong>vous êtes Konnecté.e</strong></li>
 </ul>
 <p><img alt="Konnect Accueil" src="../../../images/konnect_accueil.png" /></p>
-<p>-- <em>Pour vous connecter les prochaines fois, taper directement <code>bash konnect.sh</code> depuis un terminal lancer dans le dossier Konnect.</em></p>
 <div class="admonition success">
-<p class="admonition-title">Etape 2/3 - Installation de Konnect terminée<p><strong>Une bonne chose de faite</strong>, vous avez maintenant votre maison numérique Konnect. <strong>Mais il est essentiel</strong> que vous meubliez cette maison, il s'agit de <strong>votre environnement</strong>.</p>
+<p class="admonition-title">Etape 1/2 - Installation de Konnect terminée<p><strong>Une bonne chose de faite</strong>, vous avez maintenant votre maison numérique Konnect. <strong>Mais il est essentiel</strong> que vous meubliez cette maison, il s'agit de <strong>votre environnement</strong>.</p>
 </p>
+</div>
+<h2 id="vos-environnements-de-developpement">Vos environnements de développement<a class="headerlink" href="#vos-environnements-de-developpement" title="Permanent link">&para;</a></h2>
+<p>Désormais, il vous faut <strong>créer deux environnements</strong>, rien de plus simple :</p>
+<details class="warning">
+<summary>Création d'environnement</summary>
+<p>Cette étape peut prendre un certain temps (~ 15 à 30 min) selon votre PC. Ainsi nous vous proposons <strong>différentes options lors de leur création</strong>. Ces dernières sont présentées <strong>dans Konnect directement</strong>.</p>
+<p>A l'avenir, pour créer vos environnements vous pourrez <a href="../../../tutoriels/conda/creation_environnement" target="target">suivre ce tutoriel</a> </p>
+</details>
+<details class="info">
+<summary>De quels environnements parlons nous ?</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Les bases de Konnect</label><label for="__tabbed_4_2">Applications Web</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>L'environnement suivant vous <strong>assure le minimum</strong> pour utiliser les services de Konnect.</p>
+<ul>
+<li><strong>Nom de l'environnement</strong> : <code>ke1</code></li>
+<li><strong>Cannal favoris</strong> : <code>conda-forge</code></li>
+<li><strong>Packages</strong> : <code>gh spyder jupyter jupyterlab nodejs mkdocs mkdocs-material mkdocs-macros-plugin mike jupyter-book</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>L'environnement suivant vous permet de <strong>créer des applications Web</strong> avec le logiciel Mercury.</p>
+<ul>
+<li><strong>Nom de l'environnement</strong> : <code>mercury</code></li>
+<li><strong>Cannal favoris</strong> : <code>conda-forge</code></li>
+<li><strong>Packages</strong> : <code>mercury jupyterlab nodejs</code></li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<ul>
+<li>Dans Konnect, taper la commande <code>k04</code></li>
+<li>Puis <code>11</code> afin de lancer la création des environnements de Konnect </li>
+</ul>
+<hr />
+<p>Après l'installation des deux environnements, <strong>profiter pleinement</strong> des <a href="../../fonctionnalites/interfaces">fonctionnalités de Konnect</a>. </p>
+<div class="admonition success">
+<p class="admonition-title">Konnect est prêt à l'emploi !</p>
 </div>
 <p><br></p>
 <style>
@@ -1446,13 +1482,13 @@
       
       
         
-        <a href="../param_konnect/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Initialisation" rel="next">
+        <a href="../../fonctionnalites/interfaces/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Tour d&#39;horizon" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Initialisation
+              Tour d'horizon
             </div>
           </div>
           <div class="md-footer__button md-icon">

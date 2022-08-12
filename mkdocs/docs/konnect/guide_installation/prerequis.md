@@ -1,4 +1,4 @@
-# **Installation des prérequis** - Etape 1
+# **Installation des prérequis**
 
 ??? info "Les prérequis ?"
 
@@ -10,18 +10,19 @@
     
 
 === "Windows"
+
+    !!! warning
+    
+        **Respecter les deux points concernant GitBash**. Sans quoi des problèmes de compatibilités vont subvenir avec `GitHub Client - gh`.
+
   
     * Télécharger et installer [**Windows terminal**](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=fr-fr&gl=FR){target=}
     * Télécharger et installer [**GitBash**](https://git-scm.com/download/){target=} :
-        * Choisir `nano` comme editeur par défaut
         * Choisir d'utiliser `Windows terminal - Add Gitbash profile to Windows terminal`
         * Choisir comme `Windows terminal` comme interface bash - **ne pas choisir MinTTY** 
     
     Laisser le **reste des options par défaut** `third party software,bundled openSSH, OpenSSL library, line ending conversions, Git credential manager, File system caching, no experimental option, etc)`
     
-    !!! warning
-    
-        **Respecter les trois points concernant GitBash**. Sans quoi des problèmes de compatibilités vont subvenir avec `gh-client`.
 
 === "MacOS"
   
@@ -39,7 +40,6 @@
 **GitHub**
 
 * S'enregistrer sur GitHub [**Inscription GitHub**](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=mljar%2Fmercury){target=}
-* Télécharger et installer [**GitHub client CLI**](https://cli.github.com/){target=}
 
 **Heroku**
 
@@ -48,7 +48,7 @@
 
 ---
 
-!!! success "Etape 1/3 - Installations des prérequis terminées"
+!!! success "Installations des prérequis terminées"
 
     **Bravo !** Vous venez de finir une bonne étape. Désormais **vous possédez tous les outils nécessaires**, mais il reste à placer Konnect par dessus, afin de vous **simplifier la vie**.
 
