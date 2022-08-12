@@ -13,7 +13,6 @@ nav:
       - Guide d'installation: 
           - Prérequis: konnect/guide_installation/prerequis.md
           - Installer Konnect: konnect/guide_installation/deploy_konnect.md
-          - Initialisation: konnect/guide_installation/param_konnect.md
           
   - Manuels d'utlisation:
       - Interfaces: 
