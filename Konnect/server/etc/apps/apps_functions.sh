@@ -246,7 +246,7 @@ do
             ;;
         "En ligne")
 
-            cd mkdocs && mike deploy $version_name && cd ..
+            cd mkdocs && mike deploy --update-aliases $version_name latest  && cd ..
 	    
 	    git_index_add
 	    

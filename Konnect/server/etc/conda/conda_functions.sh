@@ -103,6 +103,8 @@ case ${choice_env} in
 			1)
 				ksln_header "" "INSTALLATION DE TOUT LES PACKAGES" ${BCK_PURPLE}
 				conda install spyder jupyter jupyterlab nodejs mkdocs mkdocs-material mkdocs-macros-plugin mike jupyter-book
+				
+				mike set-default latest
 				;;
 			2)
 				
@@ -114,6 +116,9 @@ case ${choice_env} in
 				
 				ksln_header "" "INSTALLATION Mkdocs macros, Mike et JupyterBook" ${BCK_PURPLE}
 				conda install mkdocs-macros-plugin mike jupyter-book
+				
+				mike set-default latest
+				
 				;;
 			
 			*)
