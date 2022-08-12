@@ -10,7 +10,7 @@ Une solution de **développement et de gestion de projet** simple, performante e
 
 ???+ question "A quel besoin répond Konnect ? "
 
-    Vous donnez accès à des **services et applications** nécessitant de certaines compétences informatiques, mais néanmoins très utiles **pour produire et diffuser des savoirs** et **collaborer autour de projets communs**.
+    Vous donnez accès à des **services et applications** nécessitant normalement de certaines compétences informatiques, mais néanmoins très utiles **pour produire et diffuser des savoirs** et **collaborer autour de projets communs**.
 
 
 

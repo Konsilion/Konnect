@@ -10,16 +10,18 @@ Miniconda3 est un installateur minimaliste qui permet de **gérer des bibliothè
 Séléctionnez votre système d'exploitation afin de **suivre le tutoriel** associé. 
 
 
+???+ warning "Variables d'environnement"
+
+    **IMPORTANT** : Quand l'installateur de Miniconda vous demandera s'il faut **ajouter Conda aux variables d'environnements**, ou **est-ce qu'il faut initialiser conda**, faite oui !
+
+    Sinon conda sera installé mais non détecté par votre PC.
+
 === "Windows"
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-H_onyfW9VE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
-    ???+ warning "Variables d'environnement"
 
-        Si l'installateur de Conda vous demandera s'il faut **ajouter Conda aux variables d'environnements**, faite oui !
 
-        Sinon vous devrez les ajouter manuellement. Pour plus d'informations suivre ce [lien](https://stackoverflow.com/questions/52664293/why-or-why-not-add-anaconda-to-path).
-    
 === "MacOS"
    
     <iframe width="560" height="315" src="https://www.youtube.com/embed/IRINDtw5xro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

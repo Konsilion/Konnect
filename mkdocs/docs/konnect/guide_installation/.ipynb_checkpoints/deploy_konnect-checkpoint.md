@@ -1,23 +1,23 @@
 # **Installer Konnect sur votre PC**
 
-## Téléchargement du dossier
-
-!!! note "Pour débuter"
-
-    Télécharger et extraire [**Konnect**](https://konsilion.fr/wp/wp-content/uploads/2022/08/Konnect.zip){target=} dans votre emplacement préféré *(ex : Bureau, Documents, etc)*
-
-## Paramètrage initial
-
 ??? tip "Astuces pour le terminal"
 
     * Pour ouvrir un terminal : **clic droit dans le dossier cible**, et ouvrir terminal.
     * **La souris ne marche pas** dans le terminal, il faut **utiliser les flèches**
     * Les raccourcis comme copier, coller sont différents. Ainsi **préferer le clic droit** pour voir les options disponibles.
 
+## Téléchargement du dossier
 
-??? tip "Où sont les fichiers .env et .params ?"
+Télécharger et executer ce [fichier d'installation](https://konsilion.nohost.me/nextcloud/s/DrQQe3W2ysy49D3){target=} dans l'emplacement où vous souhaitez installer Konnect *(ex : Bureau, Documents, etc)* :
+    
+* Ouvrir un terminal dans ce même emplacement
+* Taper la commande suivante : `bash install.sh`
 
-    Dans le dossier **Konnect > server > etc** | Afin d'afficher les fichiers masqués suivre les instructions ci-dessous.
+## Paramètrage initial
+
+??? tip "Où est le fichier .env ?"
+
+    Dans le dossier **Konnect > server > etc > .env** | Afin d'afficher les fichiers masqués suivre les instructions ci-dessous.
 
     === "Windows"
 
@@ -52,23 +52,20 @@
 
 === "Windows"
 
-    * Renommer le fichier `.env.example` en `.env` et `.params.example` en `.params` 
     * Ouvrir le fichier `.env` avec un éditeur de texte et **suivre les instructions**.
-    * **Dans Windows terminal** activer un **onglet GitBash** depuis le dossier Konnect - [*voir tutoriel*](https://www.youtube.com/embed/zM9Mb-otqww?start=53){target=}
+    * Depuis le dossier Konnect activer **Windows terminal** puis un **onglet GitBash** - [*voir tutoriel*](https://www.youtube.com/embed/zM9Mb-otqww?start=53){target=}
     * Taper la commande suivante : `bash konnect.sh` et ++enter++
 
 === "MacOS"
-
-    * Renommer le fichier `.env.example` en `.env` et `.params.example` en `.params` 
+ 
     * Ouvrir le fichier `.env` avec un éditeur de texte et **lire les commentaires**.
     * Ouvrir le terminal depuis le dossier Konnect
     * Taper la commande suivante : `bash konnect.sh` et ++enter++
 
 === "Linux"
 
-    * Renommer le fichier `.env.example` en `.env` et `.params.example` en `.params` 
-    * Ouvrir ce fichier `.env` avec un éditeur de texte et **suivre les instructions**, enregistrer.
-    * Ouvrir le terminal dans le dossier Konnect
+    * Ouvrir le fichier `.env` avec un éditeur de texte et **suivre les instructions**, enregistrer.
+    * Ouvrir le terminal depuis le dossier Konnect
     * Taper la commande suivante : `bash konnect.sh` et ++enter++
   
 
@@ -81,7 +78,7 @@
 
 !!! success "Etape 1/2 - Installation de Konnect terminée"
     
-        **Une bonne chose de faite**, vous avez maintenant votre maison numérique Konnect. **Mais il est essentiel** que vous meubliez cette maison, il s'agit de **votre environnement**.
+    **Une bonne chose de faite**, vous avez maintenant votre maison numérique Konnect. **Mais il est essentiel** que vous meubliez cette maison, il s'agit de **votre environnement**.
 
 
 ## Vos environnements de développement

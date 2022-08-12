@@ -52,7 +52,7 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 /* Modify background */    
     
    body{margin-top:0px;
-        background:#ddd;
+        background:#f7f7f7;
     }
 
     

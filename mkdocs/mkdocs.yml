@@ -13,6 +13,7 @@ theme:
   icon: 
     repo: fontawesome/brands/git
   logo: logo.png
+  favicon: https://konsilion.fr/wp/wp-content/uploads/2022/03/Logo_Konsilion_1.png
 
 plugins:
   - macros
