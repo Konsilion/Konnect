@@ -33,13 +33,11 @@ clear
 
 function konnect {
 
-local version="1.0"
-
 # COMMENTAIRES : La page principale Konnect présente les principales actions possible avec le HUB.
 
 # MODIFIABLE - Paramètres de votre page home
 
-	local page_name="ACCUEIL"
+	local page_name="ACCUEIL - 1.0.0"
 	local page_color=${BLUE}
 	local page_bck_color=${BCK_CYAN}
 	local page_master="konnect"
@@ -48,7 +46,7 @@ local version="1.0"
 
 	conda_env_verif
 	
-	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name} - ${version}\a"
+	clear -x && echo -ne "\e]0;${HUB_NAME} - ${page_name}\a"
 	
 	ksln_header "" ${page_name} ${page_bck_color} 
 	
