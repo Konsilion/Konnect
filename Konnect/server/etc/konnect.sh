@@ -14,13 +14,9 @@ clear
 
 . ./param.sh
 
-<<<<<<< HEAD
 . ./winpath.sh
 
 . $(conda info --base)/etc/profile.d/conda.sh	# Donne acces aux commandes conda dans le terminal - conda init issue
-=======
-. ${PATH_CONDA}/etc/profile.d/conda.sh		# Donne acces aux commandes conda dans le terminal - conda init issue
->>>>>>> master
 
 . ${PATH_ORIGIN}/server/etc/functions.sh
 
@@ -39,11 +35,9 @@ clear
 
 function konnect {
 
-<<<<<<< HEAD
+
 local version="1.0.0"
 
-=======
->>>>>>> master
 # COMMENTAIRES : La page principale Konnect présente les principales actions possible avec le HUB.
 
 # MODIFIABLE - Paramètres de votre page home
