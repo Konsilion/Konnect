@@ -219,7 +219,9 @@ function ksln_konnect_upgrade {
 	
 	rm -rf ${tmp_path}
 		
-	ksln_param_upgrade
+	echo -e "\n\n  Relancer une nouvelle session de Konnect. Appuer sur (Entrer) pour fermer cette session." && read && exit
+	
+	
 }
 
 
