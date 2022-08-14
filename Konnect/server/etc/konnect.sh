@@ -14,6 +14,8 @@ clear
 
 . ./param.sh
 
+. ./winpath.sh
+
 . $(conda info --base)/etc/profile.d/conda.sh	# Donne acces aux commandes conda dans le terminal - conda init issue
 
 . ${PATH_ORIGIN}/server/etc/functions.sh

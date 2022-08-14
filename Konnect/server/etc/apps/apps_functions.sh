@@ -184,12 +184,12 @@ echo -e "  Que ${PURPLE}souhaitez-vous${NC} faire ?\n"
 
 
 PS3="---------------------------------------- >> Taper le numéro de votre choix :"
-options=("Mettre à jour une version existante" "Créer une nouvelle version" "Annuler")
+options=("MàJ version existante" "Créer une nouvelle version" "Annuler")
 select opt in "${options[@]}"
 
 do
     case $opt in
-        "Mettre à jour une version existante")
+        "MàJ version existante")
             
             echo -e ${LINE_DOUBLE}
             
@@ -247,9 +247,7 @@ do
         "En ligne")
 
             cd mkdocs && mike deploy --update-aliases $version_name latest  && cd ..
-	    
-	    git_index_add
-	    
+	       
 	    git_index_commit
 	    
 	    git_repo_push
@@ -608,9 +606,7 @@ echo -ne "\e]0;Konsilion Hub - Applications Web\a"
 
 
 function apps_mercury_publish {
-
-	    git_index_add
-	    
+   
 	    git_index_commit
 	    
 	    git_repo_push
