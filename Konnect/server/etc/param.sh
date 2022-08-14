@@ -22,38 +22,28 @@ function ksln_param {
 
 
 
-
-
-
-
-
-
-
-
-
-
 # Version OS Check
 
 case "$OSTYPE" in
   darwin*)  
-  	echo "OSX" 
+  	echo "Installation pour : OSX" 
   	tmp_pid_idx="2"
   	tmp_editor="TextEdit"
   	;; 
   linux*)   
-  	echo "LINUX" 
+  	echo "Installation pour : LINUX" 
   	tmp_pid_idx="2"
   	tmp_editor="gedit"
   	;;
   	
   msys*)    
-  	echo "WINDOWS"
+  	echo "Installation pour : WINDOWS"
   	tmp_pid_idx="1"
   	tmp_editor="notepad"
   	;;
   	
   cygwin*)  
-  	echo "ALSO WINDOWS" 
+  	echo "Installation pour : WINDOWS" 
   	tmp_pid_idx="1"
   	tmp_editor="notepad"
   	;;
@@ -61,8 +51,6 @@ case "$OSTYPE" in
   	echo "unknown: $OSTYPE" ;;
 esac
 
-echo ${tmp_pid_idx}
-echo ${tmp_editor}
 
 sed -i -e "s|${PID_IDX}|${tmp_pid_idx}|g" ${PATH_PARAM}
 sed -i -e "s|${TEXT_EDITOR}|${tmp_editor}|g" ${PATH_PARAM}
@@ -121,7 +109,7 @@ echo -e "\n\n  - Quel est ${GREEN}votre nom${NC} :" && read git_name && git conf
 
 echo -e "\n\n  - Quel est ${GREEN}votre adresse mail${NC} :" && read git_mail && git config --global --replace-all user.email ${git_mail}
 
-git config --global core.editor ${TEXT_EDITOR}
+git config --global core.editor ${tmp_editor}
 
 echo -e "\n  Etape 3 - ${GREEN}Terminée${NC} : Git paramètré"
 

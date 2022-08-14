@@ -91,12 +91,9 @@ if [[ ${KONNECT_INIT} = "KONNECT_IS_NOT_INIT" ]]; then
 
 	cd ${PATH_ORIGIN}
 	
-	echo -e "\n  Vous souhaitez ${GREEN}installer et démarrer Konnect${NC} :
+	echo -e "\n  Vous souhaitez ${GREEN}paramètrer Konnect${NC} :
 	
-	Vous avez ${GREEN}installer et vérifier${NC} la bonne installation de ${DIM}Miniconda3${NC} et de ${DIM}Git${NC} : $(ksln_http_ln "https://konsilion.github.io/Konnect/latest/konnect/guide_installation/prerequis/" "Dépôt en ligne")
-	
-	- Si non, alors quitter et réaliser ces étapes dites de prérequis.
-	- Si oui, vous pouvez ${GREEN}continuer en tapant Entrée${NC}
+	Si oui, vous pouvez ${GREEN}continuer en tapant Entrée${NC}
 	
 	${RED}Ctrl + C${NC} pour quitter"
 	
