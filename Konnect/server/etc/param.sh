@@ -48,7 +48,7 @@ ksln_header "" "PARAMETRAGE DE GIT" ${page_bck_color}
 
 echo -e "\n  Les informations demandées maintenant ${DIM}(nom et mail)${NC} sont là pour aider à constituer un historique."
 
-echo -e "\n  ${DIM}Elles ne sont pas obligatoires, mais ${WHITE}fortement recommandées.${NC}"
+echo -e "\n  ${DIM}Elles ne sont pas obligatoires, mais ${WHITE}fortement recommandées.${NC} Tapper entrée pour continuer" && read
 
 echo -e "\n\n  - Quel est ${GREEN}votre nom${NC} :" && read git_name && git config --global --replace-all user.name ${git_name}
 
@@ -158,6 +158,7 @@ echo -e "  ${GREEN}BRAVO !${N} installation fini à 95% ${RED}vous devez mainten
 	2. puis entrer la commande ${GREEN}bash konnect.sh${NC} et entrée
 	3. (essentiel) dans Konnect, taper ${GREEN}k04 > 11${NC} pour finir d'installer les environnements ke1 et mercury" && read
 	
-	
+cd ./Konnect
+
 	exit
 }
