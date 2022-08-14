@@ -158,7 +158,7 @@ echo -e "  ${GREEN}BRAVO !${N} installation fini à 95% ${RED}vous devez mainten
 	2. puis entrer la commande ${GREEN}bash konnect.sh${NC} et entrée
 	3. (essentiel) dans Konnect, taper ${GREEN}k04 > 11${NC} pour finir d'installer les environnements ke1 et mercury" && read
 	
-echo ${PWD}
+cd ${PATH_ORIGIN}
 
 	exit
 }
