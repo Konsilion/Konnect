@@ -170,6 +170,9 @@ case "$OSTYPE" in
   	echo "unknown: $OSTYPE" ;;
 esac
 
+echo ${tmp_pid_idx}
+echo ${tmp_editor}
+
 sed -i -e "s|${PID_IDX}|${tmp_pid_idx}|g" ${PATH_PARAM}
 sed -i -e "s|${TEXT_EDITOR}|${tmp_editor}|g" ${PATH_PARAM}
 
