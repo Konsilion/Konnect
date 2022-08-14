@@ -75,9 +75,13 @@ conda config --add channels conda-forge
 
 echo -e ${LINE_DOUBLE}
 
+echo -e "\n  Initialisation de l'environnement mercury, veuillez patienter quelques instants ..."
+
 conda create --name mercury python
 
 echo -e ${LINE_DOUBLE}
+
+echo -e "\n  Initialisation de l'environnement ke1, veuillez patienter quelques instants ..."
 
 conda create --name ke1 python gh
 
@@ -85,7 +89,7 @@ conda activate ke1
 
 conda_change
 
-echo -e "\n  Etape 4 - ${GREEN}Terminée${NC} : Initialisation de ke1." 
+echo -e "\n  Etape 4 - ${GREEN}Terminée${NC} : Initialisation des environnements terminée." 
 
 echo -e ${LINE_SIMPLE}
 
@@ -128,11 +132,11 @@ echo -e ${LINE_SIMPLE}
 
 # Initialisation de conda avec le terminal bash
 
-ksln_header "" "INITIALISATION DE CONDA AVEC BASH" ${page_bck_color} 
+# ksln_header "" "INITIALISATION DE CONDA AVEC BASH" ${page_bck_color} 
 
-conda init bash
+# conda init bash
 
-echo -e "\n  INITIALISATION - ${GREEN}Terminée${NC}\t${GREEN}Appuyer sur entrée${NC} pour continuer" && read 
+# echo -e "\n  INITIALISATION - ${GREEN}Terminée${NC}\t${GREEN}Appuyer sur entrée${NC} pour continuer" && read 
 
 
 
@@ -150,10 +154,9 @@ echo -e ${LINE_DOUBLE}
 
 echo -e "  ${GREEN}BRAVO !${N} installation fini à 95% ${RED}vous devez maintenant${NC} :
 	
-	1. ${RED}Fermer${NC} ce terminal 
-	2. ${GREEN}Redemarrez${NC} un nouveau terminal depuis le dossier Konnect
-	3. Taper la commande ${GREEN}bash konnect.sh${NC} afin de démarrer
-	4. dans Konnect, taper ${GREEN}k04 > 11${NC} pour initialiser les environnements de Konnect" && read
+	1. ${GREEN}Taper entrée${NC}
+	2. puis entrer la commande ${GREEN}bash konnect.sh${NC} et entrée
+	3. (essentiel) dans Konnect, taper ${GREEN}k04 > 11${NC} pour finir d'installer les environnements ke1 et mercury" && read
 	
 	
 	exit
