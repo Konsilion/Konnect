@@ -40,8 +40,12 @@ echo -e "\n  Etape 2 - ${GREEN}Terminée${NC} : Forge paramètrée\n"
 echo -e ${LINE_SIMPLE}
 
 
-# Git configuration
 
+
+
+
+
+# Git configuration
 
 ksln_header "" "PARAMETRAGE DE GIT" ${page_bck_color} 
 
@@ -124,6 +128,50 @@ heroku login
 echo -e "\n  Etape 5 - ${GREEN}Terminée${NC} : Connecté à Heroku par le terminal"
 
 echo -e ${LINE_SIMPLE}
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Version OS Check
+
+case "$OSTYPE" in
+  darwin*)  
+  	echo "OSX" 
+  	tmp_pid_idx="2"
+  	tmp_editor="TextEdit"
+  	;; 
+  linux*)   
+  	echo "LINUX" 
+  	tmp_pid_idx="2"
+  	tmp_editor="gedit"
+  	;;
+  	
+  msys*)    
+  	echo "WINDOWS"
+  	tmp_pid_idx="1"
+  	tmp_editor="notepad"
+  	;;
+  	
+  cygwin*)  
+  	echo "ALSO WINDOWS" 
+  	tmp_pid_idx="1"
+  	tmp_editor="notepad"
+  	;;
+  *)        
+  	echo "unknown: $OSTYPE" ;;
+esac
+
+sed -i -e "s|${PID_IDX}|${tmp_pid_idx}|g" ${PATH_PARAM}
+sed -i -e "s|${TEXT_EDITOR}|${tmp_editor}|g" ${PATH_PARAM}
 
 
 

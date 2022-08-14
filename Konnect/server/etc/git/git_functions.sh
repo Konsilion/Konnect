@@ -536,11 +536,9 @@ function git_init {
 
 	
 	git init
-	
-				
+		
 	echo -e ${LINE_DOUBLE}
-		read
-	
+			
 	git add .
 	
 	echo -e ${LINE_DOUBLE}
