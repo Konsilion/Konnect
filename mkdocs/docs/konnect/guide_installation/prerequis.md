@@ -1,19 +1,39 @@
-# **Installation des prérequis**
+---
+hide:
+    - toc
+---
 
-??? info "Les prérequis ?"
 
-    Les logiciels présentés ci-dessous sont **tous nécessaires** au bon fonctionnement de Konnect. Konnect ne nécessite pas en soit d'installation, il s'agit d'une succession de scripts bash permettant l'**agancement et l'orchestration** de ces pré-requis.
-    
-    * Git gère pour vous la **mise en commun de vos projets**. C'est un **serveur distribué**, un peu à l'image de la block chain.
-    * Conda génère pour vous des **environnement de développement**. Ils assurent de travailler avec **les mêmes outils informatiques** (logiciels et version)
-    * Les prérequis de Windows sont utiles à l'**harmonisation de votre PC Windows** avec Linux et Mac (qui eux, utilisent une base UNIX - pour information)
-    
+# **Les essentiels de Konnect**
+
+Les applications présentées ci-dessous sont **toutes nécessaires** au bon fonctionnement de Konnect.
+
+* Git gère la **mise en commun des projets, données, etc** sous la forme d'un **serveur distribué**.
+* Conda génère pour vous des **environnement de développement**. Cela assure la compatibilité entre nos **différents ordinateurs** et leur environnement (logiciels, version, etc)
+* `Windows` Les prérequis supplémentaires sont utiles à l'**harmonisation de votre PC** avec Linux et Mac.
+
+
+!!! info "Konnect ~ Orchestrateur des pré-requis"
+    Konnect ne nécessite pas d'installation en soit , il s'agit d'une succession de scripts bash permettant l'**agancement et l'orchestration** de ces pré-requis.
+
+
+## **Installation des prérequis**
+
+
+
+=== "Linux"
+
+    **Git**
+
+    * Télécharger et installer [**Git**](../../../tutoriels/git/installation_git){target=}
 
 === "Windows"
 
+    **Git(Bash)**
+
     !!! warning
     
-        **Respecter les deux points concernant GitBash**. Sans quoi des problèmes de compatibilités vont subvenir avec `GitHub Client - gh`.
+        **Respecter les deux points concernant GitBash**. Sans quoi des problèmes de compatibilités vont subvenir.
 
   
     * Télécharger et installer [**Windows terminal**](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=fr-fr&gl=FR){target=}
@@ -23,14 +43,12 @@
     
     Laisser le **reste des options par défaut** `third party software,bundled openSSH, OpenSSL library, line ending conversions, Git credential manager, File system caching, no experimental option, etc)`
     
-
 === "MacOS"
-  
+    
+    **Git**
+    
     * Télécharger et installer [**Git**](../../../tutoriels/git/installation_git){target=}
 
-=== "Linux"
-
-    * Télécharger et installer [**Git**](../../../tutoriels/git/installation_git){target=}
 
 
 **Miniconda3** 
@@ -50,7 +68,7 @@
 
 !!! success "Installations des prérequis terminées"
 
-    **Bravo !** Vous venez de finir une bonne étape. Désormais **vous possédez tous les outils nécessaires**, mais il reste à placer Konnect par dessus, afin de vous **simplifier la vie**.
+    **Bravo !** Vous venez de finir une bonne étape. Désormais **vous possédez tous les outils nécessaires**, mais il reste à installer Konnect par dessus, afin de vous **simplifier la vie**.
 
 <br>
 

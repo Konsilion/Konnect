@@ -3,7 +3,7 @@ hide:
     - toc
 ---
 
-# **Ajouter un package** - *avec Konnect*
+# **Ajouter un package**
 
 Les packages sont des **applications concatenées** de sorte à pouvoir être téléchargées et utilisées **d'une manière standarde**.
 

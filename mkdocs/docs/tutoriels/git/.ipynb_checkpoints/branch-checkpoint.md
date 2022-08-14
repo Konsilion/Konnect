@@ -2,7 +2,7 @@
 hide:
 ---
 
-# **Compartimenter votre projet** - *avec Git* 
+# **Compartimenter votre projet**
 
 
 

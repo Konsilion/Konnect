@@ -2,7 +2,7 @@
 hide:
 ---
 
-# **Mise en commun de vos projets** - *avec Git*
+# **Mise en commun de vos projets**
 
 
 Lorsqu'un projet (dossier) est **connecté avec Git** alors il est possible de faire de nombreuses choses. Néanmoins, avec Konnect concentré vous sur l'essentiel :
@@ -48,7 +48,7 @@ Afin d'**ajouter vos modifications** en cours, sur votre branche courante dans v
 
 
 
-Afin d'**actualiser votre projet local**, afin de ré&cupérer les éventuelles modifications depuis votre répertoire **en ligne**, faite les commandes suivantes :
+Afin d'**actualiser votre projet local**, et de récupérer les modifications depuis le répertoire **en ligne**, faite les commandes suivantes :
 
 * Taper `k02` 
 * puis `13`

@@ -3,7 +3,7 @@ hide:
     - toc
 ---
 
-# **Création d'environnement** - *avec Konnect*
+# **Création d'environnement**
 
 Un environnement c'est un peu comme un **petit ordinateur virtuel et indépendant**, au sein de votre ordinateur. Ainsi vous pouvez **compartimenter l'installation de vos packages** au sein d'environnement distinct.
 

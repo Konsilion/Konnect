@@ -1,32 +1,38 @@
-# **Personnaliser votre documentation** - *avec Konnect*
+# **Personnaliser votre documentation**
 
 Pour celles et ceux qui souhaitent aller plus loin, vous pouvez consulter ce [tutoriel concernant Jupyter Book](https://jupyterbook.org/en/stable/basics/organize.html){target=}.
 
 ---
 
+??? tip "Où trouver les fichiers de mon JupyterBook ?"
 
-## Paramètres généraux
+    Lorsque vous avez **créé une documentation scientifique avec Konnect**, vous trouverez tous les documents qui y sont relatifs dans le dossier suivant **VotreProjet > JupyterBook**. `Konnect/server/lib/projects/VotreProjet/JupyterBook`
+    
+    !!! failure "A NE PAS FAIRE"
 
-Avec **JupyterBook**, vous modifiez vos paramètres généraux avec `_config.yml`. Des **instructions sont fournies** en son sein et il vous suffit de les suivres.
-
-
-
-## Table des matières et agancement
-
-Avec JupyterBook, vous indiquez l'architecture de votre documentation avec le fichier `_toc.yml`. Des instructions sont fournies en son sein et il vous suffit de les suivres.
-
--- Pour plus d'information, vous pouvez consulter [cette documentation](https://jupyterbook.org/en/stable/structure/toc.html){target=}
+        * Déplacer `index.md` `_toc.yml` `_config.yml`
+        * Supprimer `logo.png`, remplacer le si besoin.
 
 
+## **Paramètres généraux  et organisation**
 
-## Votre contenu - dossier `docs`
 
-Le dossier `docs` concentre tout ce qu'il vous faut. Vous organisez ce dossier comme il vous chante, néanmoins :
 
-???+ failure "A NE PAS FAIRE"
+Avec **JupyterBook**, vous contrôlez :  
 
-    * Déplacer `index.md` `_toc.yml` `_config.yml`
-    * Supprimer `logo.png`, remplacer le si besoin.
+* Les **paramètres généraux** avec le fichier : `_config.yml`.
+* L'**architecture de votre documentation** avec le fichier : `_toc.yml`. 
+
+Des instructions y sont fournies.
+
+*-- Pour plus d'information, vous pouvez consulter [cette documentation](https://jupyterbook.org/en/stable/structure/toc.html){target=}*
+
+
+
+## **Votre contenu - dossier `docs`**
+
+Le dossier `docs` concentre tout ce qu'il vous faut. Vous organisez ce dossier comme bon vous semble. Néanmoins il comporte le contenu de votre documentation alors il est préférable de penser à l'avance à comment classer vos documents.
+
 
 ---
 
@@ -40,13 +46,6 @@ Le dossier `docs` concentre tout ce qu'il vous faut. Vous organisez ce dossier c
     2. Je renseigne cette nouvelle page dans le fichier `_toc.yml`
     
     Voilà.
-
-
-## Un bon exemple
-
-
-Vous pouvez [consulter le dossier `docs` de la documentation de MethaConcept](https://github.com/Konsilion/MethaConcept/tree/dev/JupyterBook/docs){target=} pour vous rendre compte de **ce qui a été fait et comment**.
-
 
 
 

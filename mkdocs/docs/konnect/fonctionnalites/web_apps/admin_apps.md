@@ -1,4 +1,4 @@
-# **Gestion de vos applications ** - *avec Mercury*
+# **Gestion de vos applications **
 
 Pour plus d'information sur cet aspect, consulter directement la [documentation de Mercury](https://mercury-docs.readthedocs.io/en/latest/admin-panel/){target=}
 

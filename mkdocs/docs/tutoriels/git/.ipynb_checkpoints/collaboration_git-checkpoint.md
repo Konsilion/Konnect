@@ -3,7 +3,7 @@ hide:
     - toc
 ---
 
-# **Comment travailler ensemble ?** - *avec Konnect*
+# **Comment travailler ensemble ?**
 
 
 

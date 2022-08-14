@@ -4,20 +4,21 @@ Pour celles et ceux qui souhaitent aller plus loin, vous pouvez consulter ce [tu
 
 ---
 
-## Docs - un dossier pour les gouverner tous
+??? tip "Où trouver les fichiers de mon Site Web ?"
 
-Le dossier `docs` concentre tout ce qu'il vous faut. Vous organisez ce dossier comme il vous chante, néanmoins :
+    Lorsque vous avez **créé un site web avec Konnect**, vous trouverez tous les documents qui y sont relatifs dans le dossier suivant **VotreProjet > mkdocs**. `Konnect/server/lib/projects/VotreProjet/mkdocs`
+    
+    !!! failure "A NE PAS FAIRE"
 
-???+ failure "A NE PAS FAIRE"
-
-    * Déplacer `env`, `index.md`
-    * Supprimer `logo.png`, remplacer le si besoin.
-    * Modifier ou déplacer le fichier `mkdocs.yml`
-
----
-
+        * Déplacer `index.md` `env`
+        * Supprimer `logo.png`, remplacer le si besoin.
+        * Modifier ou déplacer le fichier `mkdocs.yml`
 
 Le fichier `env` vous donne accès à de nombreux paramètres. Des instructions sont fournies en son sein et il vous suffit de les suivres.
+
+## **Votre contenu - dossier `docs`**
+
+Le dossier `docs` concentre tout ce qu'il vous faut. Vous organisez ce dossier comme bon vous semble. Néanmoins il comporte le contenu de votre documentation alors il est préférable de penser à l'avance à comment classer vos documents.
 
 
 !!! abstract "En résumé"
@@ -26,17 +27,10 @@ Le fichier `env` vous donne accès à de nombreux paramètres. Des instructions 
     
     ---
     
-    1. Je créé une page en `.md` dans le dossier `docs` ou dans un dossier créé dans `docs`
+    1. Je créé une page en `.md` dans le dossier `docs` ou dans un sous-dossier créé dans `docs`
     2. Je renseigne cette nouvelle page dans le fichier `env` section `# AGANCEMENT DE VOS DOCUMENTS`
     
     Voilà.
-
-
-## Un bon exemple
-
-
-Vous pouvez [consulter le dossier `docs` de ce site internet](https://github.com/Konsilion/Konnect/tree/dev/mkdocs/docs){target=} pour vous rendre compte de **ce qui a été fait et comment**.
-
 
 
 

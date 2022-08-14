@@ -4,7 +4,7 @@ hide:
 ---
 
 
-# **Ajouter un canal de téléchargement** - *avec Konnect*
+# **Ajouter un canal de téléchargement**
 
 
 Les canaux de téléchargement sont des **annuaires pour les applications/packages de conda**. Le canal `conda-forge` est un des plus populaires, et Konnect repose en grande partie sur ce dernier.
