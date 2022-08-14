@@ -105,7 +105,7 @@ echo -e "\n  Les informations demandées maintenant ${DIM}(nom et mail)${NC} son
 
 echo -e "\n  ${DIM}Elles ne sont pas obligatoires, mais ${WHITE}fortement recommandées.${NC} Tapper entrée pour continuer" && read
 
-echo -e "\n\n  - Quel est ${GREEN}votre nom${NC} :" && read git_name && git config --global --replace-all user.name ${git_name}
+echo -e "\n\n  - Quel est ${GREEN}votre nom/prenom${NC} (pas d'espace, tout attaché) :" && read git_name && git config --global --replace-all user.name ${git_name}
 
 echo -e "\n\n  - Quel est ${GREEN}votre adresse mail${NC} :" && read git_mail && git config --global --replace-all user.email ${git_mail}
 

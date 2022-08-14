@@ -524,7 +524,7 @@ function git_index_rmv {
 	
 	echo -e "\n  Parmis les ${DIM}modification qui seront validées${NC} (en vert), quel dossier/fichier souhaitez-vous ${RED}retirer${NC} de votre prochain empaquetage (commit) ? \n"
 
-	read $d
+	read d
 
 	git restore --staged $d
 
@@ -582,7 +582,7 @@ function git_index_add {
 	
 	echo -e "\n  Parmis les ${DIM}fichiers non suivis${NC} (en rouge, en bas), quel dossier/fichier souhaitez-vous ${GREEN}ajouter${NC} de votre prochain empaquetage (commit) ? \n"
 
-	read $d
+	read d
 
 	git add $d
 
