@@ -20,6 +20,69 @@ function ksln_param {
 	ksln_header "" ${page_name} ${page_bck_color}  
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+# Version OS Check
+
+case "$OSTYPE" in
+  darwin*)  
+  	echo "OSX" 
+  	tmp_pid_idx="2"
+  	tmp_editor="TextEdit"
+  	;; 
+  linux*)   
+  	echo "LINUX" 
+  	tmp_pid_idx="2"
+  	tmp_editor="gedit"
+  	;;
+  	
+  msys*)    
+  	echo "WINDOWS"
+  	tmp_pid_idx="1"
+  	tmp_editor="notepad"
+  	;;
+  	
+  cygwin*)  
+  	echo "ALSO WINDOWS" 
+  	tmp_pid_idx="1"
+  	tmp_editor="notepad"
+  	;;
+  *)        
+  	echo "unknown: $OSTYPE" ;;
+esac
+
+echo ${tmp_pid_idx}
+echo ${tmp_editor}
+
+sed -i -e "s|${PID_IDX}|${tmp_pid_idx}|g" ${PATH_PARAM}
+sed -i -e "s|${TEXT_EDITOR}|${tmp_editor}|g" ${PATH_PARAM}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Modification de PRJ_PATH depuis PATH_ORIGIN
 
 d=${PATH_ORIGIN}/server/lib/projects
@@ -57,8 +120,6 @@ echo -e "\n  ${DIM}Elles ne sont pas obligatoires, mais ${WHITE}fortement recomm
 echo -e "\n\n  - Quel est ${GREEN}votre nom${NC} :" && read git_name && git config --global --replace-all user.name ${git_name}
 
 echo -e "\n\n  - Quel est ${GREEN}votre adresse mail${NC} :" && read git_mail && git config --global --replace-all user.email ${git_mail}
-
-
 
 git config --global core.editor ${TEXT_EDITOR}
 
@@ -139,42 +200,6 @@ echo -e ${LINE_SIMPLE}
 
 
 
-
-
-# Version OS Check
-
-case "$OSTYPE" in
-  darwin*)  
-  	echo "OSX" 
-  	tmp_pid_idx="2"
-  	tmp_editor="TextEdit"
-  	;; 
-  linux*)   
-  	echo "LINUX" 
-  	tmp_pid_idx="2"
-  	tmp_editor="gedit"
-  	;;
-  	
-  msys*)    
-  	echo "WINDOWS"
-  	tmp_pid_idx="1"
-  	tmp_editor="notepad"
-  	;;
-  	
-  cygwin*)  
-  	echo "ALSO WINDOWS" 
-  	tmp_pid_idx="1"
-  	tmp_editor="notepad"
-  	;;
-  *)        
-  	echo "unknown: $OSTYPE" ;;
-esac
-
-echo ${tmp_pid_idx}
-echo ${tmp_editor}
-
-sed -i -e "s|${PID_IDX}|${tmp_pid_idx}|g" ${PATH_PARAM}
-sed -i -e "s|${TEXT_EDITOR}|${tmp_editor}|g" ${PATH_PARAM}
 
 
 
