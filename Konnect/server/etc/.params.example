@@ -4,12 +4,20 @@
 #
 #####################################################################################################################
 
+# --- SYSTEME D'EXPLOITATION : Mettre "1" pour Windows et "2" pour Linux et Mac :
+
+	PID_IDX="PID_IDX_waint_init"
+
+	TEXT_EDITOR="TEXT_EDITOR_wait_init"  		# linux: gedit, windows: notepad
+
+
+
 
 # --- VOS PROJETS DANS KONNECT  -  remplacer les "..." par le CHEMIN DE VOTRE DOSSIER KONNECT
 
-	PRJ_PATH="PRJ_PATH_in_wait"
+	PRJ_PATH="PRJ_PATH_wait_init"
 	
-	FORGE_PATH="FORGE_PATH_in_wait" 	# 1 forge minimum.	
+	FORGE_PATH="FORGE_PATH_wait_init" 	# 1 forge minimum.	
 	
 
 

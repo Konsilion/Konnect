@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+
 # COMMENTAIRE : =============
 
 # Toutes les fonctions disponibles pour votre Hub. La fonction principale (git_home) vous permet de sélectionner celles qui vous correspond.
@@ -46,7 +47,7 @@ if [ "$inside_git_repo" ]; then
 
 	echo -e "\n  - ${WHITE}Branche de travail${NC}${NC}\t\t\t${GREEN}3${NC}. Lister\t${GREEN}4${NC}. Changer\t${GREEN}5${NC}. Créer\t${RED}6${NC}. Retirer (${YELLOW}$(git branch | grep "*")${NC})\n"
 
-	echo -e "  - ${WHITE}Vos modifications${NC}\t\t\t${GREEN}7${NC}. Afficher\t${GREEN}8${NC}. Ajouter\t${GREEN}9${NC}. Finaliser\t${DIM}10. Retirer${NC}\n"
+	echo -e "  - ${WHITE}Vos modifications${NC}\t\t\t${GREEN}7${NC}. Afficher\t${GREEN}8${NC}. Ajouter\t${GREEN}9${NC}. Retirer\t${GREEN}10${NC}. Valider & Empaqueter\n"
 
 	echo -e "  - ${WHITE}Répertoire en ligne${NC}\t\t\t${GREEN}11${NC}. Envoyer\t${GREEN}12${NC}. Statuts\t${RED}13${NC}. Actualiser\n\n"
 
@@ -418,6 +419,12 @@ function git_branch_pull {
 
 function git_index_commit {
 
+	git add -u
+	
+	echo -e "Vérifier l'ajout de vos fichiers modifiés et suivis par Git : \n" && git status
+	
+	
+
 	git commit
 }
 
@@ -511,14 +518,14 @@ function git_index_rmv {
 
 	ksln_subheader "${PRJ_NAME} > " "RETIRER - SALLE D'ATTENTE (local)"
 	
-	echo ""
-	
 	git status
 	
-	ksln_drag_drop
+	echo -e ${LINE_DOTTED}
 	
-	read $d
-	
+	echo -e "\n  Parmis les ${DIM}modification qui seront validées${NC} (en vert), quel dossier/fichier souhaitez-vous ${RED}retirer${NC} de votre prochain empaquetage (commit) ? \n"
+
+	read d
+
 	git restore --staged $d
 
 	echo -e "\n  Vérifier votre action : ${BLUE}${PRJ_NAME}${NC}\n"
@@ -536,11 +543,10 @@ function git_init {
 
 	
 	git init
-			
+		
 	echo -e ${LINE_DOUBLE}
-		read
-	
-	git_index_add
+			
+	git add .
 	
 	echo -e ${LINE_DOUBLE}
 
@@ -567,12 +573,23 @@ function git_deinit {
 
 function git_index_add {
 
-	
-	git add -u
 
-	echo -e "\n  Vérifier votre ajout - commit :\n"
+	ksln_subheader "${PRJ_NAME} > " "RETIRER - SALLE D'ATTENTE (local)"
 	
 	git status
 	
-	echo -e "\n${CONTINUE_PHRASE}" && read		
+	echo -e ${LINE_DOTTED}
+	
+	echo -e "\n  Parmis les ${DIM}fichiers non suivis${NC} (en rouge, en bas), quel dossier/fichier souhaitez-vous ${GREEN}ajouter${NC} de votre prochain empaquetage (commit) ? \n"
+
+	read d
+
+	git add $d
+
+	echo -e "\n  Vérifier votre action : ${BLUE}${PRJ_NAME}${NC}\n"
+	
+	git status
+	
+	echo -e "\n${CONTINUE_PHRASE}" && read
+	
 }

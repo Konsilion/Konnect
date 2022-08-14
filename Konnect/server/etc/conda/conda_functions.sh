@@ -31,7 +31,7 @@ function conda_home {
 
 	echo -e "  Applications et Packages\t${GREEN}4${NC}. Ajouter\t${GREEN}5${NC}. Lister\t${GREEN}6${NC}. Mettre à jour\t${RED}7${NC}. Supprimer\n\n"
 	
-	echo -e "  Les environnements\t\t${GREEN}8${NC}. Ajouter\t${GREEN}9${NC}. Lister\t${GREEN}10${NC}. Activer\n\n"
+	echo -e "  Les environnements\t\t${GREEN}8${NC}. Créer  \t${GREEN}9${NC}. Lister\t${GREEN}10${NC}. Activer\n\n"
 	
 	echo -e "\n  ${DIM}Installer environnements pour Konnect${NC} .${GREEN}11${NC}\t\t\t\t\t\t${RED}12${NC}. Supprimer cet environnement"
 		
@@ -87,14 +87,12 @@ case ${choice_env} in
 		ksln_header "" "AJOUT DES PACKAGES ESSENTIELS : ke1" ${BCK_PURPLE}
 		
 		echo -e "\n
-		Cette opération peut être ${RED}réellement longue${NC}. même si 'failed' est indiqué ne quittez pas,
+		Cette opération peut être ${RED}longue${NC} (~15-20 min). même si 'failed' est indiqué ne quittez pas,
 		conda cherche à ${GREEN}conscillier les dépendances de vos packages${NC} au sein de votre
 		environnement de développement : ${WHITE}ke1${NC}
 		
 		Pour forcer l'arrêt : ${RED}Ctrl + C${NC}\n"
 
-		conda create --name ke1 python
-		
 		conda activate ke1
 		
 	
@@ -134,7 +132,7 @@ case ${choice_env} in
 		ksln_header "" "AJOUT DES PACKAGES ESSENTIELS : mercury" ${BCK_PURPLE}
 		
 		echo -e "\n
-		Cette opération peut être ${RED}réellement longue${NC}. même si 'failed' est indiqué ne quittez pas,
+		Cette opération peut être ${RED}longue${NC} (~8-10min). même si 'failed' est indiqué ne quittez pas,
 		conda cherche à ${GREEN}conscillier les dépendances de vos packages${NC} au sein de votre
 		environnement de développement : ${WHITE}mercury${NC}
 		
@@ -342,7 +340,6 @@ function conda_env_add {
 	read  env_name
 	
 	echo -e "\n  • ${GREEN}Version de Pyhton${NC} (ex: python ou python==3.9.2)?\n"
-	
 	
 	read  py_version
 	
