@@ -33,7 +33,7 @@ clear
 
 function konnect {
 
-local version="1.0"
+local version="1.0.0"
 
 # COMMENTAIRES : La page principale Konnect présente les principales actions possible avec le HUB.
 
@@ -87,15 +87,16 @@ local version="1.0"
 if [[ ${KONNECT_INIT} = "KONNECT_IS_NOT_INIT" ]]; then
 
 
-	ksln_header "" "INITIALISATION" ${BCK_CYAN}
+	ksln_header "" "INITIALISATION DES PARAMETRES" ${BCK_CYAN}
 
 	cd ${PATH_ORIGIN}
 	
-	echo -e "\n  Vous souhaitez ${GREEN}démarrer Konnect${NC} :
+	echo -e "\n  Vous souhaitez ${GREEN}installer et démarrer Konnect${NC} :
 	
-	1. Vous avez ${GREEN}renommé et modifier${NC} le fichier ${DIM}.env.example${NC} en ${DIM}.env${NC}
-	2. Si non, alors quitter et réaliser l'étape 1
-	2. Si oui, vous pouvez ${GREEN}continuer en tapant Entrée${NC}
+	Vous avez ${GREEN}installer et vérifier${NC} la bonne installation de ${DIM}Miniconda3${NC} et de ${DIM}Git${NC} : $(ksln_http_ln "https://konsilion.github.io/Konnect/latest/konnect/guide_installation/prerequis/" "Dépôt en ligne")
+	
+	- Si non, alors quitter et réaliser ces étapes dites de prérequis.
+	- Si oui, vous pouvez ${GREEN}continuer en tapant Entrée${NC}
 	
 	${RED}Ctrl + C${NC} pour quitter"
 	
@@ -111,7 +112,7 @@ else
 	cd ${PATH_ORIGIN} 
 
 	PRJ_LOAD=1
-	PRJ_NAME=$(basename "$PRJ_PATH")
+	PRJ_NAME=$(basename "${PRJ_PATH}")
 	if [[ ${PRJ_PATH_ORIGIN} = ${PRJ_PATH} ]]; then 
 		PRJ_LOAD=0
 		PRJ_NAME="Aucun projet chargé"

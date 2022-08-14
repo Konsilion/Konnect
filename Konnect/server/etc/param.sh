@@ -58,11 +58,12 @@ echo -e "\n\n  - Quel est ${GREEN}votre adresse mail${NC} :" && read git_mail &&
 
 git config --global core.editor ${TEXT_EDITOR}
 
-
-
 echo -e "\n  Etape 3 - ${GREEN}Terminée${NC} : Git paramètré"
 
 echo -e ${LINE_SIMPLE}
+
+
+
 
 
 
@@ -87,6 +88,12 @@ conda_change
 echo -e "\n  Etape 4 - ${GREEN}Terminée${NC} : Initialisation de ke1." 
 
 echo -e ${LINE_SIMPLE}
+
+
+
+
+
+
 
 
 # GitHub Client CLI configuration
