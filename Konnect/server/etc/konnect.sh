@@ -14,7 +14,13 @@ clear
 
 . ./param.sh
 
+<<<<<<< HEAD
+. ./winpath.sh
+
+. $(conda info --base)/etc/profile.d/conda.sh	# Donne acces aux commandes conda dans le terminal - conda init issue
+=======
 . ${PATH_CONDA}/etc/profile.d/conda.sh		# Donne acces aux commandes conda dans le terminal - conda init issue
+>>>>>>> master
 
 . ${PATH_ORIGIN}/server/etc/functions.sh
 
@@ -33,6 +39,11 @@ clear
 
 function konnect {
 
+<<<<<<< HEAD
+local version="1.0.0"
+
+=======
+>>>>>>> master
 # COMMENTAIRES : La page principale Konnect présente les principales actions possible avec le HUB.
 
 # MODIFIABLE - Paramètres de votre page home
@@ -85,15 +96,13 @@ function konnect {
 if [[ ${KONNECT_INIT} = "KONNECT_IS_NOT_INIT" ]]; then
 
 
-	ksln_header "" "INITIALISATION" ${BCK_CYAN}
+	ksln_header "" "INITIALISATION DES PARAMETRES" ${BCK_CYAN}
 
 	cd ${PATH_ORIGIN}
 	
-	echo -e "\n  Vous souhaitez ${GREEN}démarrer Konnect${NC} :
+	echo -e "\n  Vous souhaitez ${GREEN}paramètrer Konnect${NC} :
 	
-	1. Vous avez ${GREEN}renommé et modifier${NC} le fichier ${DIM}.env.example${NC} en ${DIM}.env${NC}
-	2. Si non, alors quitter et réaliser l'étape 1
-	2. Si oui, vous pouvez ${GREEN}continuer en tapant Entrée${NC}
+	Si oui, vous pouvez ${GREEN}continuer en tapant Entrée${NC}
 	
 	${RED}Ctrl + C${NC} pour quitter"
 	
@@ -109,7 +118,7 @@ else
 	cd ${PATH_ORIGIN} 
 
 	PRJ_LOAD=1
-	PRJ_NAME=$(basename "$PRJ_PATH")
+	PRJ_NAME=$(basename "${PRJ_PATH}")
 	if [[ ${PRJ_PATH_ORIGIN} = ${PRJ_PATH} ]]; then 
 		PRJ_LOAD=0
 		PRJ_NAME="Aucun projet chargé"

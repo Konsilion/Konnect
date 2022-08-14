@@ -65,6 +65,12 @@ function frg_download {
 	cd ${PATH_ORIGIN}/server/lib/projects
 	
 	git_clone
+	
+	echo -e ${LINE_DOUBLE} && echo -e "  Séléctionner le projet téléchargé : \n"
+	
+	prj_activate
+	
+	
 }
 
 

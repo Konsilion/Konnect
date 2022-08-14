@@ -117,7 +117,8 @@ function ksln_function_example {
 
 function ksln_drag_drop {
 
-echo -e "\n  ${GREEN}Faite glisser${NC} votre fichier ici et ${GREEN}appuyer sur entrée${NC} :\n\n"
+
+echo -e "\n  ${GREEN}Faite glisser${NC} votre fichier/dossier ici et ${GREEN}appuyer sur entrée${NC} :\n\n"
 
 echo -e "\t\t-----------------------------------"
 echo -e "\t\t|                                 |"
@@ -132,7 +133,6 @@ echo -e "\t\t|                                 |"
 echo -e "\t\t-----------------------------------"
 
 echo -e "\n"
-
 }
 
 
@@ -164,6 +164,8 @@ function ksln_konnect_upgrade {
 	rm -rf ${tmp_path}/Konnect
 	
 	rm ${tmp_path}/server/etc/.env.example
+	
+	rm ${tmp_path}/server/etc/.params.example
 	
 
 	
@@ -202,6 +204,10 @@ function ksln_konnect_upgrade {
 
  	cp -r ${PATH_ORIGIN}/server ${PATH_ORIGIN}/sauv_konnect_${snap_append}	
 
+	
+	
+	
+	
 	
 	# Remplacement
 	
