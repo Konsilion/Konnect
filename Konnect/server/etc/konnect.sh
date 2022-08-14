@@ -68,17 +68,17 @@ local version="1.0.0"
 
 	${GREEN}5${NC} : Accèder à la Forge\t\t${RED}Ctrl + C${NC} : Éteindre\n\n\n\n"
 	
-	echo -e "  ${DIM}Initialiser Konnect${NC} .${GREEN}6${NC}\t${DIM}Mettre à jour Konnect${NC} .${GREEN}7${NC}\t"
+	echo -e "  ${DIM}Mettre à jour Konnect${NC} .${GREEN}6${NC}\t"
 
 	echo -e "${LINE_SIMPLE}"
 		
 # CHOICE / READ / ACTION
 
-	list_choice=("" "prj_home" "git_home" "apps_home" "conda_home" "frg_home" "ksln_param" "ksln_konnect_upgrade")
+	list_choice=("" "prj_home" "git_home" "apps_home" "conda_home" "frg_home" "ksln_konnect_upgrade")
 
 	ksln_answer "CYAN" && read CHOICE && cd ${PRJ_PATH} && ksln_page ${CHOICE}
 	
-	ksln_choice ${CHOICE} "7" "konnect" && clear && ${list_choice[$CHOICE]}
+	ksln_choice ${CHOICE} "6" "konnect" && clear && ${list_choice[$CHOICE]}
 
 # REFRESH
 	
