@@ -1,7 +1,10 @@
 
 
 # **Les différentes interfaces** de Konnect
- 
+
+!!! warning "Page en construction"
+
+    Les informations présentes sur cette page ne sont peut être pas à jour. Ainsi nous vous recommandons de les lire avec attention, pour ne pas faire de mégardes.
 
 ![](../../images/konnect_accueil.png)
 

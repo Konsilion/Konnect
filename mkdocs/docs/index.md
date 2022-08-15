@@ -8,7 +8,6 @@ hide:
 
 # **Konnect** - Vos projets de A à Z.
 
-
 Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutions et outils **utiles à la gestion et au développement de vos projets**.
 
 ---
