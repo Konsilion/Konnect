@@ -63,12 +63,13 @@ local version="1.0.0"
 
 	echo -e "\n
 
-	${BCK_CYAN}__${NC} : Projets et documentation .${GREEN}1${NC}\t${BCK_PURPLE}__${NC} : Applications Web .${GREEN}3${NC}\n\n
-	${BCK_YELLOW}__${NC} : Partage et versionning .${GREEN}2${NC}\t\t${BCK_GREEN}__${NC} : Environnements de développement .${GREEN}4${NC}\n\n
-
-	${GREEN}5${NC} : Accèder à la Forge\t\t${RED}Ctrl + C${NC} : Éteindre\n\n\n\n"
+	${BCK_CYAN}__${NC} : Documentation & Modélisation .${GREEN}1${NC}\t\t${BCK_PURPLE}__${NC} : Applications Web .${GREEN}3${NC}\n\n
+	${BCK_YELLOW}__${NC} : Partage et versionning .${GREEN}2${NC}\t\t\t${BCK_GREEN}__${NC} : Environnements de développement .${GREEN}4${NC}\n\n
+	${BCK_CYAN}__${NC} : Gestion de vos projets .${GREEN}5${NC}\n\n\n\n"
 	
-	echo -e "  ${DIM}Mettre à jour Konnect${NC} .${GREEN}6${NC}\t"
+	echo -e "${LINE_DOTTED}\n"
+	
+	echo -e "  ${DIM}Mettre à jour Konnect${NC} .${GREEN}6${NC}\t\t\t\t\t\t\t\t\t     ${DIM}Eteindre${NC} : ${RED}Ctrl + C${NC}"
 
 	echo -e "${LINE_SIMPLE}"
 		
