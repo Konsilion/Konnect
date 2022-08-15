@@ -20,7 +20,7 @@
 
 ---
 
-## Projets
+## Documentation et Modélisation
 
 ![](../../images/no_prj_konnect.png)
 
