@@ -1,7 +1,9 @@
 # AGANCEMENT DE VOS DOCUMENTS ===========================================================================================================
 
-## Apprendre à orchestrer vos documents à cette adresse : https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+## Toutes les informations : 
 
+# https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+# https://squidfunk.github.io/mkdocs-material/
 
 
 
@@ -10,12 +12,20 @@ nav:
    
   - Présentation & Installation:  
       - Présentation: konnect/presentation_konnect.md
-      - Guide d'installation: 
-          - Prérequis: konnect/guide_installation/prerequis.md
-          - Installer Konnect: konnect/guide_installation/deploy_konnect.md
-          - Initialisation: konnect/guide_installation/param_konnect.md
+      - Prérequis: konnect/guide_installation/prerequis.md
+      - Installer Konnect: konnect/guide_installation/deploy_konnect.md
+      - En savoir plus:
+          - Conda:
+              - Installation: tutoriels/conda/installation_conda.md
+              - Canaux de téléchargement: tutoriels/conda/ajout_channel.md
+              - Environnements: tutoriels/conda/creation_environnement.md
+              - Packages: tutoriels/conda/ajout_package.md
+          - Git:
+              - Installation: tutoriels/git/installation_git.md
+              - Répertoire projet: tutoriels/git/repo.md
+              - Branche de travail: tutoriels/git/branch.md
           
-  - Manuel d'utilisation:
+  - Usages:
       - Interfaces: konnect/fonctionnalites/interfaces.md
       - Site internet: 
           - Créer et Publier: konnect/fonctionnalites/site_web/start_site_web.md
@@ -29,23 +39,15 @@ nav:
           - Administration des applications: konnect/fonctionnalites/web_apps/admin_apps.md    
       - Konnect - Forge: 
           - Partager et Télécharger: konnect/fonctionnalites/forge/presentation_forge.md
-  
-  - En savoir plus:
-      - Conda:
-          - Installation: tutoriels/conda/installation_conda.md
-          - Canaux de téléchargement: tutoriels/conda/ajout_channel.md
-          - Environnements: tutoriels/conda/creation_environnement.md
-          - Packages: tutoriels/conda/ajout_package.md
-      - Git:
-          - Installation: tutoriels/git/installation_git.md
-          - Répertoire projet: tutoriels/git/repo.md
-          - Branche de travail: tutoriels/git/branch.md
-  
+      - Modélisation 3D:
+          - FreeCAD: konnect/fonctionnalites/freecad/freecad_start.md
+
   - Communauté: 
-      - Prises de note: informations/pad.md
+      - Echanges autour de Konnect: informations/pad.md
       - Chat de discussion: informations/chat.md
       - Les visios: informations/visio.md
       - Contacts: informations/contacts.md
+      - Nos applications Web: applications/list_apps.md
 
 
 
@@ -62,7 +64,7 @@ nav:
 site_name: Documentation - Konnect           # Indiquer le nom du site
 site_author: Konsilion Ingénieres            # Indiquer le nom des auteurs et autrices
 site_description: >-
-  Votre description à la place de ce texte.
+  Une suite logicielle, simple, accessible et performante orientée gestion et gestion de projet de DataScience.
 
 
 
@@ -70,11 +72,11 @@ site_description: >-
 # Langue et couleurs
 
 theme:
-  language: fr               # Choisir votre langue : https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language
+  language: fr               # Choisir votre langue
   palette:
     scheme: default          # NE PAS MODIFIER
-    primary: blue grey       # Couleurs pincipales : https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
-    accent: blue             # Couleur de surbrillance : https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
+    primary: blue grey       # Couleurs pincipales
+    accent: blue             # Couleur de surbrillance
 
 
 
