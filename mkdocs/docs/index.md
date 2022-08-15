@@ -21,7 +21,7 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 
 * **Pas de serveur** à gérer
 
-## *Produire et partager* les connaissances.
+## *Produire et partager les connaissances.*
 
 ---
 
