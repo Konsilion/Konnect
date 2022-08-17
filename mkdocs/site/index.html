@@ -44,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="_css/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1184,6 +1186,97 @@
 <p><a class="md-button md-button--primary" href="./konnect/presentation_konnect">Présentation de Konnect</a> <a class="md-button md-button--primary" href="./konnect/guide_installation/prerequis">Installation</a> <a class="md-button md-button--primary" href="./konnect/fonctionnalites/interfaces/">Premiers Pas</a></p>
 <hr />
 <p><img alt="" src="https://img.shields.io/badge/Maintenu-Oui-success.svg" /> <img alt="" src="https://img.shields.io/github/repo-size/Konsilion/Konnect?style=?style=for-the-badge" /></p>
+<hr />
+<p><html>
+<head>
+<link rel="stylesheet" href="../../_css/form.css" />
+</head></p>
+<body>
+<div class="container">
+        <header class="header">
+            <h2 id="title" class="text-center">
+                Prendre contact
+            </h2>
+            <p id="description" class="description text-center">
+            </p>
+        </header>   
+        <form id="survey-form" action="https://formspree.io/f/xnqrqwpo" method="POST">  
+            <div class="form-group">
+                <label id="name-label" for="name">
+                    Prénom et NOM
+                </label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="" required/>
+                </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">
+                    Email
+                </label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="" required/>
+            </div>
+
+
+            <div class="form-group">
+                <p>
+                    Quel est le sujet de votre contact ?
+                </p>
+
+                <select id="most-like" name="mostLike" class="form-control" required>
+
+                    <option disabled selected value>
+                        Liste des choix :
+                    </option>
+
+                    <option value="Deployement">
+                        Je souhaite déployer Konnect
+                    </option>
+
+                    <option value="Installation">
+                        Installation
+                    </option>
+
+                    <option value="utilisation">
+                        Utilisation
+                    </option>
+
+                    <option value="appropriation">
+                        Appropriation
+                    </option>           
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    Quel message à nous délivrer donc ? 😀
+                </p>
+
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Écrire ici ...">
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Envoyer
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    </body>
+<p></html></p>
+<p><br><br></p>
+<p><html lang="en">
+<head>
+    <link rel = "stylesheet" href = "./_css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+    <body>
+        <div>
+            <i class="center fas fa-heart" aria-hidden="true"></i>
+        </div>
+    </body>
+</html></p>
 <style>
 
 /* Delete edit button on page */
@@ -1247,6 +1340,12 @@
 
 
 </style>
+
+<p><html>
+<head>
+<link rel="stylesheet" href="../_css/accueil.css" />
+</head>
+</html></p>
 
 
 
