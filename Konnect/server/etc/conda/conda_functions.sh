@@ -138,7 +138,7 @@ case ${choice_env} in
 		
 		Pour forcer l'arrêt : ${RED}Ctrl + C${NC}\n"
 
-		conda install mercury
+		conda install mljar-mercury
 
 		conda install jupyterlab nodejs
 		
