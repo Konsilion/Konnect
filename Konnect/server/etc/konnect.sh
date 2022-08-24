@@ -36,7 +36,7 @@ clear
 function konnect {
 
 
-local version="1.0.0"
+local version="1.0.1"
 
 # COMMENTAIRES : La page principale Konnect présente les principales actions possible avec le HUB.
 
