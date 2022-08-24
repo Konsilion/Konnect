@@ -11,7 +11,6 @@ function winpath {
 	path="$(_winpath $1)"
 	
 	echo $path
-
 } 
 
 

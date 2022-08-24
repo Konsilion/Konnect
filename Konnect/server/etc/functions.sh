@@ -352,23 +352,43 @@ fi
 #################################################
 function ksln_links {
 
+
+
+local tmp_var="$(ksln_local_ln ${PRJ_PATH} "Dossier local")"
+
+
+
+
+# Test si git associé au projet
+
 inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
 if [ "$inside_git_repo" ]; then
 
-	echo -e "  $(ksln_local_ln ${PRJ_PATH} "Dossier local")  |  $(ksln_http_ln $(git config --get remote.origin.url) "Dépôt en ligne")  |  $(ksln_local_doc "http://127.0.0.1:8000" "Votre documentation")\n"
-
-else
-
-	echo -e "  $(ksln_local_ln ${PRJ_PATH} "Dossier local")  |  $(ksln_local_doc "http://127.0.0.1:8000" "Votre documentation")\n"
+	tmp_var="${tmp_var}  |  $(ksln_http_ln $(git config --get remote.origin.url) "Dépôt en ligne")"
 
 fi
+
+echo -e "   ${tmp_var}\n"
+
 }
 
 
 function ksln_local_ln {
 
-	echo -e "\e]8;;file://${1}\a${2}\e]8;;\a"
+if [[ ${PID_IDX} = "1" ]]; then
+
+	local tmp_var=$(cygpath -m ${1})
+	
+else	
+	local tmp_var=${1}
+
+fi
+
+
+	echo -e "\e]8;;file://${tmp_var}\a${2}\e]8;;\a"
+	
+	
 }
 
 
