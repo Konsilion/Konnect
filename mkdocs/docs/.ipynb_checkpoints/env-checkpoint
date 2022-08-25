@@ -84,7 +84,7 @@ theme:
 
 repo_url: https://github.com/Konsilion/Konnect         # Lien de votre Dépôt en ligne
 repo_name: Konnect/                                    # Nom du projet
-edit_uri: blob/master/mkdocs/docs                      # NE PAS MODIFIER
+edit_uri: blob/doc/mkdocs/docs                         # NE PAS MODIFIER
 
 
 

@@ -38,19 +38,6 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <html>
 <head>
 <link rel="stylesheet" href="../_css/accueil.css" />
