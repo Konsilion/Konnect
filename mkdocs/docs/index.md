@@ -43,3 +43,23 @@ Du traitement à la valorisation de vos savoirs, embarquez de nombreuses solutio
 <link rel="stylesheet" href="../_css/accueil.css" />
 </head>
 </html>
+
+<style>
+.md-content__button {
+display: none;
+}    
+    
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-image: linear-gradient(115deg,white,rgba(255, 255, 255, 0.84)), url(https://konsilion.fr/wp/wp-content/uploads/2022/08/Meeting_Work.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+</style>

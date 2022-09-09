@@ -45,4 +45,4 @@ markdown_extensions:
   - pymdownx.snippets
 
 extra_css:
-  - _css/accueil.css
+  - _css/extra.css
