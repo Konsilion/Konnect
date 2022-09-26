@@ -1,8 +1,9 @@
-:root {
+:root > * {
 	--color-back-form: rgba(245, 245, 245, 0.9);
 	--color-button: #1FAA1F;
+    --md-primary-fg-color: #136095 !important;
+    --md-primary-fg-color-light: rgba(19,96,149,0.2) !important;
 }
-
 
 #######################################
 
@@ -68,4 +69,24 @@ form {
 	cursor: pointer;
 }
 
+
+
+:root {
+  --md-admonition-icon--ksln-info: url(https://raw.githubusercontent.com/squidfunk/mkdocs-material/b1e974cc113f06491eef3e1907825dd46292df02/material/.icons/material/book-information-variant.svg)
+}
+
+.md-typeset .admonition.ksln-info,
+.md-typeset details.ksln-info {
+  border-color: var(--md-primary-fg-color);
+}
+.md-typeset .ksln-info > .admonition-title,
+.md-typeset .ksln-info > summary {
+  background-color: var(--md-primary-fg-color-light);
+}
+.md-typeset .ksln-info > .admonition-title::before,
+.md-typeset .ksln-info > summary::before {
+  background-color: var(--md-primary-fg-color);
+  -webkit-mask-image: var(--md-admonition-icon--ksln-info);
+          mask-image: var(--md-admonition-icon--ksln-info);
+}
 

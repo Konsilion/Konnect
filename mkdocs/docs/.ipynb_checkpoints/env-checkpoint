@@ -73,7 +73,7 @@ theme:
   language: fr               # Choisir votre langue
   palette:
     scheme: default          # NE PAS MODIFIER
-    primary: blue grey       # Couleurs pincipales
+# primary: white           # Couleurs pincipales
     accent: blue             # Couleur de surbrillance
 
 

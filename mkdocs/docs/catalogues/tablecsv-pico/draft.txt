@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="grid-filter">    
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filtre en-tête n°1.." title="Type in a name">
+            <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Filtre en-tête n°2.." title="Type in a country">
+        </div>
+        <table id="csvRoot"></table>
+        <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script>
+        <script type="module" src="../js/main.js"></script>   
+    </body>
+</html>
+
+<style>
+    table {
+      border-collapse: collapse;
+      border-radius: 5px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    th {
+      background: #009578;
+      color: #ffffff;
+      text-align: left;
+    }
+    th {
+      cursor: pointer;
+    }
+    td {
+      padding: 10px 20px;
+      word-break: break-all;
+    }
+    tr:nth-child(even) {
+      background: #eeeeee;
+    }
+    #myInput {
+      background-image: url('');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }  
+
+    #myInput2 {
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+</style>
+
+
+
+
+
+   
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, th, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("csvRoot");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}   
+function myFunction2() {
+  var input, filter, table, tr, td, th, i, txtValue;
+  input = document.getElementById("myInput2");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("csvRoot");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}      
+</script>
