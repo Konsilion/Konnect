@@ -25,8 +25,6 @@ hide:
 </div>
 
 
-
-
 <div id="grid-preview"> 
     <h2>Comment <b>organiser et partager</b> nos projets ?</h2><hr style="color:white !important; width:7%; border-bottom: 10px solid #3B5F7F;"> 
     Voici <u>quatres grands principes</u> nécessaires à la réalisation de projets collaboratifs. <br><br>

@@ -13,16 +13,15 @@ hide:
 
 <div style="text-align:center;">
     <h1 style="color:#3B5F7F; font-size: 60px;"><b>Katalog</b> - Nos projets <u>en commun</u>.</h1>
-    <p style="font-weight: 500; font-family: 'ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial'; margin: 50px;  font-size: 2.0em; color: grey;">Accèdez et participez au <b>développement de la science ouverte</b>.</p>
+    <p style="font-weight: 500; font-family: 'ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial'; margin: 0px 50px;  font-size: 2.0em; color: grey;">Accèdez et participez au <b>développement de la science ouverte</b>.</p>   
+    <a href="#recherche-collaborative"><p style="color:#CCCCCC;"> En savoir plus</p></a><br>
 </div>
-
 
 <div style="border-radius:15px; text-align:center; background-color: #F5F5F5; padding: 25px; box-shadow: 2px 5px 8px rgba(37, 98, 136, 0.2) !important;">
     <br>
     <a style="margin-bottom:25px;" class="md-button" href="./konnect/presentation_konnect">Tous les projets et cas d'études</a>
     <a class="md-button" href="./konnect/presentation_konnect">Prise en main</a><br>
 </div>
-
 
 
 
@@ -119,7 +118,7 @@ hide:
 
 
 <div id="grid-preview"> 
-    <h2>Pour une <b>Recherche & Développement</b> libre et collaborative</h2><hr style="color:white !important; width:7%; border-bottom: 10px solid #3B5F7F;"> 
+    <h2 id="recherche-collaborative">Pour une <b>Recherche & Développement</b> libre et collaborative</h2><hr style="color:white !important; width:7%; border-bottom: 10px solid #3B5F7F;"> 
     Voici <u>quatres grands principes</u> nécessaires à la réalisation de projets collaboratifs. <br><br>
     <ul>
         <li><b>Open community</b> : La communauté est, du fait de la notion de collaboration, un pilier centrale incontournable. Elle apporte soutient et intéligence collective, que nous pensons favorite face à l'IA.</li>
@@ -201,6 +200,7 @@ display: none;
       width: 80%; 
     }
 }    
+
 
 
 .md-footer__inner.md-grid {
