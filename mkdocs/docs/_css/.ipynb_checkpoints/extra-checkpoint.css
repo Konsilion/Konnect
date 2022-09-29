@@ -1,11 +1,56 @@
 :root > * {
 	--color-back-form: rgba(245, 245, 245, 0.9);
 	--color-button: #1FAA1F;
-    --md-primary-fg-color: #136095 !important;
+    --md-primary-fg-color: #2B8DCE !important;
     --md-primary-fg-color-light: rgba(19,96,149,0.2) !important;
+    --md-primary-fg-color--dark: #505050;
 }
 
 #######################################
+
+.md-content__button {
+    display: none;
+  }
+
+/* ------ NAVIGATION ------ */
+
+.md-header {
+    background-color: rgba(1,1,1,0);
+    background-image: linear-gradient(to right, #2B8DCE , #505050);
+}
+
+
+.md-tabs {
+    background-color: grey !important;
+    padding: 0px;
+}
+
+.md-tabs__item:hover, .md-tabs__item:hover > a  {
+    background-color: #DDD !important;
+    color: black !important;
+}
+
+.md-tabs__link {
+    color: #EEE;   
+}
+
+
+
+.div-index {
+    width: 100%;
+    max-width: 1220px;
+margin: auto;
+}
+
+
+@media only screen and (max-width: 1219px) {
+    .div-index {
+        width: 100%;
+        max-width: 1220px;
+        justify-content: center;
+    }
+} 
+
 
 a.md-content__button.md-icon {
     display: none !important;
@@ -72,12 +117,12 @@ form {
 
 
 :root {
-  --md-admonition-icon--ksln-info: url(https://raw.githubusercontent.com/squidfunk/mkdocs-material/b1e974cc113f06491eef3e1907825dd46292df02/material/.icons/material/book-information-variant.svg)
+  --md-admonition-icon--ksln-info: url(../../images/circle-info-solid.svg)
 }
 
 .md-typeset .admonition.ksln-info,
 .md-typeset details.ksln-info {
-  border-color: var(--md-primary-fg-color);
+  border-color: white;
 }
 .md-typeset .ksln-info > .admonition-title,
 .md-typeset .ksln-info > summary {

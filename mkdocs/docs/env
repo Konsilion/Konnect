@@ -10,36 +10,25 @@
 nav:
     - Accueil: index.md
     
-    - Données et mesures: catalogues/model/template
+    - Installation:
+        - Prérequis: konnect/guide_installation/prerequis.md
+        - Installer Konnect: konnect/guide_installation/deploy_konnect.md
+        - Tutoriels:
+            - Conda:
+                - Installation: tutoriels/conda/installation_conda.md
+                - Canaux de téléchargement: tutoriels/conda/ajout_channel.md
+                - Environnements: tutoriels/conda/creation_environnement.md
+                - Packages: tutoriels/conda/ajout_package.md
+            - Git:
+                - Installation: tutoriels/git/installation_git.md
+                - Répertoire projet: tutoriels/git/repo.md
+                - Branche de travail: tutoriels/git/branch.md
 
-    - Modèles numériques: catalogues/model/template
-    
-    - Prototypes et experiences: catalogues/model/template
-    
-    - Documentation: catalogues/model/template
-    
-    - Communauté: catalogues/model/template
-
-    - Konnect:
-
-        - Présentation & Installation:  
-            - Présentation: konnect/presentation_konnect.md
-            - Prérequis: konnect/guide_installation/prerequis.md
-            - Installer Konnect: konnect/guide_installation/deploy_konnect.md
-            - En savoir plus:
-                - Conda:
-                    - Installation: tutoriels/conda/installation_conda.md
-                    - Canaux de téléchargement: tutoriels/conda/ajout_channel.md
-                    - Environnements: tutoriels/conda/creation_environnement.md
-                    - Packages: tutoriels/conda/ajout_package.md
-                - Git:
-                    - Installation: tutoriels/git/installation_git.md
-                    - Répertoire projet: tutoriels/git/repo.md
-                    - Branche de travail: tutoriels/git/branch.md
-
-        - Usages:
+    - Usages & Fonctionnalités:
+        - Usages: 
             - Interfaces: konnect/fonctionnalites/interfaces.md
             - Konnect - Forge: konnect/fonctionnalites/forge/presentation_forge.md
+        - Fonctionnalités:
             - Site internet: 
                 - Créer et Publier: konnect/fonctionnalites/site_web/start_site_web.md
                 - Personnaliser: konnect/fonctionnalites/site_web/modification_site_web.md
@@ -53,18 +42,12 @@ nav:
             - Modélisation 3D:
                 - FreeCAD: konnect/fonctionnalites/freecad/freecad_start.md
 
-        - Konnect community: 
-            - Echanges autour de Konnect: informations/konnect/pad.md
-            - Chat de discussion: informations/konnect/chat.md
-            - Les visios: informations/konnect/visio.md
-            - Nos applications Web: applications/konnect/list_apps.md
+    - Communauté: 
+        - Echanges autour de Konnect: informations/pad.md
+        - Chat de discussion: informations/chat.md
+        - Les visios: informations/visio.md
+        - Nos applications Web: applications/list_apps.md
             
-    - Contacts: informations/contacts.md
-
-
-
-
-
 
 # PARAMETRES GENERAUX ===========================================================================================================
 
@@ -122,4 +105,5 @@ extra:
   version:
       provider: mike
       javascript_dir: js
+  homepage: https://konsilion.fr/wp/recherche-et-developpement/
       
