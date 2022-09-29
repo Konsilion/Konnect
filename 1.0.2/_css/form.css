@@ -1,0 +1,169 @@
+:root {
+	--color-back-form: rgba(245, 245, 245, 0.9);
+	--color-button: #1FAA1F;
+    --title-color-police: black;
+    --color-police: black;
+    --url-background: url(https://konsilion.fr/wp/wp-content/uploads/2021/11/Contact_Telephone.jpg);
+    --color1_body: white;
+    --color2_body: rgba(245, 245, 245, 0.7);
+}
+
+
+#https://konsilion.fr/wp/wp-content/uploads/2021/11/Grenoble-1.jpg
+
+#######################################
+
+
+
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+#title {
+	font-size: 70px;
+	color: var(--title-color-police);
+}
+#description {
+	font-size: 30px;
+	font-family: 'Allura', cursive;
+}
+
+
+
+body {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	color: var(--color-police);
+	margin: 0;
+}
+
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-image: linear-gradient(115deg,var(--color1_body),var(--color2_body)), var(--url-background);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+input, button, select, textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button {
+	border: none;
+}
+
+.container {
+	width: 100%;
+	margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+
+.clue {
+	margin-left: 0.25rem;
+	font-size: 0.9rem;
+	color: #e4e4e4;
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* form */
+
+
+form {
+	background: var(--color-back-form);
+    padding: 5px 25px 5px 25px;
+	border-radius: 8px;
+}
+
+
+.form-group {
+	margin: 0 auto 1.25rem auto;
+	padding: 0.25rem;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 2.375rem;
+	padding: 0.375rem 0.75rem;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio, .input-checkbox {
+	display: inline-block;
+	margin-right: 0.625rem;
+	min-height: 1.25rem;
+	min-width: 1.25rem;
+}
+
+.input-textarea {
+	min-height: 120px;
+	width: 100%;
+	padding: 0.625rem;
+	resize: vertical;
+}
+
+.submit-button {
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	background: var(--color-button);
+	color: white;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+
+
+
