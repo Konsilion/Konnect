@@ -29,7 +29,7 @@ hide:
 
 
 
-<img id="img-logo" style="box-shadow: 0px 0px 10px 5px rgba(37, 98, 136, 0.2); margin-top: 50px; border-radius: 10px;" src="../images/konnect_accueil.png">
+<img id="img-logo" style="box-shadow: 0px 0px 10px 5px rgba(37, 98, 136, 0.2); margin-top: 50px; border-radius: 10px;" src="./images/konnect_accueil.png">
 
 <div class="div-index" markdown>
 ??? ksln-info "Pourquoi une interface si "sommaire" ?"
@@ -97,7 +97,7 @@ Nous vous proposons d'utiliser Konnect afin d'**englober en un seul outil**, aut
 
 
 
-<hr><h2 style="text-align: center;">Les technologies embarquées</h2><img id="img-logo" src="../images/techno_logo_banner.png">
+<hr><h2 style="text-align: center;">Les technologies embarquées</h2><img id="img-logo" src="./images/techno_logo_banner.png">
 
 
 
