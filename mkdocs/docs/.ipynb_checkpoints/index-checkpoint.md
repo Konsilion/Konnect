@@ -8,7 +8,7 @@ hide:
 
 
 <head>
-<link rel="stylesheet" href="../_css/accueil.css" />
+<link rel="stylesheet" href="./_css/accueil.css" />
 </head>
 
 <div style="text-align:center;">
@@ -59,7 +59,7 @@ Afin que l'on puisse coopérer autour de **nos savoirs et projets**, sans partag
 
 Pour faire cela il est utile d'acceder à des **services et applications** nécessitant normalement de certaines compétences informatiques, mais néanmoins très utiles **pour produire et diffuser des savoirs** et **collaborer autour de projets communs**. 
     
-Nous vous proposons d'utiliser Konnect afin d'**englober en un seul outil**, autant de [fonctionnalités](../fonctionnalites/site_web/start_site_web/) utiles aux usages coopératif. Le tout en Open source afin d'assurer une bonne accessibilité et appropriation des outils.   
+Nous vous proposons d'utiliser Konnect afin d'**englober en un seul outil**, autant de [fonctionnalités](./fonctionnalites/site_web/start_site_web/) utiles aux usages coopératif. Le tout en Open source afin d'assurer une bonne accessibilité et appropriation des outils.   
 
 </div>
 
@@ -67,7 +67,7 @@ Nous vous proposons d'utiliser Konnect afin d'**englober en un seul outil**, aut
 
 <br><div style="border-radius:15px; text-align:center; background-color: #F5F5F5; padding: 25px; box-shadow: 2px 5px 8px rgba(37, 98, 136, 0.2) !important;">
     <br>
-    <p style="text-align: center; font-weight: 500; font-family: 'ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial'; margin: 0px 50px;  font-size: 2.0em; color: #3B5F7F;">"Afin que la compréhension des outils n'interfère pas avec l'acquisition des méthodes"</p><br>
+    <p style="text-align: center; font-weight: 500; font-family: 'ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial'; margin: 0px 50px;  font-size: 1.7em; color: #3B5F7F;">"Afin que la compréhension des outils n'interfère pas avec l'acquisition des méthodes"</p><br>
 </div><br>
 
 

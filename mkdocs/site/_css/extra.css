@@ -34,6 +34,34 @@
     color: #EEE;   
 }
 
+.md-tabs__inner.md-grid, .md-header__inner.md-grid {
+    margin:0px !important;
+
+}
+
+.md-header__source {
+    right:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .div-index {
