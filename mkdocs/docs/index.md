@@ -93,7 +93,24 @@ Nous vous proposons d'utiliser Konnect afin d'**englober en un seul outil**, aut
 </div>    
     
 
-
+<div id="grid-preview"> 
+    <h2>Pour une <b>médiation et une diffusion</b> simplifiées et accessibles de nos savoirs</h2><hr style="color:white !important; width:7%; border-bottom: 10px solid var(--md-primary-fg-color);"> 
+    Afin de permettre à tout à chacun d'appréhender les concepts physiques, les raisonnements et les conclusions scientifiques apportés, il est nécessaire de présenter simplement nos travaux. Ainsi informée, la communauté est à même d'échanger autour des choix technologiques pour notre société.
+    <ul>
+        <li><b>Jupyter Notebook</b> : Les Jupyter Notebook permettent la création et le partage de documents informatiques. Ils offrent une expérience simple, rationalisée et centrée sur les résultats et leur mise en contexte. Ils nécessitent néanmoins une certaine installation informatique et quelques connaissances de base. Pour <u>partager plus efficacement</u> vos travaux, l'application Mercury est idéale.</li>
+        <li><b>Mercury de Mljar</b> : Transformez vos carnets de notes Jupyter en applications web grâce au framework open-source Mercury. Cachez le code et ajoutez des widgets interactifs. Les utilisateurs non techniques peuvent ainsi user simplement des widgets et exécuter le notebook avec de nouveaux paramètres, <u>sans installation préalable</u>.</li>
+    </ul><br>
+    <div style="text-align:center;">
+        <img id="img-logo" src="https://mljar.com/images/mercury/turn-notebook-to-web-app.png">
+    </div>
+    <p style="text-align: center; font-weight: 500; font-family: 'ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial'; margin: 0px 50px;  font-size: 2.0em; color: grey;">Partagez facilement vos notebook avec des <u>utilisateurs novices</u>.</p>
+    <br>
+    <div style="text-align: center;">
+        <a class="md-button" href="https://mljar.com/mercury/" target="_blank">Site officiel de Mercury</a>&nbsp;
+        <a class="md-button" href="https://mercury.mljar.com/" target="_blank">Démo</a>
+    </div>
+    <br><hr style="margin-bottom:0px;">
+</div>
 
 
 
