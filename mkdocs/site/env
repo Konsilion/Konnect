@@ -55,10 +55,10 @@ nav:
 
 # Site informations
 
-site_name: Konnect - Outils numériques des sciences ouvertes           # Indiquer le nom du site
+site_name: Konnect - Outils numériques et sciences ouvertes           # Indiquer le nom du site
 site_author: Konsilion Ingénieres            # Indiquer le nom des auteurs et autrices
 site_description: >-
-  Une suite logicielles, simple, accessible utiles au développement et à la diffusion de vos projets de DataScience.
+  Une suite de logiciels, accessible et utiles au développement et à la diffusion de vos projets de DataScience et de vos savoirs plus généralement.
 
 
 
@@ -69,7 +69,7 @@ theme:
   language: fr               # Choisir votre langue
   palette:
     scheme: default          # NE PAS MODIFIER
-# primary: white           # Couleurs pincipales
+    primary: blue           # Couleurs pincipales
     accent: blue             # Couleur de surbrillance
 
 
@@ -105,5 +105,4 @@ extra:
   version:
       provider: mike
       javascript_dir: js
-  homepage: https://konsilion.fr/wp/recherche-et-developpement/
       
