@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------
+
+AFIN DE CRÉER VOS PROPRES CATALOGUES, VEUILLEZ SUIVRE LES ÉTAPES SUIVANTES :
+
+------------------------------------------------------------------------------------------
+
+1. Copier dans le même dossier 'Catalogues', le dossier 'example' et le renommer (exemples : Nos projets)
+
+2. Dans ce dossier (Nos projets), aller dans le dossier 'data' :
+    
+    * filtres.csv : Renseigner vos filtres principaux selon les modèles présentés
+    * s_filtres.csv : Renseigner vos filtres secondaires selon les modèles présentés. Particularité utiliser un icon fontawesome free : https://fontawesome.com/search?o=r&m=free
+    * parametres.csv : Renseigner les paramètres afin de bien situer dans internet votre catalogue.
+    * data.csv : et enfin enregistrer vos projets.
+
+3. Super vous avez créer un super catalogue, maintenant modifier la page 'template.md', la renommer (par exemple : projets.md), et la mettre là où vous le souhaitez dans votre site web comme une page classique.
+
+Voilà.
+
+------------------------------------------------------------------------------------------
