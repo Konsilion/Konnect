@@ -46,4 +46,4 @@ markdown_extensions:
   - pymdownx.snippets
 
 extra_css:
-  - _css/extra.css
+  - https://konsilion.github.io/katalog-setup/css/extra.css
