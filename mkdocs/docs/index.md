@@ -44,7 +44,7 @@ hide:
 
 
 
-<div class="div-cleanbody" style="max-height:350px;"><img class="img-right" src="../images/konnect_accueil.png"></div>
+<div class="div-cleanbody" style="max-height:350px;"><img class="img-right" src="./images/konnect_accueil.png"></div>
 
 
 
