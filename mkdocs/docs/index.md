@@ -161,9 +161,7 @@ Nous vous proposons d'utiliser Konnect afin d'**englober en un seul outil**, aut
 h1 {
         display:block
 }
-.md-tabs__list, .md-tabs {
-        background-color:rgba(0,40,80,1)!important;
-}    
+
 .img-right { 
     margin: 50px 0px 23px 40px; 
     border-radius: 5px; 
