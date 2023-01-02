@@ -1,50 +1,103 @@
-INHERIT: ./docs/env
+# BIENVENU ! MODIFIER ICI LES PARAMETRES DE VOTRE PLATEFORME KATALOG
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+#
+# Konsilion - Licence juridique Creative Commons CC-BY-NC
+# --------------------------------------------------------------------------------------------------------------------------------------------------
 
-theme: 
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.top
-    - navigation.indexes
-    - navigation.tracking
+
+
+# NAVIGATION
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+
+nav:
+    - Konnect - DataScience: index.md
     
-  logo: ./images/logo.png
-  favicon: https://konsilion.fr/wp/wp-content/uploads/2022/03/Logo_Konsilion_1.png
+    - Installation:
+        - Prérequis: konnect/guide_installation/prerequis.md
+        - Installer Konnect: konnect/guide_installation/deploy_konnect.md
+        - Premiers Pas: konnect/fonctionnalites/interfaces.md
+        
+    - Fonctionnalités:
+        - Site internet: 
+            - Créer et Publier: konnect/fonctionnalites/site_web/start_site_web.md
+            - Personnaliser: konnect/fonctionnalites/site_web/modification_site_web.md
+            - Nom de domaine: konnect/fonctionnalites/site_web/cname_site_web.md
+        - Documentation scientifique: 
+            - Créer et Publier: konnect/fonctionnalites/doc_scientifique/doc_start.md
+            - Personnaliser: konnect/fonctionnalites/doc_scientifique/modification_doc.md
+        - Applications Web:
+            - Créer et Publier: konnect/fonctionnalites/web_apps/webapps_start.md
+            - Administration des applications: konnect/fonctionnalites/web_apps/admin_apps.md    
+        - Modélisation 3D:
+            - FreeCAD: konnect/fonctionnalites/freecad/freecad_start.md
+
+            
 
 
+# SITE INFORMATIONS 
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+
+site_name: Konsilion - Konnect DataScience
+site_author: Nicolas Brémond
+site_description: Développer, proposer et promouvoir la Low-technologie.
+
+
+# MENTIONS 
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+
+copyright: Une plateforme open-source codé avec ❤ par Konsilion - Licence juridique Creative Commons CC-BY-NC 4.0 <br> Un grand merci à <u><a href="https://www.multi.coop/" target="_blank">multi</a></u> et <u><a href="https://squidfunk.github.io/mkdocs-material/" target="_blank">mkdocs-material</a></u> pour le support technique 
+
+
+# LANGUE, COULEURS et LOGO
+#
+# [Liste des couleurs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color)
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+
+theme:
+    language: fr
+    palette:
+        primary: blue
+        accent: green
+        scheme: default
+    logo: https://cdn-icons-png.flaticon.com/512/929/929467.png
+    favicon: https://user-images.githubusercontent.com/99027754/209714307-ab199f0d-509b-404f-9dd8-d8bd8fb99e37.png
+    name: material
+    features:
+      - navigation.indexes
+      - navigation.tracking
+      - navigation.top
+
+
+extra:
+  generator: false
+  homepage: https://konsilion.fr/pages/konnect/
+  katalog_repo: "https://github.com/konsilion/website"
+  katalog_site: "https://konsilion.github.io/website"
+
+
+
+
+
+# AUTRES PARAMETRES - Ne pas modifier
+# --------------------------------------------------------------------------------------------------------------------------------------------------
 plugins:
-  - macros
   - search
-  - mike
-
-
+  - macros
 
 markdown_extensions:
-  - toc:
-      permalink: true
-  - md_in_html
-  - footnotes
   - admonition
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - attr_list
-  - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tilde
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
   - pymdownx.details
   - pymdownx.superfences
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-
-
+      
 extra_css:
-  - https://konsilion.github.io/katalog-setup/css/extra.css
-
-
+  - https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.css
+  - https://konsilion.fr/admin/css/colors.css
+  
+# https://kit.fontawesome.com/f9666d4f53.js
